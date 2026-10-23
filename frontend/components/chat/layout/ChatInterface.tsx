@@ -34,6 +34,11 @@ import type { ContextItem } from "@/types/chat";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  saveGuestSession,
+  updateGuestSessionMeta,
+  getGuestSessions,
+} from "@/lib/storage/guestChatStorage";
 
 export default function ChatInterface({
   activeSessionId,
@@ -70,6 +75,17 @@ export default function ChatInterface({
       router.replace(`/chat?session=${id}`, { scroll: false });
 
       if (newSession) {
+        if (isGuest) {
+          saveGuestSession({
+            id: newSession.id,
+            title: newSession.title,
+            model: newSession.model,
+            responseMode: newSession.responseMode,
+            createdAt: newSession.createdAt,
+            updatedAt: newSession.updatedAt,
+            messageCount: 0,
+          });
+        }
         setSessions((prev) => {
           if (prev.some((s) => s.id === id)) return prev;
           return [{ ...newSession, messageCount: 0 }, ...prev];
@@ -103,6 +119,16 @@ export default function ChatInterface({
 
   const isLoading = status === "submitted" || status === "streaming";
   const setSidebarCollapsed = useSetSidebarCollapsed();
+
+  // Sync guest session message count and timestamp to localStorage when messages update
+  useEffect(() => {
+    if (!isGuest || !activeSessionId || messages.length === 0 || isLoading) return;
+    updateGuestSessionMeta(activeSessionId, {
+      messageCount: messages.length,
+      updatedAt: new Date().toISOString(),
+    });
+    setSessions(getGuestSessions());
+  }, [isGuest, activeSessionId, messages.length, isLoading, setSessions]);
 
   useEffect(() => {
     setSidebarCollapsed(true);

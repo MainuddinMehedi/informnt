@@ -78,7 +78,7 @@ export default function RootLayout({
         <AuthProvider>
           <Providers>
             <TooltipProvider>
-              <div className="flex flex-col h-screen h-dvh">
+              <div className="flex flex-col h-screen">
                 {/* 100% Static Shell Header */}
                 <Navbar />
 

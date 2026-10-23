@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { ArrowDown01Icon, ArrowRight01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowRight01Icon, ArrowDown01Icon } from "@hugeicons/core-free-icons";
 import { getToolName, type UIMessage } from "ai";
+import { useState } from "react";
 
 function getToolInputValue(
   input: Record<string, unknown> | undefined,
@@ -29,6 +29,28 @@ function toolStatusLabel(
       const query = getToolInputValue(input, "query");
       const prefix = state === "done" ? "Researched" : "Searching web for";
       return query ? `${prefix}: "${query}"` : "Performing web search";
+    }
+    case "search_stories": {
+      const query = getToolInputValue(input, "query");
+      const prefix =
+        state === "done"
+          ? "Searched stories for"
+          : "Searching tracked stories for";
+      return query ? `${prefix}: "${query}"` : "Searching tracked stories";
+    }
+    case "get_story_details": {
+      const slug = getToolInputValue(input, "slugOrId");
+      const prefix =
+        state === "done" ? "Loaded story breakdown" : "Loading story details";
+      return slug ? `${prefix}: "${slug}"` : "Loading story intelligence";
+    }
+    case "search_articles": {
+      const query = getToolInputValue(input, "query");
+      const prefix =
+        state === "done"
+          ? "Searched news archive for"
+          : "Searching news archive for";
+      return query ? `${prefix}: "${query}"` : "Searching news archive";
     }
     default:
       return state === "done" ? "Processed research step" : "Analyzing data...";
@@ -80,7 +102,9 @@ export function CollapsibleToolLogs({
 
   // If a tool is running and we are not forced to collapse, we show it uncollapsed.
   if (isAnyToolRunning && !forceCollapse) {
-    const toolName = getToolName(activeTool as Parameters<typeof getToolName>[0]);
+    const toolName = getToolName(
+      activeTool as Parameters<typeof getToolName>[0],
+    );
     const tp = activeTool as {
       state: string;
       input?: Record<string, unknown>;
@@ -122,7 +146,9 @@ export function CollapsibleToolLogs({
       {isExpanded && (
         <div className="space-y-2 pl-4 border-l-2 border-border/50 ml-1.5 py-1 mb-4">
           {doneTools.map((part, index) => {
-            const toolName = getToolName(part as Parameters<typeof getToolName>[0]);
+            const toolName = getToolName(
+              part as Parameters<typeof getToolName>[0],
+            );
             const tp = part as {
               input?: Record<string, unknown>;
               rawInput?: Record<string, unknown>;

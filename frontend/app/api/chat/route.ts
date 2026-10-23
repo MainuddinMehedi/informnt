@@ -1,39 +1,46 @@
-import {
-  streamText,
-  stepCountIs,
-  smoothStream,
-  wrapLanguageModel,
-  extractReasoningMiddleware,
-  type UIMessage,
-} from "ai";
 import { auth } from "@/auth";
 import {
-  createSessionTitle,
-  getMessageText,
-  prepareCoreMessages,
-  estimateRequestSize,
-} from "@/lib/chat/messages";
-import type { ContextItem } from "@/types/chat";
-import { getModel, DEFAULT_USER_MODEL, DEFAULT_GUEST_MODEL, GUEST_ALLOWED_MODELS } from "@/lib/ai/modelRegistry";
+  DEFAULT_GUEST_MODEL,
+  DEFAULT_USER_MODEL,
+  getModel,
+  GUEST_ALLOWED_MODELS,
+} from "@/lib/ai/modelRegistry";
 import { createProviderClient } from "@/lib/ai/providers";
 import {
-  webSearchTool,
   fetchUrlTool,
+  getStoryDetailsTool,
   searchArticlesTool,
+  searchStoriesTool,
+  webSearchTool,
 } from "@/lib/ai/tools";
-import { z } from "zod";
 import {
+  assertSessionAccess,
   createChatSession,
+  saveChatContexts,
   updateChatSession,
   upsertChatMessage,
-  saveChatContexts,
-  assertSessionAccess,
 } from "@/lib/chat/db";
-import { buildChatSystemPrompt } from "@/lib/chat/prompts";
 import { formatStreamError } from "@/lib/chat/errors";
 import { checkAndHandleGuestLimits } from "@/lib/chat/guestLimits";
+import {
+  createSessionTitle,
+  estimateRequestSize,
+  getMessageText,
+  prepareCoreMessages,
+} from "@/lib/chat/messages";
+import { buildChatSystemPrompt } from "@/lib/chat/prompts";
 import { buildProviderOptions } from "@/lib/chat/providers";
 import { handleStreamFinish } from "@/lib/chat/streamHandlers";
+import type { ContextItem } from "@/types/chat";
+import {
+  extractReasoningMiddleware,
+  smoothStream,
+  stepCountIs,
+  streamText,
+  wrapLanguageModel,
+  type UIMessage,
+} from "ai";
+import { z } from "zod";
 
 export const maxDuration = 120;
 
@@ -84,8 +91,7 @@ export async function POST(req: Request) {
     if (!parseResult.success) {
       return new Response(
         JSON.stringify({
-          error:
-            parseResult.error.issues[0]?.message || "Invalid request body",
+          error: parseResult.error.issues[0]?.message || "Invalid request body",
         }),
         { status: 400, headers: { "Content-Type": "application/json" } },
       );
@@ -197,7 +203,9 @@ export async function POST(req: Request) {
 
     const systemPrompt = buildChatSystemPrompt({
       responseMode,
-      contexts: contexts as unknown as Parameters<typeof buildChatSystemPrompt>[0]["contexts"],
+      contexts: contexts as unknown as Parameters<
+        typeof buildChatSystemPrompt
+      >[0]["contexts"],
       todayDateStr,
     });
 
@@ -260,6 +268,8 @@ export async function POST(req: Request) {
           web_search: webSearchTool,
           fetch_url: fetchUrlTool,
           search_articles: searchArticlesTool,
+          search_stories: searchStoriesTool,
+          get_story_details: getStoryDetailsTool,
         }
       : undefined;
 

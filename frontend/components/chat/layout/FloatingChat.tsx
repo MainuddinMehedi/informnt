@@ -25,6 +25,11 @@ import { contextFromArticle } from "@/lib/chat/contexts";
 import { useChatContext } from "@/hooks/useChatContext";
 import { useChatFlow } from "@/hooks/useChatFlow";
 import { WelcomeScreen } from "@/components/chat/messages/WelcomeScreen";
+import { useSession } from "next-auth/react";
+import {
+  saveGuestSession,
+  updateGuestSessionMeta,
+} from "@/lib/storage/guestChatStorage";
 
 // ---------------------------------------------------------------------------
 // Context banner — shown when opened from an article card
@@ -75,6 +80,8 @@ export default function FloatingChat() {
   const closeChat = useCloseChat();
   const contextArticle = useChatContextArticle();
   const clearContext = useClearChatContext();
+  const { status: authStatus } = useSession();
+  const isGuest = authStatus === "unauthenticated";
 
   const [sessionId, setSessionId] = useState<string | undefined>();
   const [selectedModel, setSelectedModel] = useState(MODEL_REGISTRY[0].id);
@@ -100,7 +107,20 @@ export default function FloatingChat() {
     handleSend,
   } = useChatFlow({
     sessionId,
-    onSessionCreated: setSessionId,
+    onSessionCreated: (id, newSession) => {
+      setSessionId(id);
+      if (isGuest && newSession) {
+        saveGuestSession({
+          id: newSession.id,
+          title: newSession.title,
+          model: newSession.model,
+          responseMode: newSession.responseMode,
+          createdAt: newSession.createdAt,
+          updatedAt: newSession.updatedAt,
+          messageCount: 0,
+        });
+      }
+    },
     contexts,
     selectedModel,
     adaptiveThinking,
@@ -108,6 +128,15 @@ export default function FloatingChat() {
   });
 
   const isLoading = status === "submitted" || status === "streaming";
+
+  // Keep guest message count and timestamp updated in localStorage
+  useEffect(() => {
+    if (!isGuest || !sessionId || messages.length === 0 || isLoading) return;
+    updateGuestSessionMeta(sessionId, {
+      messageCount: messages.length,
+      updatedAt: new Date().toISOString(),
+    });
+  }, [isGuest, sessionId, messages.length, isLoading]);
 
   const handleNewChat = useCallback(() => {
     setSessionId(undefined);

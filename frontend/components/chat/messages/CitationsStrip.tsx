@@ -9,7 +9,7 @@ import {
   formatResourcePart,
   extractToolResources,
   dedupeSources,
-} from "@/lib/chat/messageCitations";
+} from "./citations";
 
 function MessageCitations({ resource }: { resource: SourceItem }) {
   if (resource.type === "source-url") {

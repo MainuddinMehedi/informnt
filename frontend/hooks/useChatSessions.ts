@@ -4,6 +4,11 @@ import type { ChatSessionListItem } from "@/components/chat/layout/ChatHistoryPa
 import { getDefaultModel } from "@/lib/ai/modelRegistry";
 import type { ContextItem } from "@/types/chat";
 import type { UIMessage } from "ai";
+import {
+  getGuestSessions,
+  saveGuestSession,
+  removeGuestSession,
+} from "@/lib/storage/guestChatStorage";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { toast } from "sonner";
@@ -47,8 +52,15 @@ export function useChatSessions({
   const [sessionsLoading, setSessionsLoading] = useState(true);
 
   const loadSessions = useCallback(async () => {
+    if (isAuthLoading) return;
+
     setSessionsLoading(true);
     try {
+      if (isGuest) {
+        setSessions(getGuestSessions());
+        return;
+      }
+
       const res = await fetch("/api/chat/sessions");
       if (!res.ok) throw new Error("Failed to load chat sessions");
 
@@ -60,7 +72,7 @@ export function useChatSessions({
     } finally {
       setSessionsLoading(false);
     }
-  }, []);
+  }, [isAuthLoading, isGuest]);
 
   const selectSession = useCallback(
     (id: string) => {
@@ -77,6 +89,10 @@ export function useChatSessions({
   const handleDeleteSession = useCallback(
     async (id: string) => {
       try {
+        if (isGuest) {
+          removeGuestSession(id);
+        }
+
         const res = await fetch(`/api/chat/sessions/${id}`, {
           method: "DELETE",
         });
@@ -92,7 +108,7 @@ export function useChatSessions({
         toast.error("Failed to delete chat");
       }
     },
-    [activeSessionId, router],
+    [activeSessionId, isGuest, router],
   );
 
   // Derived loading state of the active session
@@ -123,7 +139,11 @@ export function useChatSessions({
         const res = await fetch(`/api/chat/sessions/${id}`);
         if (!res.ok) {
           if (res.status === 404) {
-            toast.error("Chat not found. Starting a new chat.");
+            toast.error("Chat not found or expired. Starting a new chat.");
+            if (isGuest) {
+              removeGuestSession(id);
+              setSessions(getGuestSessions());
+            }
             if (isMounted) {
               router.replace("/chat", { scroll: false });
             }
@@ -133,6 +153,19 @@ export function useChatSessions({
         }
         const data = await res.json();
         const session = data.session as ChatSessionPayload;
+
+        if (isGuest) {
+          saveGuestSession({
+            id: session.id,
+            title: session.title,
+            model: session.model,
+            responseMode: session.responseMode,
+            createdAt: session.createdAt,
+            updatedAt: session.updatedAt,
+            messageCount: session.messages?.length ?? 0,
+          });
+          setSessions(getGuestSessions());
+        }
 
         if (isMounted) {
           setSelectedModel(session.model || getDefaultModel(isGuest));
@@ -167,9 +200,11 @@ export function useChatSessions({
 
   // Initial load
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    loadSessions();
-  }, [loadSessions]);
+    if (!isAuthLoading) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      loadSessions();
+    }
+  }, [isAuthLoading, loadSessions]);
 
   return {
     activeSessionId,
