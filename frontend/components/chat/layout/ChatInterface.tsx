@@ -33,7 +33,7 @@ import { useSetLoginModalOpen, useSetSidebarCollapsed } from "@/store";
 import type { ContextItem } from "@/types/chat";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export default function ChatInterface({
   activeSessionId,
@@ -42,7 +42,9 @@ export default function ChatInterface({
 }) {
   const router = useRouter();
   const { status: authStatus } = useSession();
+  const isAuthLoading = authStatus === "loading";
   const isGuest = authStatus === "unauthenticated";
+  const locallyCreatedSessionRef = useRef<string | null>(null);
   const setLoginModalOpen = useSetLoginModalOpen();
   const {
     contexts,
@@ -61,25 +63,25 @@ export default function ChatInterface({
   const [viewingContext, setViewingContext] = useState<ContextItem | null>(
     null,
   );
-  const { messages, sendMessage, status, setMessages, stop, handleSend } =
-    useChatFlow({
-      sessionId: activeSessionId,
-      onSessionCreated: (id, newSession) => {
-        router.replace(`/chat?session=${id}`, { scroll: false });
+  const { messages, status, setMessages, stop, handleSend } = useChatFlow({
+    sessionId: activeSessionId,
+    onSessionCreated: (id, newSession) => {
+      locallyCreatedSessionRef.current = id;
+      router.replace(`/chat?session=${id}`, { scroll: false });
 
-        if (newSession) {
-          setSessions((prev) => {
-            if (prev.some((s) => s.id === id)) return prev;
-            return [{ ...newSession, messageCount: 0 }, ...prev];
-          });
-        } else {
-          loadSessions();
-        }
-      },
-      contexts,
-      selectedModel,
-      responseMode,
-    });
+      if (newSession) {
+        setSessions((prev) => {
+          if (prev.some((s) => s.id === id)) return prev;
+          return [{ ...newSession, messageCount: 0 }, ...prev];
+        });
+      } else {
+        loadSessions();
+      }
+    },
+    contexts,
+    selectedModel,
+    responseMode,
+  });
   const {
     sessions,
     sessionsLoading,
@@ -93,7 +95,10 @@ export default function ChatInterface({
     setContexts,
     setSelectedModel,
     isGuest,
+    isAuthLoading,
     activeSessionId,
+    locallyCreatedSessionRef,
+    stop,
   });
 
   const isLoading = status === "submitted" || status === "streaming";
@@ -114,9 +119,16 @@ export default function ChatInterface({
 
   const handleVoiceAIResponse = useCallback(
     (text: string) => {
-      sendMessage({ role: "assistant", parts: [{ type: "text", text }] });
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: `voice-${Date.now()}`,
+          role: "assistant",
+          parts: [{ type: "text", text }],
+        },
+      ]);
     },
-    [sendMessage],
+    [setMessages],
   );
 
   const handleVoiceClose = useCallback(() => {

@@ -25,7 +25,10 @@ interface UseChatSessionsProps {
   setContexts: (contexts: ContextItem[]) => void;
   setSelectedModel: (model: string) => void;
   isGuest: boolean;
+  isAuthLoading?: boolean;
   activeSessionId?: string;
+  locallyCreatedSessionRef?: React.RefObject<string | null> | React.MutableRefObject<string | null>;
+  stop?: () => void;
 }
 
 export function useChatSessions({
@@ -33,7 +36,10 @@ export function useChatSessions({
   setContexts,
   setSelectedModel,
   isGuest,
+  isAuthLoading,
   activeSessionId,
+  locallyCreatedSessionRef,
+  stop,
 }: UseChatSessionsProps) {
   const router = useRouter();
 
@@ -64,8 +70,9 @@ export function useChatSessions({
   );
 
   const handleNewChat = useCallback(() => {
+    stop?.();
     router.replace("/chat", { scroll: false });
-  }, [router]);
+  }, [router, stop]);
 
   const handleDeleteSession = useCallback(
     async (id: string) => {
@@ -90,11 +97,24 @@ export function useChatSessions({
 
   // Derived loading state of the active session
   useEffect(() => {
+    if (isAuthLoading) return;
+
     if (!activeSessionId) {
+      if (locallyCreatedSessionRef) {
+        locallyCreatedSessionRef.current = null;
+      }
       setMessages([]);
       setContexts([]);
       setSelectedModel(getDefaultModel(isGuest));
       return;
+    }
+
+    // Skip hydrating if this session was created locally in the current tab
+    if (locallyCreatedSessionRef?.current) {
+      if (locallyCreatedSessionRef.current === activeSessionId) {
+        return;
+      }
+      locallyCreatedSessionRef.current = null;
     }
 
     let isMounted = true;
@@ -141,6 +161,8 @@ export function useChatSessions({
     setMessages,
     setSelectedModel,
     isGuest,
+    isAuthLoading,
+    locallyCreatedSessionRef,
   ]);
 
   // Initial load
