@@ -75,6 +75,14 @@ export function buildChatSystemPrompt({
           typeof snapshot?.contentSnippet === "string"
             ? `\n  Snippet: ${snapshot.contentSnippet}`
             : "";
+        const summary =
+          typeof snapshot?.summary === "string"
+            ? `\n  Summary: ${snapshot.summary}`
+            : "";
+        const impact =
+          typeof snapshot?.impact === "string"
+            ? `\n  Impact: ${snapshot.impact}`
+            : "";
         const source =
           typeof snapshot?.source === "string"
             ? `\n  Source: ${snapshot.source}`
@@ -84,7 +92,7 @@ export function buildChatSystemPrompt({
             ? `\n  Published: ${snapshot.publishedAt}`
             : "";
 
-        return `- [${c.type}] "${c.title}"${c.url ? ` (${c.url})` : ""}${source}${publishedAt}${snippet}`;
+        return `- [${c.type}] "${c.title}"${c.url ? ` (${c.url})` : ""}${source}${publishedAt}${snippet}${summary}${impact}`;
       })
       .join("\n");
     systemPrompt += `\n\nThe user has attached the following context items for this conversation:\n${contextBlock}\nUse these to ground your analysis.`;

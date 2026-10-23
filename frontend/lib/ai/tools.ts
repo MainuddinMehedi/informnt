@@ -335,32 +335,7 @@ export const searchArticlesTool = tool({
         };
       }
 
-      // Check if the ProcessedArticle table has any records at all
-      const dbArticleCountResult = await prisma.$queryRaw<Array<{ count: bigint }>>`
-        SELECT COUNT(*)::bigint AS count FROM "ProcessedArticle";
-      `;
-      const totalArticles = Number(dbArticleCountResult[0]?.count || BigInt(0));
-      if (totalArticles === 0) {
-        return {
-          success: true,
-          results: [],
-          message: "The database currently contains no articles. The ingestion pipeline has not been run yet.",
-        };
-      }
-
-      // Check if there are any embeddings in the database to prevent silent degradation (empty database)
-      const countResult = await prisma.$queryRaw<Array<{ count: bigint }>>`
-        SELECT COUNT(*)::bigint AS count FROM "ProcessedArticle" WHERE embedding IS NOT NULL;
-      `;
-      const totalCount = Number(countResult[0]?.count || BigInt(0));
-      if (totalCount === 0) {
-        return {
-          success: true,
-          results: [],
-          message: "Geopolitical articles are present in the database, but none of them have generated vector embeddings yet. Ingestion service needs to enrich them first.",
-        };
-      }
-
+      // Generate vector embedding for semantic search
       const queryEmbedding = await generateQueryEmbedding(trimmedQuery);
       const vectorStr = `[${queryEmbedding.join(",")}]`;
 
@@ -404,7 +379,19 @@ export const searchArticlesTool = tool({
         };
       }
 
-      const formatted = parsedResults.data.map((r) => ({
+      // Filter by cosine distance threshold (< 0.65 corresponds to cosine similarity > 0.35)
+      // to prune completely unrelated noise matches
+      const relevantResults = parsedResults.data.filter((r) => r.distance < 0.65);
+
+      if (relevantResults.length === 0) {
+        return {
+          success: true,
+          results: [],
+          message: "No relevant articles found in the database matching this query.",
+        };
+      }
+
+      const formatted = relevantResults.map((r) => ({
         id: r.id,
         title: r.title,
         url: r.url,
@@ -412,6 +399,7 @@ export const searchArticlesTool = tool({
         snippet: compactText(r.contentSnippet, 300),
         biasNote: r.biasNote,
         sentimentScore: r.sentimentScore,
+        published: r.publishedAt.toISOString(),
         publishedAt: r.publishedAt.toISOString(),
         score: (1 - r.distance).toFixed(4),
       }));

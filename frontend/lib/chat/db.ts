@@ -35,6 +35,19 @@ export async function updateChatSession(
   });
 }
 
+export async function updateChatSessionTitleIfDefault(
+  id: string,
+  newTitle: string,
+) {
+  return await prisma.chatSession.updateMany({
+    where: {
+      id,
+      OR: [{ title: "New Chat" }, { title: "" }],
+    },
+    data: { title: newTitle },
+  });
+}
+
 export async function getChatSessionById(id: string) {
   return await prisma.chatSession.findFirst({
     where: { id, isArchived: false },
@@ -57,17 +70,6 @@ export async function listUserChatSessions(userId: string, take: number = 50) {
       responseMode: true,
       createdAt: true,
       updatedAt: true,
-      contexts: {
-        orderBy: { createdAt: "asc" },
-        select: {
-          id: true,
-          sourceType: true,
-          sourceId: true,
-          title: true,
-          url: true,
-          snapshot: true,
-        },
-      },
       _count: { select: { messages: true } },
     },
   });
