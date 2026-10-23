@@ -18,6 +18,7 @@ import SidebarSkeleton from "@/components/skeletons/layout/SidebarSkeleton";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -115,6 +116,11 @@ export default function RootLayout({
           </Providers>
         </AuthProvider>
       </body>
+
+      {process.env.NODE_ENV === "production" &&
+        process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
     </html>
   );
 }
