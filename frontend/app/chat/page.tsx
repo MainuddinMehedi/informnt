@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function ChatPage() {
   return (
-    <div className="h-full flex flex-col bg-background/95 overflow-hidden">
+    <div className="h-full min-h-0 flex flex-col bg-background/95 overflow-hidden">
       <Suspense fallback={<ChatInterface />}>
         <ChatController />
       </Suspense>

@@ -68,7 +68,12 @@ export default function ChatInput({
   }, [value, disabled, onSend]);
 
   return (
-    <div className={cn("px-4 pb-4 shrink-0 z-10", className)}>
+    <div
+      className={cn(
+        "px-3 sm:px-4 pb-2 sm:pb-4 pb-[max(0.5rem,env(safe-area-inset-bottom))] shrink-0 z-10",
+        className,
+      )}
+    >
       <div className="max-w-3xl mx-auto flex flex-col relative">
         {/* Mobile context pills slot */}
         <div className="absolute bottom-full left-0 right-0 mb-0.5 w-full">

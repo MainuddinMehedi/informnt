@@ -150,7 +150,7 @@ export default function ChatInterface({
           onLoginClick={() => setLoginModalOpen(true)}
         />
 
-        <div className="flex-1 overflow-hidden relative pt-14">
+        <div className="flex-1 overflow-hidden relative pt-12 sm:pt-14">
           {messages.length === 0 ? (
             <WelcomeScreen onNewChat={handleNewChat} onSend={handleSend} />
           ) : (

@@ -48,7 +48,7 @@ export default function MessageList({ messages, isLoading }: MessageListProps) {
 
   return (
     <div ref={scrollRef} className="h-full overflow-y-auto scrollbar-sleek">
-      <div className="max-w-3xl mx-auto p-4 flex flex-col gap-6">
+      <div className="max-w-3xl mx-auto px-3 sm:px-4 py-3 sm:py-4 flex flex-col gap-3.5 sm:gap-6">
         {groupedMessages.map((msg, idx) => {
           const isLastMessage = idx === groupedMessages.length - 1;
           const isLastAndLoading =

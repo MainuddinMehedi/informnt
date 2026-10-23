@@ -81,29 +81,29 @@ export function WelcomeScreen({
   }
 
   return (
-    <div className="h-full w-full overflow-y-auto flex flex-col items-center justify-center px-4 sm:px-6 py-6 sm:py-8 text-center select-none animate-in fade-in zoom-in-95 duration-500">
-      <div className="relative mb-6 sm:mb-8 mt-auto sm:mt-0">
-        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-primary/10 flex items-center justify-center border border-primary/20 shadow-inner">
+    <div className="h-full w-full overflow-y-auto flex flex-col items-center justify-center px-4 sm:px-6 py-3 sm:py-8 text-center select-none animate-in fade-in zoom-in-95 duration-500">
+      <div className="relative mb-2.5 sm:mb-8 mt-auto sm:mt-0">
+        <div className="w-12 h-12 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl bg-primary/10 flex items-center justify-center border border-primary/20 shadow-inner">
           <HugeiconsIcon
             icon={Robot01Icon}
-            className="w-8 h-8 sm:w-10 sm:h-10 text-primary"
+            className="w-6 h-6 sm:w-10 sm:h-10 text-primary"
           />
         </div>
-        <div className="absolute inset-0 -m-2 sm:-m-3 rounded-3xl bg-primary/5 animate-pulse" />
+        <div className="absolute inset-0 -m-1.5 sm:-m-3 rounded-2xl sm:rounded-3xl bg-primary/5 animate-pulse" />
       </div>
 
-      <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-1.5 sm:mb-2">
+      <h2 className="text-lg sm:text-2xl font-bold text-foreground mb-1 sm:mb-2">
         AI Analyst
       </h2>
-      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-md mb-8 sm:mb-10">
+      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-xs sm:max-w-md mb-3.5 sm:mb-10">
         I analyze geopolitical events and trends using live multi-perspective
         data. Start a new conversation or try a quick action below.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full max-w-lg mb-auto sm:mb-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 w-full max-w-lg mb-auto sm:mb-0">
         <button
           onClick={onNewChat}
-          className="flex items-center gap-2.5 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-card border border-border/60 hover:border-primary/40 hover:bg-muted/50 transition-all group text-left shadow-sm cursor-pointer"
+          className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-3 rounded-xl bg-card border border-border/60 hover:border-primary/40 hover:bg-muted/50 transition-all group text-left shadow-sm cursor-pointer"
         >
           <HugeiconsIcon
             icon={PlusSignIcon}
@@ -116,7 +116,7 @@ export function WelcomeScreen({
 
         <button
           onClick={() => onSend("Summarize today's most impactful news")}
-          className="flex items-center gap-2.5 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-card border border-border/60 hover:border-primary/40 hover:bg-muted/50 transition-all group text-left shadow-sm cursor-pointer"
+          className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-3 rounded-xl bg-card border border-border/60 hover:border-primary/40 hover:bg-muted/50 transition-all group text-left shadow-sm cursor-pointer"
         >
           <HugeiconsIcon
             icon={Sparkles}
@@ -131,7 +131,7 @@ export function WelcomeScreen({
           onClick={() =>
             onSend("What are the latest developments in the Middle East?")
           }
-          className="flex items-center gap-2.5 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-card border border-border/60 hover:border-primary/40 hover:bg-muted/50 transition-all group text-left shadow-sm sm:col-span-2 cursor-pointer"
+          className="flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-3 rounded-xl bg-card border border-border/60 hover:border-primary/40 hover:bg-muted/50 transition-all group text-left shadow-sm sm:col-span-2 cursor-pointer"
         >
           <HugeiconsIcon
             icon={MessageSquare}
