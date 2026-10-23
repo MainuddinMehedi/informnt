@@ -13,39 +13,42 @@ import {
 import type { ContextItem } from "@/types/chat";
 import { Loading03Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Suspense, use, useEffect, useState } from "react";
+import { Suspense, use, useMemo } from "react";
 
 interface ContextDetailsModalProps {
   contextItem: ContextItem | null;
   onClose: () => void;
 }
 
+type ContextDetailResult = {
+  article?: Parameters<typeof ArticleDetailView>[0]["article"];
+  story?: Parameters<typeof StoryDetailView>[0]["story"];
+  sources?: Parameters<typeof StoryDetailView>[0]["sources"];
+  origins?: Parameters<typeof StoryDetailView>[0]["origins"];
+  error?: string;
+};
+
 export function ContextDetailsModal({
   contextItem,
   onClose,
 }: ContextDetailsModalProps) {
-  const [detailsPromise, setDetailsPromise] = useState<Promise<any> | null>(
-    null,
-  );
-
-  useEffect(() => {
-    if (!contextItem) {
-      setDetailsPromise(null);
-      return;
-    }
+  const detailsPromise = useMemo<Promise<ContextDetailResult> | null>(() => {
+    if (!contextItem) return null;
 
     if (contextItem.type === "article" || !contextItem.type) {
-      setDetailsPromise(getArticleDetails(contextItem.id));
-    } else if (contextItem.type === "story") {
-      setDetailsPromise(getStoryDetails(contextItem.id));
+      return getArticleDetails(contextItem.id) as Promise<ContextDetailResult>;
     }
+    if (contextItem.type === "story") {
+      return getStoryDetails(contextItem.id) as Promise<ContextDetailResult>;
+    }
+    return null;
   }, [contextItem]);
 
   const isOpen = !!contextItem;
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="w-[95vw] max-w-[95vw] sm:w-[85vw] sm:max-w-[85vw] h-[90vh] p-0 overflow-y-auto bg-background/95 backdrop-blur-xl border-border/50 scrollbar-sleek">
+      <DialogContent className="w-[95vw] max-w-[95vw] sm:w-[85vw] sm:max-w-[85vw] h-[90dvh] sm:h-[90vh] p-0 overflow-y-auto bg-background/95 backdrop-blur-xl border-border/50 scrollbar-sleek">
         <DialogTitle className="sr-only">
           {contextItem?.title || "Details"}
         </DialogTitle>
@@ -85,7 +88,7 @@ function DetailsResolver({
   type,
   slug,
 }: {
-  promise: Promise<any>;
+  promise: Promise<ContextDetailResult>;
   type?: "article" | "story" | string;
   slug: string;
 }) {
