@@ -21,11 +21,13 @@ import {
   fetchUrlTool,
   searchArticlesTool,
 } from "@/lib/ai/tools";
+import { z } from "zod";
 import {
   createChatSession,
   updateChatSession,
   upsertChatMessage,
   saveChatContexts,
+  assertSessionAccess,
 } from "@/lib/chat/db";
 import { buildChatSystemPrompt } from "@/lib/chat/prompts";
 import { formatStreamError } from "@/lib/chat/errors";
@@ -35,26 +37,60 @@ import { handleStreamFinish } from "@/lib/chat/streamHandlers";
 
 export const maxDuration = 120;
 
-type IncomingMessage = {
-  id?: string;
-  role: string;
-  parts?: Array<{ type: string; text?: string }>;
-  content?: string;
-  metadata?: unknown;
-};
-
-type IncomingContextItem = {
-  id?: string;
-  title: string;
-  type: string;
-  url?: string;
-  sourceId?: string;
-  sourceType?: string;
-  snapshot?: unknown;
-};
+const chatRequestSchema = z.object({
+  messages: z
+    .array(
+      z.object({
+        id: z.string().optional(),
+        role: z.string(),
+        parts: z.array(z.record(z.string(), z.unknown())).optional(),
+        content: z.union([z.string(), z.array(z.unknown())]).optional(),
+        metadata: z.unknown().optional(),
+      }),
+    )
+    .min(1, "At least one message is required")
+    .max(100, "Too many messages in conversation history"),
+  contexts: z
+    .array(
+      z.object({
+        id: z.string().optional(),
+        title: z.string().max(500),
+        type: z.string().max(50),
+        url: z.string().max(2048).optional(),
+        sourceId: z.string().optional(),
+        sourceType: z.string().optional(),
+        snapshot: z.unknown().optional(),
+      }),
+    )
+    .max(30, "Too many context items")
+    .optional(),
+  model: z.string().max(100).optional(),
+  adaptiveThinking: z.boolean().optional(),
+  sessionId: z.string().uuid("Invalid session ID format").optional(),
+  responseMode: z.enum(["concise", "descriptive"]).optional(),
+});
 
 export async function POST(req: Request) {
   try {
+    const rawJson = await req.json().catch(() => null);
+    if (!rawJson) {
+      return new Response(
+        JSON.stringify({ error: "Invalid JSON in request body" }),
+        { status: 400, headers: { "Content-Type": "application/json" } },
+      );
+    }
+
+    const parseResult = chatRequestSchema.safeParse(rawJson);
+    if (!parseResult.success) {
+      return new Response(
+        JSON.stringify({
+          error:
+            parseResult.error.issues[0]?.message || "Invalid request body",
+        }),
+        { status: 400, headers: { "Content-Type": "application/json" } },
+      );
+    }
+
     const {
       messages,
       contexts,
@@ -62,14 +98,7 @@ export async function POST(req: Request) {
       adaptiveThinking = false,
       sessionId,
       responseMode = "concise",
-    } = (await req.json()) as {
-      messages: IncomingMessage[];
-      contexts?: IncomingContextItem[];
-      model?: string;
-      adaptiveThinking?: boolean;
-      sessionId?: string;
-      responseMode?: "concise" | "descriptive";
-    };
+    } = parseResult.data;
 
     const latestUserMessage = [...messages]
       .reverse()
@@ -80,28 +109,63 @@ export async function POST(req: Request) {
 
     const authSession = await auth();
     const isGuest = !authSession?.user?.id;
+    const userId = authSession?.user?.id || null;
+
     let effectiveModel = model;
     if (isGuest && !GUEST_ALLOWED_MODELS.includes(model)) {
       effectiveModel = DEFAULT_GUEST_MODEL;
     }
 
-    // 1. Session Setup
-    let activeSessionId = sessionId;
-    if (!activeSessionId) {
-      const session = await createChatSession({
-        title: createSessionTitle(latestUserText),
-        model: effectiveModel,
-        responseMode,
-        userId: isGuest ? null : authSession.user.id,
-      });
+    // 1. Model Validation (fail early before any database mutations)
+    const modelConfig = getModel(effectiveModel);
+    if (!modelConfig) {
+      return new Response(
+        JSON.stringify({ error: `Model ${effectiveModel} is not supported.` }),
+        { status: 400, headers: { "Content-Type": "application/json" } },
+      );
+    }
 
-      activeSessionId = session.id;
-    } else {
+    // 2. Session Setup & Access Verification
+    let activeSessionId = sessionId;
+    if (activeSessionId) {
+      const access = await assertSessionAccess(activeSessionId, userId);
+      if (!access.allowed) {
+        if (access.reason === "forbidden") {
+          return new Response(
+            JSON.stringify({
+              error: "Forbidden: You do not have access to this chat session.",
+            }),
+            { status: 403, headers: { "Content-Type": "application/json" } },
+          );
+        }
+        return new Response(
+          JSON.stringify({ error: "Chat session not found or archived." }),
+          { status: 404, headers: { "Content-Type": "application/json" } },
+        );
+      }
+
       await updateChatSession(activeSessionId, {
         model: effectiveModel,
         responseMode,
       });
+    } else {
+      const session = await createChatSession({
+        title: createSessionTitle(latestUserText),
+        model: effectiveModel,
+        responseMode,
+        userId,
+      });
+
+      activeSessionId = session.id;
     }
+
+    // 3. Guest Limits Check
+    const guestLimitResponse = await checkAndHandleGuestLimits({
+      isGuest,
+      messages,
+      activeSessionId,
+    });
+    if (guestLimitResponse) return guestLimitResponse;
 
     if (contexts?.length) {
       await saveChatContexts(activeSessionId, contexts as ContextItem[]);
@@ -123,15 +187,7 @@ export async function POST(req: Request) {
       });
     }
 
-    // 2. Guest Limits
-    const guestLimitResponse = await checkAndHandleGuestLimits({
-      isGuest,
-      messages: messages as any,
-      activeSessionId,
-    });
-    if (guestLimitResponse) return guestLimitResponse;
-
-    // 3. System Prompt & Model Config
+    // 4. System Prompt & Model Config
     const todayDateStr = new Date().toLocaleDateString("en-US", {
       weekday: "long",
       year: "numeric",
@@ -141,17 +197,9 @@ export async function POST(req: Request) {
 
     const systemPrompt = buildChatSystemPrompt({
       responseMode,
-      contexts: contexts as any,
+      contexts: contexts as unknown as Parameters<typeof buildChatSystemPrompt>[0]["contexts"],
       todayDateStr,
     });
-
-    const modelConfig = getModel(effectiveModel);
-    if (!modelConfig) {
-      return new Response(
-        JSON.stringify({ error: `Model ${effectiveModel} is not supported.` }),
-        { status: 400, headers: { "Content-Type": "application/json" } },
-      );
-    }
 
     // 4. Initialize Provider Client
     const provider = createProviderClient(modelConfig.provider);
@@ -190,8 +238,14 @@ export async function POST(req: Request) {
         : modelConfig.contextWindow > 32000
           ? 16
           : 8;
-    const coreMessages = await prepareCoreMessages(messages as any, MAX_TURNS);
-    const requestSize = estimateRequestSize(systemPrompt, coreMessages as any);
+    const coreMessages = await prepareCoreMessages(
+      messages as unknown as Parameters<typeof prepareCoreMessages>[0],
+      MAX_TURNS,
+    );
+    const requestSize = estimateRequestSize(
+      systemPrompt,
+      coreMessages as unknown as Parameters<typeof estimateRequestSize>[1],
+    );
 
     console.log("DEBUG: Sending to streamText", {
       model,
@@ -222,9 +276,7 @@ export async function POST(req: Request) {
       system: systemPrompt,
       messages: coreMessages,
       tools,
-      // @ts-ignore
-      maxSteps: 10,
-      maxTokens: adaptiveThinking ? 16384 : 4096,
+      maxOutputTokens: adaptiveThinking ? 16384 : 4096,
       experimental_transform: [
         smoothStream({ chunking: "word", delayInMs: 20 }),
       ],

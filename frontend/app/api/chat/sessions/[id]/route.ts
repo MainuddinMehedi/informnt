@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { UIMessage } from "ai";
+import { z } from "zod";
 import { auth } from "@/auth";
 import type { ContextItem } from "@/types/chat";
 import {
@@ -7,7 +8,16 @@ import {
   updateChatSession,
   archiveChatSession,
   overwriteChatContexts,
+  assertSessionAccess,
 } from "@/lib/chat/db";
+
+const patchSessionSchema = z.object({
+  title: z.string().trim().min(1).max(200).optional(),
+  model: z.string().max(100).optional(),
+  responseMode: z.enum(["concise", "descriptive"]).optional(),
+  isArchived: z.boolean().optional(),
+  contexts: z.array(z.record(z.string(), z.unknown())).optional(),
+});
 
 function toUiMessage(message: {
   id: string;
@@ -40,15 +50,25 @@ export async function GET(
 ) {
   try {
     const { id } = await params;
-    const session = await getChatSessionById(id);
+    const authSession = await auth();
+    const userId = authSession?.user?.id || null;
 
-    if (!session) {
-      return NextResponse.json({ error: "Session not found" }, { status: 404 });
+    const access = await assertSessionAccess(id, userId);
+    if (!access.allowed) {
+      return NextResponse.json(
+        {
+          error:
+            access.reason === "forbidden"
+              ? "Forbidden: You do not have access to this chat session."
+              : "Session not found",
+        },
+        { status: access.reason === "forbidden" ? 403 : 404 },
+      );
     }
 
-    const authSession = await auth();
-    if (session.userId !== null && session.userId !== authSession?.user?.id) {
-      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+    const session = await getChatSessionById(id);
+    if (!session) {
+      return NextResponse.json({ error: "Session not found" }, { status: 404 });
     }
 
     return NextResponse.json({
@@ -89,7 +109,42 @@ export async function PATCH(
 ) {
   try {
     const { id } = await params;
-    const body = await req.json();
+    const authSession = await auth();
+    const userId = authSession?.user?.id || null;
+
+    const access = await assertSessionAccess(id, userId);
+    if (!access.allowed) {
+      return NextResponse.json(
+        {
+          error:
+            access.reason === "forbidden"
+              ? "Forbidden: You do not have access to this chat session."
+              : "Session not found",
+        },
+        { status: access.reason === "forbidden" ? 403 : 404 },
+      );
+    }
+
+    const rawJson = await req.json().catch(() => null);
+    if (!rawJson) {
+      return NextResponse.json(
+        { error: "Invalid JSON in request body" },
+        { status: 400 },
+      );
+    }
+
+    const parseResult = patchSessionSchema.safeParse(rawJson);
+    if (!parseResult.success) {
+      return NextResponse.json(
+        {
+          error:
+            parseResult.error.issues[0]?.message || "Invalid update payload",
+        },
+        { status: 400 },
+      );
+    }
+
+    const body = parseResult.data;
     const updateData: {
       title?: string;
       model?: string;
@@ -98,47 +153,40 @@ export async function PATCH(
       updatedAt?: Date;
     } = {};
 
-    if (typeof body.title === "string") updateData.title = body.title;
-    if (typeof body.model === "string") updateData.model = body.model;
-    if (typeof body.responseMode === "string") {
+    if (body.title !== undefined) updateData.title = body.title;
+    if (body.model !== undefined) updateData.model = body.model;
+    if (body.responseMode !== undefined) {
       updateData.responseMode = body.responseMode;
     }
-    if (typeof body.isArchived === "boolean") {
+    if (body.isArchived !== undefined) {
       updateData.isArchived = body.isArchived;
     }
 
-    let session = await getChatSessionById(id);
-
-    if (!session) {
-      return NextResponse.json({ error: "Session not found" }, { status: 404 });
-    }
-
-    const authSession = await auth();
-    if (session.userId !== null && session.userId !== authSession?.user?.id) {
-      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
-    }
+    let updatedSession = access.session!;
 
     if (Object.keys(updateData).length > 0) {
-      session = await updateChatSession(id, updateData) as any;
+      updatedSession = await updateChatSession(id, updateData);
     }
 
     if (Array.isArray(body.contexts)) {
-      await overwriteChatContexts(id, body.contexts as ContextItem[]);
+      await overwriteChatContexts(id, body.contexts as unknown as ContextItem[]);
 
       // Bump updatedAt to move the session to the top of the history list
       if (Object.keys(updateData).length === 0) {
-        session = await updateChatSession(id, { updatedAt: new Date() }) as any;
+        updatedSession = await updateChatSession(id, {
+          updatedAt: new Date(),
+        });
       }
     }
 
     return NextResponse.json({
       session: {
-        id: session!.id,
-        title: session!.title,
-        model: session!.model,
-        responseMode: session!.responseMode,
-        createdAt: session!.createdAt.toISOString(),
-        updatedAt: session!.updatedAt.toISOString(),
+        id: updatedSession.id,
+        title: updatedSession.title,
+        model: updatedSession.model,
+        responseMode: updatedSession.responseMode,
+        createdAt: updatedSession.createdAt.toISOString(),
+        updatedAt: updatedSession.updatedAt.toISOString(),
       },
     });
   } catch (error) {
@@ -156,15 +204,20 @@ export async function DELETE(
 ) {
   try {
     const { id } = await params;
-    const session = await getChatSessionById(id);
-    
-    if (!session) {
-      return NextResponse.json({ error: "Session not found" }, { status: 404 });
-    }
-
     const authSession = await auth();
-    if (session.userId !== null && session.userId !== authSession?.user?.id) {
-      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+    const userId = authSession?.user?.id || null;
+
+    const access = await assertSessionAccess(id, userId);
+    if (!access.allowed) {
+      return NextResponse.json(
+        {
+          error:
+            access.reason === "forbidden"
+              ? "Forbidden: You do not have access to this chat session."
+              : "Session not found",
+        },
+        { status: access.reason === "forbidden" ? 403 : 404 },
+      );
     }
 
     await archiveChatSession(id);

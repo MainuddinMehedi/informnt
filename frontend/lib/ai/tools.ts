@@ -9,10 +9,6 @@ const MAX_SEARCH_RESULTS = 10;
 const MAX_SEARCH_SNIPPET_CHARS = 260;
 const MAX_FETCHED_CONTENT_CHARS = 1200;
 
-function clampCount(count: number | undefined) {
-  return Math.min(Math.max(count ?? MAX_SEARCH_RESULTS, 1), MAX_SEARCH_RESULTS);
-}
-
 function compactText(value: string | undefined, maxLength: number) {
   if (!value) return "";
   const normalized = value.replace(/\s+/g, " ").trim();
@@ -162,6 +158,66 @@ async function tryEngines(
   throw new Error(`All search engines failed — ${errors.join("; ")}`);
 }
 
+import dns from "node:dns/promises";
+
+function isPrivateIp(ip: string): boolean {
+  if (ip === "localhost" || ip === "::1" || ip === "0.0.0.0") return true;
+  if (ip.startsWith("127.")) return true;
+  if (ip.startsWith("169.254.")) return true; // Link-local / Cloud metadata (AWS, GCP, Azure)
+  if (ip.startsWith("10.")) return true; // RFC 1918 Class A
+  if (ip.startsWith("192.168.")) return true; // RFC 1918 Class C
+  const match172 = ip.match(/^172\.(\d+)\./);
+  if (match172) {
+    const secondOctet = parseInt(match172[1], 10);
+    if (secondOctet >= 16 && secondOctet <= 31) return true; // RFC 1918 Class B
+  }
+  if (ip.toLowerCase().startsWith("fc") || ip.toLowerCase().startsWith("fd")) return true; // IPv6 ULA
+  if (ip.toLowerCase().startsWith("fe80")) return true; // IPv6 link-local
+  return false;
+}
+
+async function validateSafeUrl(rawUrl: string): Promise<{ valid: boolean; reason?: string }> {
+  try {
+    const parsed = new URL(rawUrl);
+    if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+      return { valid: false, reason: "Only HTTP and HTTPS protocols are supported." };
+    }
+
+    const hostname = parsed.hostname.toLowerCase();
+    if (
+      hostname === "localhost" ||
+      hostname.endsWith(".localhost") ||
+      hostname.endsWith(".local") ||
+      hostname.endsWith(".internal") ||
+      hostname.endsWith(".lan")
+    ) {
+      return { valid: false, reason: "Access to local and internal network hostnames is prohibited." };
+    }
+
+    if (isPrivateIp(hostname)) {
+      return { valid: false, reason: "Access to private or internal IP addresses is prohibited." };
+    }
+
+    try {
+      const records = await dns.lookup(hostname, { all: true });
+      for (const record of records) {
+        if (isPrivateIp(record.address)) {
+          return {
+            valid: false,
+            reason: `Target address resolves to a restricted private address (${record.address}).`,
+          };
+        }
+      }
+    } catch {
+      // If DNS resolution fails, allow fetch to handle or fail naturally
+    }
+
+    return { valid: true };
+  } catch {
+    return { valid: false, reason: "Invalid URL format." };
+  }
+}
+
 const fetchUrlInputSchema = zodSchema(
   z.object({
     url: z.string().url().describe("The URL to fetch and extract content from"),
@@ -173,8 +229,28 @@ export const fetchUrlTool = tool({
     "Fetch and extract the main content (title, text, author, etc.) from a given URL. Use this when the user provides a link they want you to read or analyze.",
   inputSchema: fetchUrlInputSchema,
   execute: async ({ url }) => {
+    const validation = await validateSafeUrl(url);
+    if (!validation.valid) {
+      return {
+        title: "",
+        description: "",
+        content: `Blocked for security: ${validation.reason}`,
+        author: "",
+        published: "",
+        source: url,
+        url,
+      };
+    }
+
     try {
-      const article = await extract(url);
+      const timeoutPromise = new Promise<never>((_, reject) => {
+        setTimeout(() => reject(new Error("Request timed out after 10 seconds")), 10000);
+      });
+
+      const article = await Promise.race([
+        extract(url, undefined, { signal: AbortSignal.timeout(10000) } as unknown as Parameters<typeof extract>[2]),
+        timeoutPromise,
+      ]);
 
       if (!article) {
         return {
@@ -185,7 +261,7 @@ export const fetchUrlTool = tool({
           author: "",
           published: "",
           source: url,
-          url: url,
+          url,
         };
       }
 
@@ -209,11 +285,11 @@ export const fetchUrlTool = tool({
       return {
         title: "",
         description: "",
-        content: `Failed to fetch URL. Error: ${(err as Error).message}. The site might be blocking access (e.g., 401/403). Try relying on search results instead.`,
+        content: `Failed to fetch URL: ${(err as Error).message}. The site might be blocking access (e.g., 401/403) or timed out. Try relying on search results instead.`,
         author: "",
         published: "",
         source: url,
-        url: url,
+        url,
       };
     }
   },
