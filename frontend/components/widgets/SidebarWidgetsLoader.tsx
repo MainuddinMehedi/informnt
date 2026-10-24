@@ -1,7 +1,7 @@
 import { DiversityInsightWidget } from "@/components/analytics/DiversityInsightWidget";
 import { EventClustersWidget } from "@/components/widgets/events/EventClustersWidget";
 import { EventRegionWidget } from "@/components/widgets/events/EventRegionWidget";
-import { resolveFeedParams } from "@/lib/helpers/feedParamsResolver";
+import { resolveFeedParams } from "@/helpers/feed/paramsResolver";
 import { buildArticleWhereClause } from "@/queries/article/filter";
 import { getCachedUserSettings } from "@/queries/userSettings";
 

@@ -17,6 +17,7 @@
  */
 
 import { ContextDetailsModal } from "@/components/chat/context/ContextDetailsModal";
+import { useContextDetailsModal } from "@/hooks/useContextDetailsModal";
 import ContextPanel from "@/components/chat/context/ContextPanel";
 import ContextPickerModal from "@/components/chat/context/ContextPickerModal";
 import { ContextPills } from "@/components/chat/context/ContextPills";
@@ -30,7 +31,6 @@ import { useChatFlow } from "@/hooks/useChatFlow";
 import { useChatSessions } from "@/hooks/useChatSessions";
 import { getActiveModels, getDefaultModel } from "@/lib/ai/modelRegistry";
 import { useSetLoginModalOpen, useSetSidebarCollapsed } from "@/store";
-import type { ContextItem } from "@/types/chat";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -65,9 +65,7 @@ export default function ChatInterface({
   const [responseMode, setResponseMode] = useState<"concise" | "descriptive">(
     "concise",
   );
-  const [viewingContext, setViewingContext] = useState<ContextItem | null>(
-    null,
-  );
+  const { openContextModal } = useContextDetailsModal();
   const { messages, status, setMessages, stop, handleSend } = useChatFlow({
     sessionId: activeSessionId,
     onSessionCreated: (id, newSession) => {
@@ -211,7 +209,7 @@ export default function ChatInterface({
             <ContextPills
               items={contexts}
               onRemove={removeContext}
-              onViewContext={setViewingContext}
+              onViewContext={openContextModal}
               className="lg:hidden"
             />
           }
@@ -222,7 +220,7 @@ export default function ChatInterface({
         items={contexts}
         onRemove={removeContext}
         onAdd={addContext}
-        onViewContext={setViewingContext}
+        onViewContext={openContextModal}
       />
       <ContextPickerModal
         isOpen={contextPickerOpen}
@@ -230,10 +228,7 @@ export default function ChatInterface({
         onAdd={handleAddContexts}
         existingItems={contexts}
       />
-      <ContextDetailsModal
-        contextItem={viewingContext}
-        onClose={() => setViewingContext(null)}
-      />
+      <ContextDetailsModal />
     </div>
   );
 }

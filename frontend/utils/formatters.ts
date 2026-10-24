@@ -62,3 +62,39 @@ export function formatPublishedDate(value?: string) {
     year: "numeric",
   }).format(date);
 }
+
+export function formatDuration(start: Date | string, end: Date | string | null): string {
+  if (!end) return "-";
+  const ms = new Date(end).getTime() - new Date(start).getTime();
+  if (ms < 1000) return `${ms}ms`;
+  const secs = Math.round(ms / 1000);
+  if (secs < 60) return `${secs}s`;
+  const mins = Math.floor(secs / 60);
+  const remainingSecs = secs % 60;
+  return `${mins}m ${remainingSecs}s`;
+}
+
+/**
+ * Normalizes multi-line whitespace and truncates string to a max character count.
+ */
+export function compactText(
+  value: string | undefined,
+  maxLength: number,
+): string {
+  if (!value) return "";
+  const normalized = value.replace(/\s+/g, " ").trim();
+  return normalized.length > maxLength
+    ? `${normalized.slice(0, maxLength - 3)}...`
+    : normalized;
+}
+
+/**
+ * Converts large metrics (e.g. Corpus Size, counts) into a compact shorthand (e.g. 1500 -> "1.5K")
+ */
+export function formatCompactNumber(n: number): string {
+  if (n >= 1000) return `${(n / 1000).toFixed(1)}K`;
+  return n.toString();
+}
+
+
+

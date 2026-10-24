@@ -1,5 +1,5 @@
 import { extract } from "@extractus/article-extractor";
-import { compactText } from "@/lib/helpers/string";
+import { compactText } from "@/utils/formatters";
 import { validateSafeUrl } from "@/lib/security/ssrf";
 
 export const MAX_FETCHED_CONTENT_CHARS = 1200;

@@ -5,7 +5,7 @@ import { SentimentBadge } from "@/components/articles/SentimentBadge";
 import { Badge } from "@/components/ui/badge";
 import { RelativeTime } from "@/components/ui/RelativeTime";
 import { Article } from "@/types/article";
-import { getEventRegionBadgeVariant } from "@/utils/analytics";
+import { getEventRegionBadgeVariant } from "@/helpers/articles/regionBadge";
 import { Calendar03Icon, Globe, Sparkles } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Suspense } from "react";

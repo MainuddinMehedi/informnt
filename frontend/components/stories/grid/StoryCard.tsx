@@ -6,7 +6,7 @@ import {
   getImpactHoverBorder,
   getImpactHoverGradient,
   getImpactHoverText,
-} from "@/utils/stories";
+} from "@/helpers/stories/impact";
 import { Clock01Icon, Earth, TradeUpIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";

@@ -80,47 +80,37 @@ ingestion-service/
 ```
 frontend/
   app/
-    api/
-      articles/
-        route.ts      ← GET /api/articles?cursor&category&sort&search (pagination endpoint)
-      revalidate/
-        route.ts      ← GET /api/revalidate?tag=&secret= (on-demand cache invalidation)
-    analytics/
-        page.tsx        ← Analytics page: hosts all four insight widgets
+    api/              ← Route handlers (articles, revalidate, resolve-article)
+    analytics/        ← Analytics dashboards & insight widgets
+    stories/          ← Story intelligence & cluster views
     page.tsx          ← Home feed (server component, SSR first page)
     layout.tsx        ← Root layout: Navbar + responsive Sidebar + Footer + Suspense shell
-  components/
-    Feed/
-      ArticleFeed.tsx ← Client component: owns article list state + IntersectionObserver
-      ArticleCount.tsx← Client component: reads live count from Zustand store
-      FeedSkeleton.tsx← Skeleton components: ArticleCardSkeleton, FiltersSkeleton, FeedSkeleton
-      Filters.tsx     ← Server component: fetches categories, renders pills + sort + count
-      CategoryFilter.tsx ← Client component: category pill navigation
-      Sort.tsx        ← Client component: sort select (URL-driven)
-    layout/
-      Navbar.tsx      ← Header: logo, SearchBar (Suspense-wrapped), notifications, theme toggle
-      Sidebar.tsx     ← Desktop sidebar (icon-only at md, full labels at lg)
-      NavLinks.tsx    ← Nav links; supports alwaysFull prop for mobile drawer
-      MobileNavDrawer.tsx ← Mobile Sheet drawer (hamburger trigger, closes on navigation)
-      SearchBar.tsx   ← Search: desktop input + mobile tap-to-expand overlay
-    articles/
-      ArticleCard.tsx
-      SentimentBadge.tsx
-    widgets/
-      PerspectiveWidget.tsx
-      EventClustersWidget.tsx
-      BiasDistributionWidget.tsx
-      DiversityInsightWidget.tsx
-  store/
-    index.ts          ← Zustand store: FeedSlice (live) + NotificationSlice/UserSlice (stubs)
-  queries/
-    articles.ts       ← getArticles(): cursor-based pagination, 'use cache', returns { articles, nextCursor }
-    categories.ts     ← getCategories(): 'use cache'
-  types/
-    article.ts        ← Article interface
-
+  components/         ← Pure React UI components (.tsx ONLY; no nested helpers/utils)
+    Feed/             ← ArticleFeed, DailyFeed, Filters, layout shells
+    articles/         ← ArticleCard, ArticleDetailView, SentimentBadge
+    stories/          ← StoryCard, ImpactBadge, StoryHero, PerspectiveWidget
+    chat/             ← FloatingChat, ChatInterface, CitationCard, MessageBubble
+    admin/            ← Health monitoring, worker logs, status badges
+    widgets/          ← Global sidebar & dashboard insight widgets
+  helpers/            ← Centralized domain-specific helpers (Pattern A: helpers/<domain>/)
+    feed/             ← paramsResolver, queryBuilder, grouping
+    chat/             ← citations, toolLogs
+    admin/            ← healthFormatters
+    stories/          ← impact calculations & badges
+    articles/         ← regionBadge
+    analytics/        ← sentiment mappings, query date calculators
+  utils/              ← Generic, domain-agnostic portable utilities
+    formatters.ts     ← formatRelativeTime, formatDuration, compactText, formatCompactNumber
+    colors.ts         ← METADATA_COLORS, DEFAULT_CHART_COLOR
+    regions.ts        ← Geopolitical region & publisher mappings
+  hooks/              ← Custom React & Zustand state hooks (useContextDetailsModal, useChatFlow)
+  queries/            ← Database queries, cache scopes, and data mappers (queries/article/mapper.ts)
+  lib/
+    services/         ← External service clients (serply.ts, search/, extractor.ts)
+    prisma.ts         ← Frontend Prisma client instance
+  types/              ← Shared TypeScript type definitions
 prisma/               ← Shared database schema
-docs/                 ← Phase documentation and architecture notes
+docs/                 ← Architecture ledger, domain guides, and indexes
 ```
 
 ## 🚀 Key Commands

@@ -3,7 +3,8 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { InformationCircleIcon, Clock01Icon } from "@hugeicons/core-free-icons";
 import { formatDistanceToNow } from "date-fns";
 import type { SystemTaskData } from "@/queries/admin/health";
-import { getStatusBadge, formatTaskName } from "./utils";
+import { WorkerStatusBadge } from "./WorkerStatusBadge";
+import { formatTaskName } from "@/helpers/admin/healthFormatters";
 
 interface ActiveWorkersMonitorProps {
   runningTasks: SystemTaskData[];
@@ -38,7 +39,7 @@ export default function ActiveWorkersMonitor({ runningTasks }: ActiveWorkersMoni
                   Started {formatDistanceToNow(new Date(task.startedAt))} ago
                 </p>
               </div>
-              {getStatusBadge(task.status, task.heartbeatAt)}
+              <WorkerStatusBadge status={task.status} heartbeatAt={task.heartbeatAt} />
             </div>
             <div className="flex justify-between items-center text-[10px] border-t border-border/30 pt-3">
               <span className="text-muted-foreground">

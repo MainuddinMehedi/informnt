@@ -4,7 +4,7 @@ import ArticleCard from "@/components/articles/ArticleCard";
 import { PaginationError } from "@/components/Feed/PaginationError";
 import { ArticleFeedLoadingGrid } from "@/components/skeletons/home/ArticleFeedSkeleton";
 import { useInfiniteScroll } from "@/hooks/useInfiniteScroll";
-import { formatGroupingKey, getGroupingKey } from "@/lib/helpers/dateUtils";
+import { formatGroupingKey, getGroupingKey } from "@/helpers/feed/grouping";
 import { useSetArticleCount } from "@/store";
 import { Article } from "@/types/article";
 import { useEffect } from "react";

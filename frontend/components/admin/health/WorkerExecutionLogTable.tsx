@@ -1,7 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { format } from "date-fns";
 import type { SystemTaskData } from "@/queries/admin/health";
-import { getStatusBadge, formatTaskName, formatDuration, formatMetadata } from "./utils";
+import { formatDuration } from "@/utils/formatters";
+import { WorkerStatusBadge } from "./WorkerStatusBadge";
+import { formatMetadata, formatTaskName } from "@/helpers/admin/healthFormatters";
 
 interface WorkerExecutionLogTableProps {
   taskLogs: SystemTaskData[];
@@ -40,7 +42,7 @@ export default function WorkerExecutionLogTable({ taskLogs }: WorkerExecutionLog
                       {formatTaskName(log.taskName)}
                     </td>
                     <td className="px-5 py-3.5">
-                      {getStatusBadge(log.status)}
+                      <WorkerStatusBadge status={log.status} />
                     </td>
                     <td className="px-5 py-3.5 text-muted-foreground">
                       {format(new Date(log.startedAt), "MMM dd, HH:mm")}

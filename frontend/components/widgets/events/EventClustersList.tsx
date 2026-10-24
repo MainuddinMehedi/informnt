@@ -8,7 +8,7 @@ import {
   getImpactHoverGradient,
   getImpactHoverText,
   getImpactTextColor,
-} from "@/utils/stories";
+} from "@/helpers/stories/impact";
 
 interface StoryCluster {
   id: string;

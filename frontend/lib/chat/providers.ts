@@ -9,7 +9,7 @@ export function buildProviderOptions({
   modelProvider: string;
   responseMode: "concise" | "descriptive";
 }) {
-  const openaiOptions: Record<string, unknown> = {};
+  const openaiOptions: Record<string, string | number | boolean | null> = {};
 
   if (modelProvider === "groq") {
     openaiOptions.parallelToolCalls = false;

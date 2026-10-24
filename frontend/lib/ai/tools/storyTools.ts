@@ -17,7 +17,7 @@ const searchStoriesInputSchema = zodSchema(
 
 export const searchStoriesTool = tool({
   description:
-    "Lightweight search of informnt's tracked multi-article Story Clusters. Returns ONLY high-level metadata (slug, title, status, article count, themes). Use this to check if an ongoing or developing story exists. If a deep breakdown is needed, call get_story_details with the story slug.",
+    "Search informnt's tracked multi-article Story Clusters ('Emerging Narratives'). Check this tool first for any general event, crisis, conflict, natural disaster, political situation, or macro news topic (e.g. 'Nepal flood', 'Middle East conflict', 'Taiwan elections') to check if informnt is already tracking an active narrative. Returns high-level metadata (slug, title, status, articleCount, themes). If a matching story cluster is found, call get_story_details to retrieve its full timeline intelligence.",
   inputSchema: searchStoriesInputSchema,
   execute: async ({ query }) => {
     const response = await searchStoryClustersByKeywords(query);
@@ -37,14 +37,17 @@ export const searchStoriesTool = tool({
         count: 0,
         stories: [],
         message:
-          "No tracked story clusters found for this query in informnt's archive.",
+          "No tracked story clusters found for this query in informnt's archive. Proceed to search individual articles with search_articles.",
       };
     }
 
     return {
       success: true,
       count: response.count,
-      stories: response.stories,
+      stories: response.stories.map((s, idx) => ({
+        index: idx + 1,
+        ...s,
+      })),
     };
   },
 });
@@ -59,7 +62,7 @@ const getStoryDetailsInputSchema = zodSchema(
 
 export const getStoryDetailsTool = tool({
   description:
-    "Retrieve full intelligence details for a specific Story Cluster (summary, why it matters, key developments, and top sources). Only call this when the user explicitly asked for this story breakdown or answered 'yes' to hearing more about it.",
+    "Retrieve synthesized intelligence details and key articles for a specific Story Cluster (summary, why it matters, key developments timeline, top sources, and indexed articles). Call this whenever a relevant Story Cluster is identified in search_stories to ground your synthesis.",
   inputSchema: getStoryDetailsInputSchema,
   execute: async ({ slugOrId }) => {
     const response = await getStoryIntelligence(slugOrId);

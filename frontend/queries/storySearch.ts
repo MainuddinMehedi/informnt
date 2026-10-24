@@ -9,10 +9,19 @@ export interface StoryClusterSummary {
   themes: string[];
 }
 
+export interface StoryArticleItem {
+  index: number;
+  title: string;
+  source: string;
+  url: string;
+  published?: string;
+}
+
 export interface StoryClusterDetail {
   slug: string;
   title: string;
   url: string;
+  citationIndex?: number;
   status: string;
   summary: string;
   whyItMatters: string | null;
@@ -22,6 +31,7 @@ export interface StoryClusterDetail {
   lastActivity?: string;
   regions: string[];
   themes: string[];
+  articles: StoryArticleItem[];
 }
 
 const STOP_WORDS = new Set([
@@ -171,6 +181,19 @@ export async function getStoryIntelligence(
         lastActivityAt: true,
         themes: true,
         regions: true,
+        articles: {
+          take: 10,
+          select: {
+            rawArticle: {
+              select: {
+                title: true,
+                source: true,
+                url: true,
+                publishedAt: true,
+              },
+            },
+          },
+        },
       },
     });
 
@@ -187,6 +210,7 @@ export async function getStoryIntelligence(
         slug: story.slug,
         title: story.title,
         url: `/stories/${story.slug}`,
+        citationIndex: 1,
         status: story.status || "DEVELOPING",
         summary: story.summary,
         whyItMatters: story.whyItMatters,
@@ -196,6 +220,14 @@ export async function getStoryIntelligence(
         lastActivity: story.lastActivityAt?.toISOString(),
         regions: story.regions,
         themes: story.themes,
+        articles: story.articles.map((a, idx) => ({
+          index: idx + 2,
+          citationIndex: idx + 2,
+          title: a.rawArticle.title,
+          source: a.rawArticle.source,
+          url: a.rawArticle.url,
+          published: a.rawArticle.publishedAt?.toISOString(),
+        })),
       },
     };
   } catch (error) {

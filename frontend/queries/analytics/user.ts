@@ -1,5 +1,5 @@
 import prisma from "@/lib/prisma";
-import { getStartDate } from "@/utils/analytics";
+import { getStartDate } from "@/helpers/analytics/queries";
 import { cacheLife, cacheTag } from "next/cache";
 
 export interface UserAnalyticsData {

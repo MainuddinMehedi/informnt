@@ -1,83 +1,17 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { SourceAvatarStack } from "@/components/ui/SourceAvatar";
 import { ArrowDown01Icon, ArrowRight01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { getToolName, type UIMessage } from "ai";
-import { useState } from "react";
-
-function getToolInputValue(
-  input: Record<string, unknown> | undefined,
-  key: string,
-) {
-  const value = input?.[key];
-  return typeof value === "string" && value.trim() ? value.trim() : "";
-}
-
-function toolStatusLabel(
-  toolName: string,
-  input?: Record<string, unknown>,
-  state: "running" | "done" = "running",
-): string {
-  switch (toolName) {
-    case "fetch_url": {
-      const url = getToolInputValue(input, "url");
-      const prefix = state === "done" ? "Grounded in" : "Accessing";
-      return url ? `${prefix}: ${url}` : `${prefix} remote content`;
-    }
-    case "web_search": {
-      const query = getToolInputValue(input, "query");
-      const prefix = state === "done" ? "Researched" : "Searching web for";
-      return query ? `${prefix}: "${query}"` : "Performing web search";
-    }
-    case "search_stories": {
-      const query = getToolInputValue(input, "query");
-      const prefix =
-        state === "done"
-          ? "Searched stories for"
-          : "Searching tracked stories for";
-      return query ? `${prefix}: "${query}"` : "Searching tracked stories";
-    }
-    case "get_story_details": {
-      const slug = getToolInputValue(input, "slugOrId");
-      const prefix =
-        state === "done" ? "Loaded story breakdown" : "Loading story details";
-      return slug ? `${prefix}: "${slug}"` : "Loading story intelligence";
-    }
-    case "search_articles": {
-      const query = getToolInputValue(input, "query");
-      const prefix =
-        state === "done"
-          ? "Searched news archive for"
-          : "Searching news archive for";
-      return query ? `${prefix}: "${query}"` : "Searching news archive";
-    }
-    default:
-      return state === "done" ? "Processed research step" : "Analyzing data...";
-  }
-}
-
-function ToolStatusLine({
-  label,
-  isDone = false,
-}: {
-  label: string;
-  isDone?: boolean;
-}) {
-  return (
-    <div className="flex max-w-full items-center gap-2 text-xs text-muted-foreground/60 mb-2">
-      <span
-        className={cn(
-          "w-2 h-2 rounded-full",
-          isDone
-            ? "bg-muted-foreground/50"
-            : "bg-muted-foreground/40 animate-pulse",
-        )}
-      />
-      <span className="min-w-0 truncate">{label}</span>
-    </div>
-  );
-}
+import { useMemo, useState } from "react";
+import { extractToolResources } from "@/helpers/chat/citations";
+import {
+  getToolQuery,
+  toolRunningLabel,
+  getHeaderLabel,
+  isZeroResults,
+} from "@/helpers/chat/toolLogs";
 
 interface CollapsibleToolLogsProps {
   toolParts: UIMessage["parts"];
@@ -90,17 +24,27 @@ export function CollapsibleToolLogs({
 }: CollapsibleToolLogsProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  if (!toolParts || toolParts.length === 0) return null;
-
   // Find the first active tool (streaming or available)
-  const activeTool = toolParts.find((part) => {
+  const activeTool = toolParts?.find((part) => {
     const tp = part as { state: string };
     return tp.state === "input-streaming" || tp.state === "input-available";
   });
 
   const isAnyToolRunning = !!activeTool;
 
-  // If a tool is running and we are not forced to collapse, we show it uncollapsed.
+  // Filter completed tools with output
+  const doneTools = useMemo(
+    () =>
+      toolParts?.filter((part) => {
+        const tp = part as { state: string; output?: Record<string, unknown> };
+        return tp.state === "output-available" && tp.output;
+      }) ?? [],
+    [toolParts],
+  );
+
+  if (!toolParts || toolParts.length === 0) return null;
+
+  // 1. If currently running a tool
   if (isAnyToolRunning && !forceCollapse) {
     const toolName = getToolName(
       activeTool as Parameters<typeof getToolName>[0],
@@ -111,58 +55,75 @@ export function CollapsibleToolLogs({
       rawInput?: Record<string, unknown>;
     };
 
+    const query = getToolQuery(tp.input ?? tp.rawInput);
+
     return (
-      <ToolStatusLine
-        label={toolStatusLabel(toolName, tp.input ?? tp.rawInput)}
-      />
+      <div className="inline-flex items-center gap-2 text-xs text-muted-foreground/70 my-1.5">
+        <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shrink-0" />
+        <span className="font-medium text-foreground/80">
+          {toolRunningLabel(toolName, query)}
+        </span>
+      </div>
     );
   }
 
-  // All tools are done (or error).
-  const doneTools = toolParts.filter((part) => {
-    const tp = part as { state: string; output?: Record<string, unknown> };
-    return tp.state === "output-available" && tp.output;
-  });
-
   if (doneTools.length === 0) return null;
 
+  const headerLabel = getHeaderLabel(doneTools);
+
   return (
-    <div className="mb-4">
+    <div className="my-1.5">
       <button
         type="button"
         onClick={() => setIsExpanded(!isExpanded)}
-        className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors mb-2 font-medium cursor-pointer"
+        className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors font-medium cursor-pointer select-none"
       >
         <HugeiconsIcon
           icon={isExpanded ? ArrowDown01Icon : ArrowRight01Icon}
-          className="w-3.5 h-3.5"
+          className="w-3.5 h-3.5 text-muted-foreground/70"
         />
-        <span>
-          Performed {doneTools.length} research step
-          {doneTools.length === 1 ? "" : "s"}
-        </span>
+        <span>{headerLabel}</span>
       </button>
 
       {isExpanded && (
-        <div className="space-y-2 pl-4 border-l-2 border-border/50 ml-1.5 py-1 mb-4">
+        <div className="border-l border-border/50 pl-3.5 ml-1.5 my-2 space-y-2">
           {doneTools.map((part, index) => {
-            const toolName = getToolName(
-              part as Parameters<typeof getToolName>[0],
-            );
             const tp = part as {
               input?: Record<string, unknown>;
               rawInput?: Record<string, unknown>;
+              output?: Record<string, unknown>;
             };
+            const query =
+              getToolQuery(tp.input ?? tp.rawInput) || "Search query";
+            const stepSources = extractToolResources([part]).map((s) => ({
+              name: s.source || "informnt",
+              url: s.value,
+            }));
+            const isZero = isZeroResults(tp.output);
+
             return (
-              <ToolStatusLine
+              <div
                 key={index}
-                label={toolStatusLabel(
-                  toolName,
-                  tp.input ?? tp.rawInput,
-                  "done",
-                )}
-                isDone
-              />
+                className="flex flex-wrap items-center gap-2 text-xs py-0.5"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/40 shrink-0" />
+                <span className="font-mono text-[11px] text-muted-foreground/90 truncate max-w-[500px]">
+                  {query}
+                </span>
+
+                {stepSources.length > 0 ? (
+                  <SourceAvatarStack
+                    sources={stepSources}
+                    size="sm"
+                    max={4}
+                    className="shrink-0"
+                  />
+                ) : isZero ? (
+                  <span className="shrink-0 px-1.5 py-0.5 rounded text-[10px] font-mono font-medium border bg-amber-500/10 text-amber-500/90 border-amber-500/20">
+                    0 found
+                  </span>
+                ) : null}
+              </div>
             );
           })}
         </div>

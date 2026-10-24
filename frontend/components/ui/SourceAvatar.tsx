@@ -17,6 +17,7 @@ interface SourceAvatarProps {
 interface SourceAvatarStackProps {
   sources: Source[];
   max?: number;
+  size?: "sm" | "md";
   className?: string;
 }
 
@@ -35,7 +36,7 @@ export function SourceAvatar({ name, url, className }: SourceAvatarProps) {
   const domain = getDomain(url);
   
   // Custom mapping for common local sources if needed
-  let faviconUrl = domain ? `https://www.google.com/s2/favicons?sz=64&domain=${domain}` : null;
+  const faviconUrl = domain ? `https://www.google.com/s2/favicons?sz=64&domain=${domain}` : null;
 
   const initials = name
     .split(/\s+/)
@@ -72,36 +73,61 @@ export function SourceAvatar({ name, url, className }: SourceAvatarProps) {
   );
 }
 
-export function SourceAvatarStack({ sources, max = 4, className }: SourceAvatarStackProps) {
+export function SourceAvatarStack({
+  sources,
+  max = 4,
+  size = "md",
+  className,
+}: SourceAvatarStackProps) {
   if (!sources || sources.length === 0) return null;
 
   const uniqueSourcesMap = new Map<string, string>();
-  sources.forEach(s => {
+  sources.forEach((s) => {
     if (s.name && !uniqueSourcesMap.has(s.name)) {
       uniqueSourcesMap.set(s.name, s.url);
     }
   });
 
-  const uniqueSources = Array.from(uniqueSourcesMap.entries()).map(([name, url]) => ({
-    name,
-    url,
-  }));
+  const uniqueSources = Array.from(uniqueSourcesMap.entries()).map(
+    ([name, url]) => ({
+      name,
+      url,
+    }),
+  );
 
   const displayedSources = uniqueSources.slice(0, max);
   const remainingCount = uniqueSources.length - max;
+  const isSm = size === "sm";
 
   return (
-    <div className={cn("flex items-center -space-x-2 overflow-hidden", className)}>
+    <div
+      className={cn(
+        "flex items-center overflow-hidden",
+        isSm ? "-space-x-1.5" : "-space-x-2",
+        className,
+      )}
+    >
       {displayedSources.map((src) => (
         <SourceAvatar
           key={src.name}
           name={src.name}
           url={src.url}
-          className="h-6 w-6 ring-2 ring-background"
+          className={cn(
+            isSm
+              ? "h-4.5 w-4.5 ring-1 ring-background"
+              : "h-6 w-6 ring-2 ring-background",
+          )}
         />
       ))}
       {remainingCount > 0 && (
-        <div className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-muted border border-border text-[9px] font-bold text-muted-foreground ring-2 ring-background select-none shadow-xs">
+        <div
+          className={cn(
+            "inline-flex shrink-0 items-center justify-center rounded-full bg-muted border border-border font-bold text-muted-foreground select-none shadow-xs",
+            isSm
+              ? "h-4.5 w-4.5 text-[8px] ring-1 ring-background"
+              : "h-6 w-6 text-[9px] ring-2 ring-background",
+          )}
+        >
           +{remainingCount}
         </div>
       )}

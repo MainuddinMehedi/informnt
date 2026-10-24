@@ -1,5 +1,5 @@
 import { generateQueryEmbedding } from "@/lib/ai/embeddings";
-import { compactText } from "@/lib/helpers/string";
+import { compactText } from "@/utils/formatters";
 import prisma from "@/lib/prisma";
 import { z } from "zod";
 

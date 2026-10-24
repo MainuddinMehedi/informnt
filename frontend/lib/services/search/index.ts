@@ -1,5 +1,5 @@
 import { webSearch as exaWebSearch } from "@exalabs/ai-sdk";
-import { compactText } from "@/lib/helpers/string";
+import { compactText } from "@/utils/formatters";
 import type { WebSearchResult, WebSearchResponse } from "./types";
 
 export const MAX_SEARCH_RESULTS = 10;
@@ -130,7 +130,8 @@ export async function executeWebSearch(
       if (results.length > 0) {
         return {
           engine: name,
-          results: results.map((r) => ({
+          results: results.map((r, idx) => ({
+            index: idx + 1,
             title: compactText(r.title, 140),
             url: r.url,
             snippet: compactText(r.snippet, MAX_SEARCH_SNIPPET_CHARS),

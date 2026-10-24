@@ -1,4 +1,5 @@
 export interface WebSearchResult {
+  index?: number;
   title: string;
   url: string;
   snippet: string;

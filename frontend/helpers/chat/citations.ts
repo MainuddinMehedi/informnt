@@ -1,4 +1,5 @@
 import { getToolName, isToolUIPart, type UIMessage } from "ai";
+import type { ContextItem } from "@/types/chat";
 
 export type SourceItemType =
   | "source-url"
@@ -6,6 +7,7 @@ export type SourceItemType =
   | "source-unknown";
 
 export type SourceItem = {
+  index?: number;
   label: string;
   value: string;
   type: SourceItemType;
@@ -16,7 +18,49 @@ export type SourceItem = {
   mediaType?: string;
   engine?: string;
   toolName?: string;
+  id?: string;
+  internalUrl?: string;
+  isPlatformItem?: boolean;
+  contextItem?: ContextItem;
 };
+
+export function isPlatformResource(resource: SourceItem): boolean {
+  if (resource.isPlatformItem) return true;
+  if (resource.internalUrl) return true;
+  if (resource.value?.startsWith("/")) return true;
+  return false;
+}
+
+export function getResourceContextItem(
+  resource: SourceItem,
+): ContextItem | null {
+  if (resource.contextItem) return resource.contextItem;
+
+  const urlToCheck = resource.internalUrl || resource.value;
+  if (!urlToCheck) return null;
+
+  if (urlToCheck.startsWith("/stories/")) {
+    const slug = urlToCheck.replace("/stories/", "").split(/[?#]/)[0];
+    return {
+      id: slug,
+      title: resource.label,
+      type: "story",
+      url: urlToCheck,
+    };
+  }
+
+  if (urlToCheck.startsWith("/article/")) {
+    const id = urlToCheck.replace("/article/", "").split(/[?#]/)[0];
+    return {
+      id,
+      title: resource.label,
+      type: "article",
+      url: urlToCheck,
+    };
+  }
+
+  return null;
+}
 
 // ============================================================================
 // Built-in Vercel AI SDK Part Handlers
@@ -105,22 +149,38 @@ function mapArticleSources(output: Record<string, unknown>): SourceItem[] {
   for (const r of results) {
     if (!r || typeof r !== "object") continue;
     const res = r as {
+      id?: string;
       url?: string;
       title?: string;
       snippet?: string;
       source?: string;
       published?: string;
+      publishedAt?: string;
     };
-    if (!res.url) continue;
+    if (!res.url && !res.id) continue;
+
+    const value = res.url || (res.id ? `/article/${res.id}` : "");
+    const internalUrl = res.id ? `/article/${res.id}` : undefined;
 
     items.push({
-      label: res.title || res.url,
-      value: res.url,
+      id: res.id,
+      label: res.title || res.url || "Internal Article",
+      value,
       type: "source-url",
       snippet: res.snippet,
-      published: res.published,
+      published: res.published || res.publishedAt,
       source: res.source,
       toolName: "search_articles",
+      internalUrl,
+      isPlatformItem: true,
+      contextItem: res.id
+        ? {
+            id: res.id,
+            title: res.title || "Article",
+            type: "article",
+            url: res.url,
+          }
+        : undefined,
     });
   }
 
@@ -164,20 +224,67 @@ function mapStoryDetailSources(output: Record<string, unknown>): SourceItem[] {
     title?: string;
     summary?: string;
     url?: string;
+    articles?: Array<{
+      id?: string;
+      title?: string;
+      url?: string;
+      source?: string;
+      published?: string;
+      publishedAt?: string;
+    }>;
   };
   const storyUrl = s.url || (s.slug ? `/stories/${s.slug}` : "");
-  if (!storyUrl) return [];
+  const items: SourceItem[] = [];
 
-  return [
-    {
+  if (storyUrl) {
+    items.push({
+      id: s.slug,
       label: s.title || "Tracked Story",
       value: storyUrl,
       type: "source-url",
       snippet: s.summary,
-      source: "Tracked Story",
+      source: "informnt Story Cluster",
       toolName: "get_story_details",
-    },
-  ];
+      internalUrl: s.slug ? `/stories/${s.slug}` : storyUrl,
+      isPlatformItem: true,
+      contextItem: s.slug
+        ? {
+            id: s.slug,
+            title: s.title || "Story Cluster",
+            type: "story",
+            url: storyUrl,
+          }
+        : undefined,
+    });
+  }
+
+  if (Array.isArray(s.articles)) {
+    for (const art of s.articles) {
+      if (!art || typeof art !== "object" || !art.url) continue;
+      const internalUrl = art.id ? `/article/${art.id}` : undefined;
+      items.push({
+        id: art.id,
+        label: art.title || art.url,
+        value: art.url,
+        type: "source-url",
+        source: art.source,
+        published: art.published || art.publishedAt,
+        toolName: "get_story_details",
+        internalUrl,
+        isPlatformItem: !!art.id,
+        contextItem: art.id
+          ? {
+              id: art.id,
+              title: art.title || "Article",
+              type: "article",
+              url: art.url,
+            }
+          : undefined,
+      });
+    }
+  }
+
+  return items;
 }
 
 // ============================================================================
@@ -255,18 +362,32 @@ export function extractToolResources(parts: UIMessage["parts"]): SourceItem[] {
 }
 
 /**
- * Deduplicates sources by normalized URL.
+ * Deduplicates sources by normalized URL and assigns sequential 1-based indices.
  */
 export function dedupeSources(sources: SourceItem[]): SourceItem[] {
   const seen = new Set<string>();
+  const result: SourceItem[] = [];
 
-  return sources.filter((source) => {
-    if (!source.value) return false;
+  for (const source of sources) {
+    if (!source.value) continue;
     const key = source.value.replace(/\/$/, "");
 
-    if (seen.has(key)) return false;
+    if (seen.has(key)) continue;
     seen.add(key);
+    result.push({
+      ...source,
+      index: result.length + 1,
+    });
+  }
 
-    return true;
-  });
+  return result;
+}
+
+/**
+ * Returns all unique, numbered sources present in a message (from parts and tool outputs).
+ */
+export function getMessageSources(parts: UIMessage["parts"]): SourceItem[] {
+  const partResources = parts.filter(isSourceResourcePart).map(formatResourcePart);
+  const toolResources = extractToolResources(parts);
+  return dedupeSources([...partResources, ...toolResources]);
 }

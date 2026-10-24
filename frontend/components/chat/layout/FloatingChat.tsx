@@ -20,6 +20,7 @@ import {
 import ChatInput from "@/components/chat/input/ChatInput";
 import MessageList from "@/components/chat/messages/MessageList";
 import ContextPickerModal from "@/components/chat/context/ContextPickerModal";
+import { ContextDetailsModal } from "@/components/chat/context/ContextDetailsModal";
 import { MODEL_REGISTRY, getActiveModels } from "@/lib/ai/modelRegistry";
 import { contextFromArticle } from "@/lib/chat/contexts";
 import { useChatContext } from "@/hooks/useChatContext";
@@ -317,6 +318,7 @@ export default function FloatingChat() {
         onAdd={handleAddContexts}
         existingItems={contexts}
       />
+      <ContextDetailsModal />
     </>
   );
 }
