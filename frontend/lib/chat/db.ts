@@ -35,6 +35,19 @@ export async function updateChatSession(
   });
 }
 
+export async function updateChatSessionTitleIfDefault(
+  id: string,
+  newTitle: string,
+) {
+  return await prisma.chatSession.updateMany({
+    where: {
+      id,
+      OR: [{ title: "New Chat" }, { title: "" }],
+    },
+    data: { title: newTitle },
+  });
+}
+
 export async function getChatSessionById(id: string) {
   return await prisma.chatSession.findFirst({
     where: { id, isArchived: false },
@@ -57,20 +70,51 @@ export async function listUserChatSessions(userId: string, take: number = 50) {
       responseMode: true,
       createdAt: true,
       updatedAt: true,
-      contexts: {
-        orderBy: { createdAt: "asc" },
-        select: {
-          id: true,
-          sourceType: true,
-          sourceId: true,
-          title: true,
-          url: true,
-          snapshot: true,
-        },
-      },
       _count: { select: { messages: true } },
     },
   });
+}
+
+export async function assertSessionAccess(
+  sessionId: string,
+  userId: string | null,
+): Promise<{
+  allowed: boolean;
+  reason?: "not_found" | "forbidden";
+  session?: {
+    id: string;
+    userId: string | null;
+    isArchived: boolean;
+    model: string;
+    responseMode: string;
+    title: string;
+    createdAt: Date;
+    updatedAt: Date;
+  };
+}> {
+  const session = await prisma.chatSession.findFirst({
+    where: { id: sessionId, isArchived: false },
+    select: {
+      id: true,
+      userId: true,
+      isArchived: true,
+      model: true,
+      responseMode: true,
+      title: true,
+      createdAt: true,
+      updatedAt: true,
+    },
+  });
+
+  if (!session) {
+    return { allowed: false, reason: "not_found" };
+  }
+
+  if (session.userId !== null && session.userId !== userId) {
+    return { allowed: false, reason: "forbidden", session };
+  }
+
+  return { allowed: true, session };
 }
 
 export async function archiveChatSession(id: string) {
@@ -101,6 +145,15 @@ export async function upsertChatMessage({
   const metadataJson = (
     metadata === undefined || metadata === null ? undefined : metadata
   ) as Prisma.InputJsonValue;
+
+  const existing = await prisma.chatMessage.findUnique({
+    where: { id },
+    select: { sessionId: true },
+  });
+
+  if (existing && existing.sessionId !== sessionId) {
+    throw new Error("Cannot overwrite a message from a different session");
+  }
 
   return await prisma.chatMessage.upsert({
     where: { id },

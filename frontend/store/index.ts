@@ -66,6 +66,7 @@ interface SettingsActions {
     key: K,
     value: SettingsState[K],
   ) => void;
+  setSidebarCollapsed: (collapsed: boolean) => void;
 }
 
 type SettingsSlice = SettingsState & SettingsActions;
@@ -124,6 +125,8 @@ export const useAppStore = create<AppStore>()(
       colorTheme: "maia",
       isSidebarCollapsed: false,
       setSetting: (key, value) => set((state) => ({ ...state, [key]: value })),
+      setSidebarCollapsed: (collapsed) =>
+        set((state) => ({ ...state, isSidebarCollapsed: collapsed })),
     }),
     {
       name: "global-news-aggregator-settings",
@@ -182,7 +185,5 @@ export const useSettings = () => {
 export const useTheme = () => useAppStore((s) => s.theme);
 export const useIsSidebarCollapsed = () =>
   useAppStore((s) => s.isSidebarCollapsed);
-export const useSetSidebarCollapsed = () => {
-  const setSetting = useAppStore((s) => s.setSetting);
-  return (collapsed: boolean) => setSetting("isSidebarCollapsed", collapsed);
-};
+export const useSetSidebarCollapsed = () =>
+  useAppStore((s) => s.setSidebarCollapsed);

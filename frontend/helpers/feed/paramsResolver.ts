@@ -11,7 +11,10 @@ import { getCachedFeedSources } from "@/queries/feedSources";
  * @param userSettings - The user's settings object fetched from the database
  * @returns An object containing all fully resolved filter parameters.
  */
-export async function resolveFeedParams(searchParams: any, userSettings: any) {
+export async function resolveFeedParams(
+  searchParams: Record<string, string | string[] | undefined>,
+  userSettings: any, // eslint-disable-line @typescript-eslint/no-explicit-any
+) {
   let enabledSources: string[] | undefined = undefined;
   let hiddenCategories: string[] | undefined = undefined;
 
@@ -23,28 +26,28 @@ export async function resolveFeedParams(searchParams: any, userSettings: any) {
     const globalSources = await getCachedFeedSources();
 
     const enabledGlobalNames = globalSources
-      .filter((s: any) => !disabledBuiltins.includes(s.url))
-      .map((s: any) => s.name);
+      .filter((s: { url: string; name: string }) => !disabledBuiltins.includes(s.url))
+      .map((s: { url: string; name: string }) => s.name);
 
     enabledSources = [...enabledGlobalNames];
     hiddenCategories = userSettings.hiddenCategories || [];
   }
 
   // 2. Resolve Active Category
-  const defaultCategory = userSettings.feedDefaultCategory;
+  const defaultCategory = userSettings?.feedDefaultCategory;
   const category =
     typeof searchParams.category === "string"
       ? searchParams.category
       : defaultCategory;
 
   // 3. Resolve Sort Order (handling legacy "newest" state)
-  let defaultSort = userSettings.feedDefaultSort;
+  let defaultSort = userSettings?.feedDefaultSort;
   if (defaultSort === "newest") defaultSort = "latest";
   const sort =
     typeof searchParams.sort === "string" ? searchParams.sort : defaultSort;
 
   // 4. Resolve Region
-  const defaultRegion = userSettings.feedDefaultRegion;
+  const defaultRegion = userSettings?.feedDefaultRegion;
   const region =
     typeof searchParams.region === "string"
       ? searchParams.region
@@ -67,7 +70,7 @@ export async function resolveFeedParams(searchParams: any, userSettings: any) {
     typeof searchParams.cursor === "string" ? searchParams.cursor : undefined;
 
   // 6. Resolve Date and Article Mode
-  const mode = userSettings.homePageMode;
+  const mode = userSettings?.homePageMode;
   const feedDate =
     mode === "daily"
       ? typeof searchParams.date === "string"

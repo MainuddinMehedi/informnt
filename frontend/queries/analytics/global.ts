@@ -1,5 +1,5 @@
 import prisma from "@/lib/prisma";
-import { calculateDistribution, getStartDate } from "@/utils/analytics";
+import { calculateDistribution, getStartDate } from "@/helpers/analytics/queries";
 import { DEFAULT_CHART_COLOR, METADATA_COLORS } from "@/utils/colors";
 import { cacheLife, cacheTag } from "next/cache";
 

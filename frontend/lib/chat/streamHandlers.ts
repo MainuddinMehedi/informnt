@@ -1,4 +1,8 @@
-import { updateChatSession, upsertChatMessage } from "@/lib/chat/db";
+import {
+  updateChatSession,
+  updateChatSessionTitleIfDefault,
+  upsertChatMessage,
+} from "@/lib/chat/db";
 import { createSessionTitle, getMessageText } from "@/lib/chat/messages";
 import type { UIMessage } from "ai";
 
@@ -17,7 +21,7 @@ export async function handleStreamFinish({
   responseMode: "concise" | "descriptive";
   latestUserText: string;
 }) {
-  if (isAborted || !activeSessionId) return;
+  if (!activeSessionId) return;
 
   try {
     const assistantText = getMessageText(responseMessage);
@@ -29,12 +33,13 @@ export async function handleStreamFinish({
     );
 
     if (!assistantText && !hasToolCalls && !hasReasoning) {
-      console.warn("Skipping empty assistant response", {
-        sessionId: activeSessionId,
-        model: effectiveModel,
-        parts: responseMessage.parts,
-      });
-
+      if (!isAborted) {
+        console.warn("Skipping empty assistant response", {
+          sessionId: activeSessionId,
+          model: effectiveModel,
+          parts: responseMessage.parts,
+        });
+      }
       return;
     }
 
@@ -61,10 +66,16 @@ export async function handleStreamFinish({
       metadata: responseMessage.metadata,
     });
 
+    if (latestUserText) {
+      await updateChatSessionTitleIfDefault(
+        activeSessionId,
+        createSessionTitle(latestUserText),
+      );
+    }
+
     await updateChatSession(activeSessionId, {
       model: effectiveModel,
       responseMode,
-      title: latestUserText ? createSessionTitle(latestUserText) : undefined,
     });
   } catch (err) {
     console.error("Error in onFinish background task:", err);

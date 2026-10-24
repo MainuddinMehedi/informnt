@@ -3,10 +3,21 @@ import StoryHero from "@/components/stories/grid/StoryHero";
 import { PerspectiveWidget } from "@/components/stories/PerspectiveWidget";
 import { StoryAnalysis } from "@/components/stories/StoryAnalysis";
 import { StoryTimelineSidebar } from "@/components/stories/timeline/StoryTimelineSidebar";
-import { mapProcessedArticleToArticle } from "@/lib/article";
+import {
+  mapProcessedArticleToArticle,
+  ProcessedArticleWithRaw,
+} from "@/queries/article/mapper";
 
 interface StoryDetailViewProps {
-  story: any; // Using any for now, or you can import the specific type if available
+  story: Parameters<typeof StoryHero>[0]["story"] & {
+    articles: ProcessedArticleWithRaw[];
+    keyDevelopments?: Array<{
+      title: string;
+      date: string;
+      description?: string;
+    }>;
+    [key: string]: unknown;
+  };
   sources: Array<{ name: string; url: string }>;
   origins: string[];
   slug: string;
@@ -18,7 +29,6 @@ export function StoryDetailView({
   sources,
   origins,
   slug,
-  isModal,
 }: StoryDetailViewProps) {
   return (
     <div className="w-full space-y-8">

@@ -4,7 +4,7 @@ import BookmarkButton from "@/components/bookmarks/BookmarkButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { getEventRegionBadgeVariant } from "@/utils/analytics";
+import { getEventRegionBadgeVariant } from "@/helpers/articles/regionBadge";
 import AiButton from "./AiButton";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Globe } from "@hugeicons/core-free-icons";

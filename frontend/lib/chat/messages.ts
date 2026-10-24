@@ -1,4 +1,4 @@
-import { isToolUIPart, convertToModelMessages, type UIMessage } from "ai";
+import { convertToModelMessages, isToolUIPart, type UIMessage } from "ai";
 
 export function getMessageText(
   message: Partial<UIMessage> & { content?: string | unknown[] },
@@ -109,7 +109,10 @@ export function estimateRequestSize(
       system: systemPrompt,
       messages: coreMessages.map((msg) => ({
         role: msg.role,
-        content: String(msg.content),
+        content:
+          typeof msg.content === "string"
+            ? msg.content
+            : JSON.stringify(msg.content),
       })),
     }),
     "utf8",
@@ -118,30 +121,61 @@ export function estimateRequestSize(
 
 export async function prepareCoreMessages(
   messages: Array<{
+    id?: string;
     role: string;
     parts?: Array<{ type: string; text?: string }>;
+    metadata?: unknown;
   }>,
   maxTurns: number,
 ) {
-  const coreMessages = await convertToModelMessages(
-    messages.filter((msg) => {
-      const hasToolCalls = msg.parts?.some(
-        (p) => p.type === "tool-invocation" || p.type.startsWith("tool-"),
-      );
+  // 1. Strip fake error messages and empty assistant non-tool turns
+  const cleanMessages = messages.filter((msg) => {
+    if (msg.id?.startsWith("error-")) return false;
+    if (
+      msg.metadata &&
+      typeof msg.metadata === "object" &&
+      (msg.metadata as Record<string, unknown>).error
+    ) {
+      return false;
+    }
 
-      if (
-        msg.role === "assistant" &&
-        !getMessageText(msg as unknown as UIMessage).trim() &&
-        !hasToolCalls
-      ) {
-        return false;
-      }
-      return true;
-    }) as UIMessage[],
+    const hasToolCalls = msg.parts?.some(
+      (p) => p.type === "tool-invocation" || p.type.startsWith("tool-"),
+    );
+
+    if (
+      msg.role === "assistant" &&
+      !getMessageText(msg as unknown as UIMessage).trim() &&
+      !hasToolCalls
+    ) {
+      return false;
+    }
+    return true;
+  });
+
+  // 2. Turn-based windowing: keep only the last maxTurns complete user turns
+  // This preserves tool-call -> tool-result -> assistant-response sequences
+  const userIndices: number[] = [];
+  cleanMessages.forEach((msg, idx) => {
+    if (msg.role === "user") {
+      userIndices.push(idx);
+    }
+  });
+
+  let trimmedMessages = cleanMessages;
+  if (userIndices.length > maxTurns) {
+    const startIndex = userIndices[userIndices.length - maxTurns];
+    trimmedMessages = cleanMessages.slice(startIndex);
+  }
+
+  // 3. Convert to Model Messages
+  const coreMessages = await convertToModelMessages(
+    trimmedMessages as UIMessage[],
   );
 
-  while (coreMessages.length > maxTurns) {
-    coreMessages.splice(0, 1);
+  // 4. Ensure conversation history sent to provider starts with a user message
+  while (coreMessages.length > 0 && coreMessages[0].role !== "user") {
+    coreMessages.shift();
   }
 
   return coreMessages;

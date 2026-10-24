@@ -12,8 +12,15 @@ export function normalizeError(err: unknown): string {
       try {
         const parsed = JSON.parse(errObj.message);
 
-        if (parsed && typeof parsed === "object" && "message" in parsed) {
-          errorMessage = String((parsed as Record<string, unknown>).message);
+        if (parsed && typeof parsed === "object") {
+          const msg =
+            (parsed as Record<string, unknown>).error ??
+            (parsed as Record<string, unknown>).message;
+          if (typeof msg === "string") {
+            errorMessage = msg;
+          } else {
+            errorMessage = errObj.message;
+          }
         } else {
           errorMessage = errObj.message;
         }

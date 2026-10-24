@@ -56,7 +56,7 @@ export function ChatTextarea({
       placeholder="Ask about geopolitical events, trends, or analysis…"
       rows={1}
       className={cn(
-        "w-full bg-transparent resize-none outline-none px-2 text-[13px] sm:text-sm placeholder:text-muted-foreground/70 disabled:opacity-50 scrollbar-sleek leading-relaxed",
+        "w-full bg-transparent resize-none outline-none px-2 text-base sm:text-sm placeholder:text-muted-foreground/70 disabled:opacity-50 scrollbar-sleek leading-relaxed",
         isCompact
           ? "h-11 py-2 sm:h-9 sm:py-1.5 flex-1"
           : "min-h-[48px] max-h-32 py-2",

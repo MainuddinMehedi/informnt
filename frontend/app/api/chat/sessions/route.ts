@@ -31,16 +31,6 @@ export async function GET() {
         createdAt: session.createdAt.toISOString(),
         updatedAt: session.updatedAt.toISOString(),
         messageCount: session._count.messages,
-        contexts: session.contexts.map((context) => ({
-          id: context.sourceId ?? context.id,
-          dbId: context.id,
-          type: context.sourceType,
-          sourceType: context.sourceType,
-          sourceId: context.sourceId,
-          title: context.title,
-          url: context.url ?? undefined,
-          snapshot: context.snapshot,
-        })),
       })),
     });
   } catch (error) {

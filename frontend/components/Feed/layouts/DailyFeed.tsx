@@ -5,8 +5,8 @@ import { PaginationError } from "@/components/Feed/PaginationError";
 import { ArticleFeedLoadingGrid } from "@/components/skeletons/home/ArticleFeedSkeleton";
 import { Button } from "@/components/ui/button";
 import { useInfiniteScroll } from "@/hooks/useInfiniteScroll";
-import { formatGroupingKey } from "@/lib/helpers/dateUtils";
-import { buildFeedQueryParams } from "@/lib/helpers/feedQueryBuilder";
+import { formatGroupingKey } from "@/helpers/feed/grouping";
+import { buildFeedQueryParams } from "@/helpers/feed/queryBuilder";
 import { useSetArticleCount } from "@/store";
 import { Article } from "@/types/article";
 import { useEffect, useState } from "react";
@@ -178,7 +178,7 @@ export default function DailyFeed({
           {!cursor ? (
             <div className="flex flex-col items-center justify-center py-10 bg-muted/30 rounded-2xl border border-border/50">
               <p className="text-muted-foreground font-medium mb-4 text-lg">
-                You've reached the end of{" "}
+                You&apos;ve reached the end of{" "}
                 {formatGroupingKey(activeDate).toLowerCase()}.
               </p>
 

@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Search01Icon,
-  Cancel01Icon,
   File01Icon,
   MessageSquare,
   Sparkles,
@@ -103,6 +102,11 @@ export default function ContextPickerModal({
     return () => clearTimeout(timer);
   }, [isOpen, activeTab, search, stories.length, fetchArticles, fetchStories]);
 
+  const handleClose = useCallback(() => {
+    setSelectedItems([]);
+    onClose();
+  }, [onClose]);
+
   const toggleSelection = (item: ContextItem) => {
     setSelectedItems((prev) => {
       const isSelected = prev.some((i) => i.id === item.id);
@@ -116,15 +120,14 @@ export default function ContextPickerModal({
 
   const handleConfirm = () => {
     onAdd(selectedItems);
-    setSelectedItems([]);
-    onClose();
+    handleClose();
   };
 
   const isAlreadyAdded = (id: string) => existingItems.some((i) => i.id === id);
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[600px] w-[95vw] h-[85vh] sm:h-[80vh] max-h-[850px] p-0 flex flex-col overflow-hidden gap-0 rounded-2xl border-border/60 shadow-2xl">
+    <Dialog open={isOpen} onOpenChange={(open) => !open && handleClose()}>
+      <DialogContent className="sm:max-w-[600px] w-[95vw] h-[85dvh] sm:h-[80vh] max-h-[850px] p-0 flex flex-col overflow-hidden gap-0 rounded-2xl border-border/60 shadow-2xl">
         <DialogHeader className="px-3 sm:px-6 pt-4 sm:pt-6 pb-3 sm:pb-4 border-b border-border/50 shrink-0">
           <DialogTitle className="flex items-center gap-2 sm:gap-2.5 text-base sm:text-lg">
             <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-primary/15 flex items-center justify-center">
@@ -148,7 +151,7 @@ export default function ContextPickerModal({
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search articles, stories, or trends..."
-              className="pl-8 sm:pl-9 h-9 sm:h-11 text-xs sm:text-sm bg-background border-border/60 focus:ring-primary/20 rounded-xl"
+              className="pl-8 sm:pl-9 h-9 sm:h-11 text-base sm:text-sm bg-background border-border/60 focus:ring-primary/20 rounded-xl"
             />
           </div>
 
@@ -263,8 +266,8 @@ export default function ContextPickerModal({
               {stories
                 .filter(
                   (story) =>
-                    story.title.toLowerCase().includes(search.toLowerCase()) ||
-                    story.summary.toLowerCase().includes(search.toLowerCase()),
+                    story.title?.toLowerCase().includes(search.toLowerCase()) ||
+                    story.summary?.toLowerCase().includes(search.toLowerCase()),
                 )
                 .map((story) => {
                   const context: ContextItem = {

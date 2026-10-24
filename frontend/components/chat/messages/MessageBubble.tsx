@@ -1,6 +1,6 @@
 "use client";
 
-import { memo } from "react";
+import { memo, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import {
   Robot01Icon,
@@ -18,23 +18,59 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { MODEL_LABELS } from "@/lib/ai/modelRegistry";
 import { CitationsStrip } from "@/components/chat/messages/CitationsStrip";
+import { CitationBadge } from "@/components/chat/messages/CitationBadge";
 import { CollapsibleToolLogs } from "@/components/chat/messages/CollapsibleToolLogs";
 import {
   normalizeMarkdownText,
   areMessagePartsEqual,
 } from "@/lib/chat/messages";
+import {
+  getMessageSources,
+  type SourceItem,
+} from "@/helpers/chat/citations";
+
+function linkifyCitations(rawText: string): string {
+  // Separate adjacent bracketed groups e.g. [1][2] -> [1] [2]
+  let result = rawText.replace(/\]\s*\[/g, "] [");
+
+  // Convert comma-separated citations e.g. [1, 2, 3] -> [1] [2] [3]
+  result = result.replace(/\[(\d+(?:\s*,\s*\d+)+)\]/g, (_, m: string) =>
+    m
+      .split(",")
+      .map((n) => `[${n.trim()}](#cite-${n.trim()})`)
+      .join(" "),
+  );
+
+  // Convert single bracketed citations: [1] -> [1](#cite-1)
+  result = result.replace(/(?<!!)\[(\d+)\](?!\s*[:\(])/g, "[$1](#cite-$1)");
+
+  // Ensure adjacent markdown citation links have spacing between them
+  result = result.replace(/(#cite-\d+\))\s*(?=\[)/g, "$1 ");
+
+  return result;
+}
 
 const MemoizedMarkdown = memo(
-  ({ text }: { text: string }) => (
+  ({ text, sources = [] }: { text: string; sources?: SourceItem[] }) => (
     <div className="prose dark:prose-invert max-w-none wrap-break-word prose-stream">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
-          a: ({ href, children }) => (
-            <a href={href} target="_blank" rel="noopener noreferrer">
-              {children}
-            </a>
-          ),
+          a: ({ href, children }) => {
+            if (href?.startsWith("#cite-")) {
+              const citeIndex = parseInt(href.replace("#cite-", ""), 10);
+              const source = sources[citeIndex - 1];
+
+              return <CitationBadge index={citeIndex} source={source} />;
+            }
+
+            return (
+              <a href={href} target="_blank" rel="noopener noreferrer">
+                {children}
+              </a>
+            );
+          },
+          img: () => null,
           em: ({ children }) => <em className="text-sm">{children}</em>,
           pre: ({ children }) => (
             <pre className="whitespace-pre-wrap wrap-break-word overflow-x-hidden bg-muted/20 p-3 rounded-lg border border-border/40 my-3">
@@ -55,11 +91,13 @@ const MemoizedMarkdown = memo(
           },
         }}
       >
-        {normalizeMarkdownText(text)}
+        {normalizeMarkdownText(linkifyCitations(text))}
       </ReactMarkdown>
     </div>
   ),
-  (prevProps, nextProps) => prevProps.text === nextProps.text,
+  (prevProps, nextProps) =>
+    prevProps.text === nextProps.text &&
+    prevProps.sources?.length === nextProps.sources?.length,
 );
 MemoizedMarkdown.displayName = "MemoizedMarkdown";
 
@@ -112,6 +150,11 @@ function MessageBubble({
       toolPart.state === "input-available"
     );
   });
+
+  const sources = useMemo(
+    () => (!isUser ? getMessageSources(message.parts ?? []) : []),
+    [isUser, message.parts],
+  );
 
   const showLoadingDots =
     isLastAndLoading &&
@@ -231,7 +274,10 @@ function MessageBubble({
                       // Render markdown even while streaming for a fluid experience
                       return (
                         <div key={`text-${index}`} className="relative">
-                          <MemoizedMarkdown text={part.text} />
+                          <MemoizedMarkdown
+                            text={part.text}
+                            sources={sources}
+                          />
 
                           {isLastAndLoading &&
                             index === textParts.length - 1 && (

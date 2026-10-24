@@ -127,10 +127,10 @@ These documents represent the source of truth for each major platform feature. T
    Session handling via NextAuth.js and Prisma, defining scopes for Public, Authenticated, and Admin users.
 6. **[6. Admin Dashboard](file:///home/mainu/programming/projects/automation/geopolitical-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/4.%20admin-dashboard/0.admin-dashboard.md)**  
    Core administration panel for system health telemetry, ingestion crawler configuration, feed management, user permissions audit, and interactive gazetteer tuning sandbox.
-7. **[7. Chat Interface](file:///home/mainu/programming/projects/automation/geopolitical-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/6.%20chat/0.%20chat-interface.md)**
-8. **[8. Notification System](file:///home/mainu/programming/projects/automation/geopolitical-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/7.%20notification-system/0.%20notification-system.md)**  
-   Intent and design document for the global in-app notification system (broadcast, channels, schedule). Implementation deferred.  
-   Interactive multi-model AI global news analyst chat interface with context RAG grounding, voice-mode integration, and session history management. Uses [embeddings.ts](file:///home/mainu/programming/projects/automation/geopolitical-news-monitor/global-news-aggregator/frontend/lib/ai/embeddings.ts) to embed user search queries and runs the `searchArticlesTool` (in [tools.ts](file:///home/mainu/programming/projects/automation/geopolitical-news-monitor/global-news-aggregator/frontend/lib/ai/tools.ts)) to perform vector similarity lookups on Supabase.
+7. **[7. Chat Interface](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/6.%20chat/0.%20chat-interface.md)**  
+   Interactive multi-model AI global news analyst chat interface with context RAG grounding, voice-mode integration, and session history management. Uses [embeddings.ts](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/frontend/lib/ai/embeddings.ts) to embed user search queries and runs tools (in [tools/](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/frontend/lib/ai/tools/index.ts)) to perform vector similarity lookups on Supabase and live web searches.
+8. **[8. Notification System](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/7.%20notification-system/0.%20notification-system.md)**  
+   Intent and design document for the global in-app notification system (broadcast, channels, schedule). Implementation deferred.
 
 ---
 

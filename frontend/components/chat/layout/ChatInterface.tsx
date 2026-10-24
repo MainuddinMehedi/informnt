@@ -17,6 +17,7 @@
  */
 
 import { ContextDetailsModal } from "@/components/chat/context/ContextDetailsModal";
+import { useContextDetailsModal } from "@/hooks/useContextDetailsModal";
 import ContextPanel from "@/components/chat/context/ContextPanel";
 import ContextPickerModal from "@/components/chat/context/ContextPickerModal";
 import { ContextPills } from "@/components/chat/context/ContextPills";
@@ -30,10 +31,14 @@ import { useChatFlow } from "@/hooks/useChatFlow";
 import { useChatSessions } from "@/hooks/useChatSessions";
 import { getActiveModels, getDefaultModel } from "@/lib/ai/modelRegistry";
 import { useSetLoginModalOpen, useSetSidebarCollapsed } from "@/store";
-import type { ContextItem } from "@/types/chat";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  saveGuestSession,
+  updateGuestSessionMeta,
+  getGuestSessions,
+} from "@/lib/storage/guestChatStorage";
 
 export default function ChatInterface({
   activeSessionId,
@@ -42,7 +47,9 @@ export default function ChatInterface({
 }) {
   const router = useRouter();
   const { status: authStatus } = useSession();
+  const isAuthLoading = authStatus === "loading";
   const isGuest = authStatus === "unauthenticated";
+  const locallyCreatedSessionRef = useRef<string | null>(null);
   const setLoginModalOpen = useSetLoginModalOpen();
   const {
     contexts,
@@ -58,28 +65,37 @@ export default function ChatInterface({
   const [responseMode, setResponseMode] = useState<"concise" | "descriptive">(
     "concise",
   );
-  const [viewingContext, setViewingContext] = useState<ContextItem | null>(
-    null,
-  );
-  const { messages, sendMessage, status, setMessages, stop, handleSend } =
-    useChatFlow({
-      sessionId: activeSessionId,
-      onSessionCreated: (id, newSession) => {
-        router.replace(`/chat?session=${id}`, { scroll: false });
+  const { openContextModal } = useContextDetailsModal();
+  const { messages, status, setMessages, stop, handleSend } = useChatFlow({
+    sessionId: activeSessionId,
+    onSessionCreated: (id, newSession) => {
+      locallyCreatedSessionRef.current = id;
+      router.replace(`/chat?session=${id}`, { scroll: false });
 
-        if (newSession) {
-          setSessions((prev) => {
-            if (prev.some((s) => s.id === id)) return prev;
-            return [{ ...newSession, messageCount: 0 }, ...prev];
+      if (newSession) {
+        if (isGuest) {
+          saveGuestSession({
+            id: newSession.id,
+            title: newSession.title,
+            model: newSession.model,
+            responseMode: newSession.responseMode,
+            createdAt: newSession.createdAt,
+            updatedAt: newSession.updatedAt,
+            messageCount: 0,
           });
-        } else {
-          loadSessions();
         }
-      },
-      contexts,
-      selectedModel,
-      responseMode,
-    });
+        setSessions((prev) => {
+          if (prev.some((s) => s.id === id)) return prev;
+          return [{ ...newSession, messageCount: 0 }, ...prev];
+        });
+      } else {
+        loadSessions();
+      }
+    },
+    contexts,
+    selectedModel,
+    responseMode,
+  });
   const {
     sessions,
     sessionsLoading,
@@ -93,11 +109,24 @@ export default function ChatInterface({
     setContexts,
     setSelectedModel,
     isGuest,
+    isAuthLoading,
     activeSessionId,
+    locallyCreatedSessionRef,
+    stop,
   });
 
   const isLoading = status === "submitted" || status === "streaming";
   const setSidebarCollapsed = useSetSidebarCollapsed();
+
+  // Sync guest session message count and timestamp to localStorage when messages update
+  useEffect(() => {
+    if (!isGuest || !activeSessionId || messages.length === 0 || isLoading) return;
+    updateGuestSessionMeta(activeSessionId, {
+      messageCount: messages.length,
+      updatedAt: new Date().toISOString(),
+    });
+    setSessions(getGuestSessions());
+  }, [isGuest, activeSessionId, messages.length, isLoading, setSessions]);
 
   useEffect(() => {
     setSidebarCollapsed(true);
@@ -114,9 +143,16 @@ export default function ChatInterface({
 
   const handleVoiceAIResponse = useCallback(
     (text: string) => {
-      sendMessage({ role: "assistant", parts: [{ type: "text", text }] });
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: `voice-${Date.now()}`,
+          role: "assistant",
+          parts: [{ type: "text", text }],
+        },
+      ]);
     },
-    [sendMessage],
+    [setMessages],
   );
 
   const handleVoiceClose = useCallback(() => {
@@ -138,7 +174,7 @@ export default function ChatInterface({
           onLoginClick={() => setLoginModalOpen(true)}
         />
 
-        <div className="flex-1 overflow-hidden relative pt-14">
+        <div className="flex-1 overflow-hidden relative pt-12 sm:pt-14">
           {messages.length === 0 ? (
             <WelcomeScreen onNewChat={handleNewChat} onSend={handleSend} />
           ) : (
@@ -173,7 +209,7 @@ export default function ChatInterface({
             <ContextPills
               items={contexts}
               onRemove={removeContext}
-              onViewContext={setViewingContext}
+              onViewContext={openContextModal}
               className="lg:hidden"
             />
           }
@@ -184,7 +220,7 @@ export default function ChatInterface({
         items={contexts}
         onRemove={removeContext}
         onAdd={addContext}
-        onViewContext={setViewingContext}
+        onViewContext={openContextModal}
       />
       <ContextPickerModal
         isOpen={contextPickerOpen}
@@ -192,10 +228,7 @@ export default function ChatInterface({
         onAdd={handleAddContexts}
         existingItems={contexts}
       />
-      <ContextDetailsModal
-        contextItem={viewingContext}
-        onClose={() => setViewingContext(null)}
-      />
+      <ContextDetailsModal />
     </div>
   );
 }

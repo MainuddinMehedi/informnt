@@ -48,7 +48,6 @@ export function contextFromArticle(article: {
       publishedAt: article.publishedAt,
       url: article.url,
       contentSnippet: article.contentSnippet,
-      extractedContent: article.extractedContent,
       eventRegion: article.eventRegion,
       sentimentScore: article.sentimentScore,
       categories: article.categories?.map((c) => c.name),

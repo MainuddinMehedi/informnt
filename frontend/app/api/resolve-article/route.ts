@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { extract } from "@extractus/article-extractor";
 import { marked } from "marked";
-import { searchArticleUrl } from "@/lib/search-article";
+import { searchArticleUrl } from "@/lib/services/serply";
 
 const SOCIAL_SITES = [
   "youtube.com",

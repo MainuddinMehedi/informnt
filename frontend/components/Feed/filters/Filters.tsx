@@ -3,7 +3,7 @@ import ActiveFilters from "@/components/Feed/filters/ActiveFilters";
 import CategoryFilter from "@/components/Feed/filters/CategoryFilter";
 import FilterPopover from "@/components/Feed/filters/FilterPopover";
 import Sort from "@/components/Feed/filters/Sort";
-import { resolveFeedParams } from "@/lib/helpers/feedParamsResolver";
+import { resolveFeedParams } from "@/helpers/feed/paramsResolver";
 import prisma from "@/lib/prisma";
 import { getCachedUserSettings } from "@/queries/userSettings";
 
@@ -15,7 +15,6 @@ export default async function Filters({ searchParams }: FiltersProps) {
   const params = await searchParams;
   const settings = await getCachedUserSettings();
   const {
-    defaultRegion,
     defaultSort,
     defaultCategory,
     category,

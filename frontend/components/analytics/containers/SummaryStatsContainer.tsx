@@ -1,10 +1,8 @@
 import { auth } from "@/auth";
 import { getGlobalAnalyticsData } from "@/queries/analytics/global";
 import { getUserAnalyticsData } from "@/queries/analytics/user";
-import {
-  formatCompactNumber,
-  getSentimentDisplayProps,
-} from "@/utils/analytics";
+import { getSentimentDisplayProps } from "@/helpers/analytics/sentiment";
+import { formatCompactNumber } from "@/utils/formatters";
 import { StatCard } from "../AnalyticsUI";
 
 interface Props {

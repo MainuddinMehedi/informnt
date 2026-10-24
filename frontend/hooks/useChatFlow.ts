@@ -127,7 +127,7 @@ export function useChatFlow({
 
       sendingRef.current = true;
       try {
-        const targetSessionId = await ensureSession(text);
+        const targetSessionId = await ensureSession(text, contexts);
 
         sendMessage(
           { role: "user", parts: [{ type: "text", text }] },
@@ -148,7 +148,14 @@ export function useChatFlow({
         sendingRef.current = false;
       }
     },
-    [contexts, ensureSession, responseMode, selectedModel, sendMessage],
+    [
+      adaptiveThinking,
+      contexts,
+      ensureSession,
+      responseMode,
+      selectedModel,
+      sendMessage,
+    ],
   );
 
   return {

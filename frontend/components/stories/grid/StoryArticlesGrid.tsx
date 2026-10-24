@@ -1,6 +1,9 @@
 import { Badge } from "@/components/ui/badge";
 import ArticleCard from "@/components/articles/ArticleCard";
-import { mapProcessedArticleToArticle, ProcessedArticleWithRaw } from "@/lib/article";
+import {
+  mapProcessedArticleToArticle,
+  ProcessedArticleWithRaw,
+} from "@/queries/article/mapper";
 
 interface StoryArticlesGridProps {
   articles: ProcessedArticleWithRaw[];

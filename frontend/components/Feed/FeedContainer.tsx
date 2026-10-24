@@ -1,7 +1,7 @@
 import FeedError from "@/components/Feed/FeedError";
 import ArticleFeed from "@/components/Feed/layouts/ArticleFeed";
-import { resolveFeedParams } from "@/lib/helpers/feedParamsResolver";
-import { getArticleById, getArticles } from "@/queries/articles";
+import { resolveFeedParams } from "@/helpers/feed/paramsResolver";
+import { getArticles } from "@/queries/articles";
 import { getCachedUserSettings } from "@/queries/userSettings";
 import { Article } from "@/types/article";
 
@@ -24,7 +24,6 @@ export async function FeedContainer({ searchParams }: FeedContainerProps) {
     bias,
     scope,
     feedDate,
-    articleId,
     mode,
     enabledSources,
     hiddenCategories,
@@ -34,33 +33,27 @@ export async function FeedContainer({ searchParams }: FeedContainerProps) {
 
   let articles: Article[] = [];
   let nextCursor = null;
-  let selectedArticle = null;
   let error: string | null = null;
 
   try {
-    // Fetch articles and selected article in parallel
-    const [result, selected] = await Promise.all([
-      getArticles({
-        category,
-        sort,
-        search,
-        region,
-        srcOrigin,
-        type,
-        story,
-        bias,
-        scope,
-        date: feedDate,
-        enabledSources,
-        hiddenCategories,
-        take,
-      }),
-      articleId ? getArticleById(articleId) : Promise.resolve(null),
-    ]);
+    const result = await getArticles({
+      category,
+      sort,
+      search,
+      region,
+      srcOrigin,
+      type,
+      story,
+      bias,
+      scope,
+      date: feedDate,
+      enabledSources,
+      hiddenCategories,
+      take,
+    });
 
     articles = result.articles;
     nextCursor = result.nextCursor;
-    selectedArticle = selected;
   } catch (e) {
     console.error("Home Page Fetch Error:", e);
     error =
