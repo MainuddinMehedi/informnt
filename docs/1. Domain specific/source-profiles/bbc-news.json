@@ -1,0 +1,160 @@
+{
+  "facts": {
+    "identity": {
+      "name": "BBC News",
+      "slug": "bbc-news",
+      "website": "https://www.bbc.com/news",
+      "publisherCountry": "UK",
+      "language": "English",
+      "foundedYear": 1922,
+      "description": "The news division of the UK public broadcaster, providing global reporting, live coverage and analysis in English and many other languages."
+    },
+    "ownership": {
+      "owner": "British Broadcasting Corporation",
+      "parentOrganization": "BBC",
+      "stateFunded": true,
+      "ownershipNotes": "A public-service broadcaster funded primarily by the licence fee and commercial activities, governed by a royal charter. Editorial independence is formally protected but contested in UK political debate."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Public Service",
+    "publisherType": "Broadcaster",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Europe",
+    "subRegion": "United Kingdom"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Global",
+      "United Kingdom",
+      "Europe"
+    ],
+    "secondaryRegions": [
+      "Africa",
+      "Asia-Pacific",
+      "Middle East",
+      "North America",
+      "South America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Breaking news",
+        "International reporting",
+        "Live coverage",
+        "Investigations"
+      ],
+      "moderate": [
+        "Business",
+        "Science",
+        "Health"
+      ],
+      "weak": [
+        "Hyperlocal US news",
+        "Specialist market data",
+        "Niche trade coverage"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Royal charter and editorial guidelines require independence; coverage includes critical reporting on UK governments of different parties.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.8
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC rates Least Biased and Mostly Factual; UK coverage is broad and institutionally centrist, with critics alleging a metropolitan liberal outlook.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is explanatory and range-bound, without a consistent partisan economic programme.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.55
+    },
+    "internationalAlignment": {
+      "value": [
+        "United Kingdom",
+        "Liberal democracies",
+        "NATO"
+      ],
+      "evidence": "Frames security and foreign policy from a UK/European perspective and gives substantial space to NATO and Western alliance positions, alongside global voices.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting Mostly Factual and credibility High; long-established corrections and editorial standards.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.85
+    },
+    "externalRatings": {
+      "mbfc": "Least Biased",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Least Biased; factual reporting Mostly Factual; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Global public-broadcaster voice. Combines fast breaking-news capacity with explanatory reporting, usually framed through UK/European institutional perspectives and liberal-democratic norms.",
+    "knownStrengths": [
+      "Global breaking news",
+      "Video and live reporting",
+      "Investigative documentaries",
+      "Language coverage"
+    ],
+    "knownWeaknesses": [
+      "UK-centric framing",
+      "Institutional caution",
+      "Uneven depth outside headline regions"
+    ]
+  },
+  "selectionRationale": "A high-reliability global baseline with strong breaking-news and explanatory capacity, already proven in the ingestion pipeline.",
+  "feeds": [
+    {
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "category": "World",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:38:15+00:00",
+      "entryCount": 31,
+      "feedTitle": "BBC News",
+      "bozo": false,
+      "validationNote": "31 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Sky News",
+      "CNN",
+      "Reuters"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping treats BBC as Commercial Publisher; the profile records Public Service ownership. Mapping left unchanged for compatibility and flagged for schema review. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-bbc-news-about",
+      "EV-bbc-news-wikipedia",
+      "EV-bbc-news-mbfc",
+      "EV-bbc-news-feed-1"
+    ]
+  }
+}

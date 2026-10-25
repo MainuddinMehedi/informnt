@@ -1,0 +1,156 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Gulf News",
+      "slug": "gulf-news",
+      "website": "https://gulfnews.com",
+      "publisherCountry": "UAE",
+      "language": "English",
+      "foundedYear": 1978,
+      "description": "A Dubai-based English-language daily covering UAE politics, business, regional affairs, lifestyle and international news for a large expatriate readership."
+    },
+    "ownership": {
+      "owner": "Al Nisr Publishing LLC",
+      "parentOrganization": "Al Nisr Group",
+      "stateFunded": false,
+      "ownershipNotes": "Published by Al Nisr Publishing LLC, part of Al Nisr Group, a UAE media and publishing company. The group's ownership and the UAE's media environment create close ties to the state-aligned business establishment."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Mixed",
+    "sourceRegion": "Middle East",
+    "subRegion": "United Arab Emirates"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "United Arab Emirates",
+      "Middle East"
+    ],
+    "secondaryRegions": [
+      "Asia-Pacific",
+      "Global",
+      "Europe"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "UAE politics",
+        "Gulf business",
+        "Regional affairs",
+        "Lifestyle"
+      ],
+      "moderate": [
+        "International news",
+        "Technology",
+        "Travel"
+      ],
+      "weak": [
+        "Investigative depth",
+        "Africa",
+        "Latin America"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Commercial UAE publisher with a professional newsroom, operating within a media environment that strongly discourages criticism of the state and ruling families.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.4
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No MBFC rating; self-assessed as centrist with a pro-UAE, pro-business and state-aligned foreign-policy framing.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.4
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Business and investment coverage strongly favours UAE economic strategy and regional commerce.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.55
+    },
+    "internationalAlignment": {
+      "value": [
+        "United Arab Emirates",
+        "Gulf states",
+        "Market economies"
+      ],
+      "evidence": "UAE and Gulf lens with a strong business, tourism and state-development orientation.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.65
+    },
+    "reliability": {
+      "value": "Medium",
+      "evidence": "Professional newspaper with named reporters, but state-aligned constraints and limited adversarial reporting reduce independent reliability on UAE politics.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.45
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified for Gulf News."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "UAE establishment-aligned English-language coverage, strongest on Gulf business, lifestyle and regional diplomacy.",
+    "knownStrengths": [
+      "UAE business",
+      "Gulf affairs",
+      "Lifestyle",
+      "Expatriate audience"
+    ],
+    "knownWeaknesses": [
+      "State-aligned constraints",
+      "Limited investigative independence",
+      "Gulf-centric"
+    ]
+  },
+  "selectionRationale": "Adds an English-language Gulf national perspective from the UAE, complementing Arab News and Al Jazeera.",
+  "feeds": [
+    {
+      "url": "https://gulfnews.com/stories.rss",
+      "category": "Stories",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T14:44:55+00:00",
+      "entryCount": 29,
+      "feedTitle": "Gulf News - World",
+      "bozo": false,
+      "validationNote": "29 items; valid RSS; gulfnews.com/rss returned 404."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "The National",
+      "Arab News",
+      "Khaleej Times"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page accessible but returned little text. Ownership from Al Nisr references and Wikipedia. Feed validated via stories.rss. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-gulf-news-about",
+      "EV-gulf-news-wikipedia",
+      "EV-gulf-news-feed-1"
+    ]
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Arab News",
+      "slug": "arab-news",
+      "website": "https://www.arabnews.com",
+      "publisherCountry": "Saudi Arabia",
+      "language": "English",
+      "foundedYear": 1975,
+      "description": "Saudi Arabia's English-language daily, covering Saudi and Gulf politics, business and regional affairs for diplomats and executives."
+    },
+    "ownership": {
+      "owner": "Saudi Research and Media Group (SRMG)",
+      "parentOrganization": "SRMG",
+      "stateFunded": false,
+      "ownershipNotes": "Published by Saudi Research and Media Group, a publicly traded Saudi media company with state-linked shareholders and close proximity to official Saudi communications."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Regional",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Middle East",
+    "subRegion": "Gulf"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Saudi Arabia",
+      "Gulf",
+      "Middle East"
+    ],
+    "secondaryRegions": [
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Saudi politics",
+        "Gulf business",
+        "Energy",
+        "Regional diplomacy"
+      ],
+      "moderate": [
+        "Islam",
+        "Culture",
+        "Technology"
+      ],
+      "weak": [
+        "Saudi human-rights criticism",
+        "Independent domestic investigations",
+        "Israel/Palestine balance"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "State-Aligned",
+      "evidence": "Coverage closely tracks Saudi official positions and avoids sustained criticism of the Saudi government; SRMG has state-linked ownership.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.75
+    },
+    "politicalLeaning": {
+      "value": "Centre-Right",
+      "evidence": "MBFC rates Right-Center and Mixed factual reporting; socially conservative and pro-Saudi establishment.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Business coverage aligns with Saudi Vision 2030, energy markets and Gulf investment flows.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "internationalAlignment": {
+      "value": [
+        "Saudi Arabia",
+        "Gulf Cooperation Council",
+        "Vision 2030"
+      ],
+      "evidence": "Frames regional affairs through Saudi state priorities and Gulf cooperation.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.8
+    },
+    "reliability": {
+      "value": "Medium",
+      "evidence": "MBFC rates factual reporting Mixed and credibility Low; useful for official Saudi perspectives but weak as an independent check.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": "Right-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Right-Center; factual reporting Mixed; credibility Low (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Saudi establishment voice. Explains Gulf affairs through official Saudi priorities, Vision 2030 and regional diplomacy, with limited adversarial reporting on the kingdom.",
+    "knownStrengths": [
+      "Saudi official perspective",
+      "Gulf business",
+      "Energy",
+      "Regional diplomacy"
+    ],
+    "knownWeaknesses": [
+      "State-aligned blind spots",
+      "Low MBFC credibility",
+      "Human-rights omissions",
+      "Cloudflare-blocked feed"
+    ]
+  },
+  "selectionRationale": "Provides a Saudi official-perspective source, but its blocked feed and low independent credibility make it a monitoring-only addition.",
+  "feeds": [
+    {
+      "url": "https://www.arabnews.com/rss.xml",
+      "category": "Top news",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T16:38:30+00:00",
+      "entryCount": 50,
+      "feedTitle": "Arab News",
+      "bozo": false,
+      "validationNote": "50 items; valid RSS returning current items with production User-Agent headers."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Right-leaning",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "SRMG"
+    ],
+    "competitors": [
+      "Gulf News",
+      "Al Arabiya English",
+      "Asharq Al-Awsat"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production feed is Cloudflare-blocked. Activation recommendation: monitor only; do not treat as validated. MBFC credibility is Low. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-arab-news-about",
+      "EV-arab-news-wikipedia",
+      "EV-arab-news-mbfc",
+      "EV-arab-news-feed-1"
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Kyodo News",
+      "slug": "kyodo-news",
+      "website": "https://english.kyodonews.net",
+      "publisherCountry": "Japan",
+      "language": "English",
+      "foundedYear": 1945,
+      "description": "Japan's leading nonprofit cooperative news agency, supplying domestic and international news, photos and video to Japanese and global media."
+    },
+    "ownership": {
+      "owner": "Kyodo News cooperative members",
+      "parentOrganization": "Kyodo News",
+      "stateFunded": false,
+      "ownershipNotes": "A nonprofit cooperative owned by Japanese newspapers and broadcasters. Its English service, Japan Wire, distributes Japan and Asia news internationally."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Cooperative",
+    "publisherType": "Wire Service",
+    "editorialStyle": "Straight News",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "East Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Japan",
+      "Asia-Pacific",
+      "Global"
+    ],
+    "secondaryRegions": [
+      "North America",
+      "Europe",
+      "Middle East"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Japan politics",
+        "Japanese economy",
+        "Asia-Pacific news",
+        "Breaking news"
+      ],
+      "moderate": [
+        "Business",
+        "Technology",
+        "Sport"
+      ],
+      "weak": [
+        "Africa",
+        "Latin America",
+        "Long-form opinion"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Cooperative ownership and wire-service standards; straight-news file is source-attributed and nonpartisan.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.6
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC rates Kyodo News Least Biased with High factual reporting; the English wire is fact-focused.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.6
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage reports corporate and policy positions without a consistent ideological programme.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.4
+    },
+    "internationalAlignment": {
+      "value": [
+        "Japan",
+        "Asia-Pacific",
+        "Liberal democracies"
+      ],
+      "evidence": "Japanese national and regional lens with strong coverage of Japan-US and Japan-Asia relations.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; cooperative wire with professional standards.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "externalRatings": {
+      "mbfc": "Least Biased",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Least Biased; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Japanese wire-service coverage. It prioritises confirmed facts from Japan and Asia, with an institutional and regional perspective.",
+    "knownStrengths": [
+      "Japan politics",
+      "Japanese business",
+      "Asia-Pacific breaking news",
+      "Photos and video"
+    ],
+    "knownWeaknesses": [
+      "Limited analysis",
+      "Japan-centric",
+      "Small English feed"
+    ]
+  },
+  "selectionRationale": "Adds a Japanese cooperative wire perspective alongside Nikkei and The Japan Times, improving Asia-Pacific breadth.",
+  "feeds": [
+    {
+      "url": "https://english.kyodonews.net/list/feed/rss4kyodonews-fzone",
+      "category": "Japan Wire",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T03:40:00+00:00",
+      "entryCount": 15,
+      "feedTitle": "Japan Wire by Kyodo News",
+      "bozo": false,
+      "validationNote": "15 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Independent Wire",
+    "biasGroup": "Centrist",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Jiji Press",
+      "Reuters",
+      "AP"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page confirms cooperative structure and English wire mission. Feed validated. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-kyodo-news-about",
+      "EV-kyodo-news-wikipedia",
+      "EV-kyodo-news-mbfc",
+      "EV-kyodo-news-feed-1"
+    ]
+  }
+}

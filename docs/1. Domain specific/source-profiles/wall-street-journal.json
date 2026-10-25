@@ -1,0 +1,157 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Wall Street Journal",
+      "slug": "wall-street-journal",
+      "website": "https://www.wsj.com",
+      "publisherCountry": "USA",
+      "language": "English",
+      "foundedYear": 1889,
+      "description": "An American business and financial newspaper with global news, markets, opinion and investigative reporting."
+    },
+    "ownership": {
+      "owner": "News Corp",
+      "parentOrganization": "Dow Jones & Company",
+      "stateFunded": false,
+      "ownershipNotes": "Published by Dow Jones & Company, a division of News Corp. The Murdoch-family-controlled parent has substantial influence over editorial strategy, especially opinion."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "North America",
+    "subRegion": "United States"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "United States",
+      "Global"
+    ],
+    "secondaryRegions": [
+      "Europe",
+      "Asia-Pacific",
+      "Middle East"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Business",
+        "Markets",
+        "Financial regulation",
+        "US politics"
+      ],
+      "moderate": [
+        "Technology",
+        "International affairs",
+        "Opinion"
+      ],
+      "weak": [
+        "Humanitarian reporting",
+        "Global South social issues",
+        "Local news"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "News and opinion are formally separate; the newsroom has strong reporting standards, while the opinion page is consistently right-of-centre and owner-influenced.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.65
+    },
+    "politicalLeaning": {
+      "value": "Centre-Right",
+      "evidence": "MBFC rates Right-Center and Mostly Factual; news coverage is business-oriented and opinion is pro-market.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Business and opinion coverage consistently favour markets, lower taxes and deregulation, with a strong investor audience.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.8
+    },
+    "internationalAlignment": {
+      "value": [
+        "United States",
+        "Market economies",
+        "Transatlantic alliance"
+      ],
+      "evidence": "Frames policy through US business and market interests, with a generally hawkish view of geopolitical risk.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting Mostly Factual and credibility High; strong newsroom but opinion/selection has a clear pro-market and right-leaning tilt.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.8
+    },
+    "externalRatings": {
+      "mbfc": "Right-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Right-Center; factual reporting Mostly Factual; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Business-establishment voice. Explains global events through markets, regulation, corporate strategy and US foreign-policy interests, with a pro-market editorial page.",
+    "knownStrengths": [
+      "Business and markets",
+      "Financial investigations",
+      "US policy",
+      "Corporate coverage"
+    ],
+    "knownWeaknesses": [
+      "Pro-market framing",
+      "Limited humanitarian lens",
+      "Paywall and stale public feed"
+    ]
+  },
+  "selectionRationale": "Provides a major business/financial perspective and right-of-centre counterweight, though its current public feed is stale.",
+  "feeds": [
+    {
+      "url": "https://feeds.a.dj.com/rss/RSSWorldNews.xml",
+      "category": "World",
+      "feedType": "RSS 2.0",
+      "enabled": false,
+      "validationStatus": "STALE",
+      "httpStatus": 200,
+      "latestObserved": "2025-01-27T13:23:00+00:00",
+      "entryCount": 20,
+      "feedTitle": "WSJ.com: World News",
+      "bozo": false,
+      "validationNote": "Last item January 2025; feed is not suitable for current-news ingestion without replacement."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Right-leaning",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Financial Times",
+      "Bloomberg",
+      "The New York Times"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Current feed is stale by more than 18 months. Activation recommendation: replace or disable until a current official feed is found. Existing mapping retained. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-wall-street-journal-about",
+      "EV-wall-street-journal-wikipedia",
+      "EV-wall-street-journal-mbfc",
+      "EV-wall-street-journal-feed-1"
+    ]
+  }
+}

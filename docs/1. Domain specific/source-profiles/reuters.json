@@ -1,0 +1,145 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Reuters",
+      "slug": "reuters",
+      "website": "https://www.reuters.com",
+      "publisherCountry": "UK",
+      "language": "English",
+      "foundedYear": 1851,
+      "description": "A global news agency supplying breaking news, business and financial data, and multimedia reporting to publishers and professional clients in many languages."
+    },
+    "ownership": {
+      "owner": "Thomson Reuters",
+      "parentOrganization": "Thomson Reuters Corporation",
+      "stateFunded": false,
+      "ownershipNotes": "Reuters News is a division of publicly traded Thomson Reuters. The Reuters Trust Principles commit the agency to independence and freedom from bias, although the parent company also sells data and services to governments and financial firms."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Wire Service",
+    "editorialStyle": "Straight News",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Europe",
+    "subRegion": "United Kingdom"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Global",
+      "United States",
+      "Europe",
+      "Asia-Pacific"
+    ],
+    "secondaryRegions": [
+      "Middle East",
+      "Africa",
+      "South America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Breaking news",
+        "Business and finance",
+        "Politics",
+        "Investigations"
+      ],
+      "moderate": [
+        "Technology",
+        "Climate",
+        "Health"
+      ],
+      "weak": [
+        "Local news",
+        "Sport",
+        "Long-form opinion"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "The Trust Principles and Reuters editorial standards explicitly require independence from ownership and political pressure; wire copy is source-attributed and institutionally cautious.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.65
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC rates Reuters Least Biased with Very High factual reporting; its core news file is deliberately non-partisan, although story selection reflects a global business-news agenda.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.65
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Business coverage is market-literate but not campaign-style; the agency reports corporate and policy positions rather than adopting a single economic programme.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.45
+    },
+    "internationalAlignment": {
+      "value": [
+        "Global",
+        "Liberal democracies",
+        "Market economies"
+      ],
+      "evidence": "Coverage is globally distributed and framed through professional news norms, with a strong Anglo-American and financial-market centre of gravity.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.5
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting Very High and credibility High; Reuters is a foundational wire service with named sourcing and correction processes.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": "Least Biased",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Least Biased; factual reporting Very High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Fast, attributed, market-sensitive wire coverage. Reuters prioritises verifiable facts, official statements and speed, with less interpretive framing than newspapers and a strong business lens.",
+    "knownStrengths": [
+      "Global breaking news",
+      "Financial and commodity news",
+      "Official-source access",
+      "Multimedia verification"
+    ],
+    "knownWeaknesses": [
+      "Limited interpretive depth",
+      "Business-agenda framing",
+      "Opinion and local colour are not core products"
+    ]
+  },
+  "selectionRationale": "A canonical global wire is essential for breadth, speed and cross-checking. Its absence would leave the catalog dependent on secondary publishers for basic event confirmation.",
+  "feeds": [],
+  "systemMapping": {
+    "sourceType": "Independent Wire",
+    "biasGroup": "Centrist",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Associated Press",
+      "Agence France-Presse",
+      "Bloomberg News"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "No verified official public RSS endpoint was found: Reuters Agency and Arc endpoints returned 404, and the legacy feed was unavailable. High portfolio value but no activation recommendation until a licensed or verified feed exists. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-reuters-about",
+      "EV-reuters-wikipedia",
+      "EV-reuters-mbfc",
+      "EV-reuters-feed-discovery"
+    ]
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Guardian",
+      "slug": "the-guardian",
+      "website": "https://www.theguardian.com",
+      "publisherCountry": "UK",
+      "language": "English",
+      "foundedYear": 1821,
+      "description": "A British daily and global digital news organisation known for liberal-progressive journalism, investigations, climate coverage and opinion."
+    },
+    "ownership": {
+      "owner": "Scott Trust Limited",
+      "parentOrganization": "Guardian Media Group",
+      "stateFunded": false,
+      "ownershipNotes": "Owned by the Scott Trust, whose constitution is intended to secure editorial independence and reinvest profits in journalism rather than distribute them to shareholders."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Non-profit",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Europe",
+    "subRegion": "United Kingdom"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "United Kingdom",
+      "Europe",
+      "Global"
+    ],
+    "secondaryRegions": [
+      "Africa",
+      "Asia-Pacific",
+      "Middle East",
+      "North America",
+      "South America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Investigations",
+        "Climate",
+        "Human rights",
+        "Global development"
+      ],
+      "moderate": [
+        "Business",
+        "Technology",
+        "Culture"
+      ],
+      "weak": [
+        "Market data",
+        "Defence trade press",
+        "Local US sports"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Scott Trust structure protects editorial independence; the paper takes explicit editorial positions, especially on social and environmental issues.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.8
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "MBFC rates Left-Center and High factual reporting; editorial and opinion consistently lean progressive, while news reporting is professionally sourced.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.8
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Generally social-democratic and sceptical of concentrated corporate power, but not uniformly state-directed.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "internationalAlignment": {
+      "value": [
+        "United Kingdom",
+        "Liberal internationalism",
+        "Climate action",
+        "Human rights"
+      ],
+      "evidence": "Strong emphasis on climate, human rights and international law; critical of authoritarian governments and sometimes of UK/US policy.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.7
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; long record of corrections, investigations and named sourcing.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.85
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Liberal-progressive global voice. Prioritises climate, human rights, inequality and civil liberties, with strong investigative capacity and a sceptical posture toward concentrated corporate and state power.",
+    "knownStrengths": [
+      "Investigative journalism",
+      "Climate coverage",
+      "Human-rights reporting",
+      "Global opinion"
+    ],
+    "knownWeaknesses": [
+      "Progressive framing",
+      "Limited right-of-centre viewpoints",
+      "Uneven business coverage"
+    ]
+  },
+  "selectionRationale": "Adds a high-quality centre-left perspective with strong climate, investigations and human-rights coverage, balancing right-leaning and state-aligned sources.",
+  "feeds": [
+    {
+      "url": "https://www.theguardian.com/world/rss",
+      "category": "World",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-23T07:57:11+00:00",
+      "entryCount": 45,
+      "feedTitle": "World news | The Guardian",
+      "bozo": false,
+      "validationNote": "45 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Left-leaning",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "BBC News",
+      "The Independent",
+      "Financial Times"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. Scott Trust ownership is a key independence safeguard. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-the-guardian-about",
+      "EV-the-guardian-wikipedia",
+      "EV-the-guardian-mbfc",
+      "EV-the-guardian-feed-1"
+    ]
+  }
+}

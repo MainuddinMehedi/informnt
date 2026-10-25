@@ -1,0 +1,156 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Indian Express",
+      "slug": "indian-express",
+      "website": "https://indianexpress.com",
+      "publisherCountry": "India",
+      "language": "English",
+      "foundedYear": 1932,
+      "description": "A major Indian English-language daily known for political reporting, investigations, opinion and coverage of national and international affairs."
+    },
+    "ownership": {
+      "owner": "Indian Express Limited",
+      "parentOrganization": "Indian Express Limited",
+      "stateFunded": false,
+      "ownershipNotes": "Owned by Indian Express Limited, controlled by the Goenka family after the 1999 split from the southern New Indian Express editions."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "South Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "India",
+      "South Asia"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "Asia-Pacific",
+      "Middle East"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Indian politics",
+        "Investigations",
+        "Policy",
+        "Opinion"
+      ],
+      "moderate": [
+        "Business",
+        "Science",
+        "Culture"
+      ],
+      "weak": [
+        "Markets data",
+        "Local sport",
+        "Africa"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Long record of adversarial reporting on Indian governments and a strong opinion section; family ownership creates commercial pressures but no evidence of direct state control.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.6
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No parsed MBFC rating; self-assessed as centre to centre-right on economic policy with liberal, plural opinion pages.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.45
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Editorial and business coverage generally favour liberalisation, investment and fiscal prudence, with space for heterodox opinion.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "India",
+        "Liberal democracy",
+        "South Asia"
+      ],
+      "evidence": "Strong Indian national lens with growing international coverage and a pro-democracy, civil-liberties orientation.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.5
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Established newspaper of record with named reporters, corrections and investigative track record; no external factual rating parsed.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.65
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No clean MBFC rating parsed for The Indian Express."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Indian national newspaper with a liberal, investigative and opinion-rich mix. It frames world events through Indian strategic interests and domestic political accountability.",
+    "knownStrengths": [
+      "Indian politics",
+      "Investigations",
+      "Policy analysis",
+      "Opinion"
+    ],
+    "knownWeaknesses": [
+      "India-centric",
+      "Variable digital feed quality",
+      "Limited grassroots South Asia coverage"
+    ]
+  },
+  "selectionRationale": "Adds a major Indian national perspective and investigative capacity to complement Scroll and global wires.",
+  "feeds": [
+    {
+      "url": "https://indianexpress.com/feed/",
+      "category": "Main",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:35:41+00:00",
+      "entryCount": 200,
+      "feedTitle": "The Indian Express",
+      "bozo": false,
+      "validationNote": "200 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "The Hindu",
+      "Hindustan Times",
+      "Scroll.in"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page confirms founding and ownership context. Feed returns a large mixed file; duplication with The Hindu and Scroll requires de-duplication review. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-indian-express-about",
+      "EV-indian-express-wikipedia",
+      "EV-indian-express-feed-1"
+    ]
+  }
+}

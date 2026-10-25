@@ -99,11 +99,8 @@ ingestion-service/
 │   ├── formatDuration.js     # millisecond → human-readable duration
 │   ├── hashSnippet.js        # SHA-256 content hashing
 │   ├── normalizeUrl.js       # URL normalization
-│   ├── regionMapping.js      # country → geopolitical region mapping
-│   └── cleanupOldSkippedArticles.js
-│
-└── constants/
-    └── categories.js         # category definitions
+│   ├── extractArticleDate.js # publication date scraper fallback for undated feeds
+│   └── categories.js         # category definitions
 ```
 
 ---
@@ -112,34 +109,37 @@ ingestion-service/
 
 These documents represent the source of truth for each major platform feature. They conform to the standardized outline format and are ordered by logic and data flow.
 
-1. **[1. Ingestion & Enrichment Pipeline](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/1.%20enrichment-pipeline/0.enrichment-pipeline.md)**  
+1. **[1. Ingestion & Enrichment Pipeline](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/1.%20enrichment-pipeline/0.%20enrichment-pipeline.md)**  
    The two-stage parsing flow: Stage 1 local Regex Gazetteer sieve and Stage 2 LLM enrichment (Mistral/Groq).
-2. **[2. Story Clustering](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/2.%20story/0.story-clustering.md)**
+2. **[2. Story Clustering](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/2.%20story/0.%20story-clustering.md)**
    The end-to-end grouping engine that matches geopolitical entities and runs batch LLM categorization to group news articles into stories.
    - **[Clustering Technical Audit](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/2.%20story/clustering-audit.md)**: Reviews algorithm limitations, O(N²) scaling, heuristics, and detail optimization pathways using `pgvector`.
-3. **[3. Locked Topics](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/3.%20locked-topics/0.locked-topics.md)**  
+3. **[3. Locked Topics](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/3.%20locked-topics/0.%20locked-topics.md)**  
    The user-defined custom tracking feature that executes multi-source scans (Google News, Brave, Reddit, web scrapers) and rates findings via AI.
-   - **[Scanner Flow Audit](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/3.%20locked-topics/scanner-flow-audit.md)**: Details the ingestion orchestrator, source configuration, data persistence, and relevance scoring.
-4. **[4. Feed, Pagination, & 3-Axis Filtering](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/5.%20feed-&-metadata-specific/0.feed-filtering.md)**  
+   - **[Scanner Flow Audit](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/archive_dump/scanner-flow-audit.md)**: Details the ingestion orchestrator, source configuration, data persistence, and relevance scoring.
+4. **[4. Feed, Pagination, & 3-Axis Filtering](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/5.%20feed-&-metadata-specific/0.%20feed-filtering.md)**  
    Cursor-based infinite scroll pagination, URL query syncer, responsive layout grid, and the 3-axis filters (Event Region, Source Origin, Source Type).
    - **[Source Curation SOP](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/5.%20feed-%26-metadata-specific/source-curation-sop.md)**: Evidence-graded research methodology for vetting publishers. Defines the 4-level evidence framework, 9-step research checklist, internal taxonomy, and quality gates.
    - **[Source Curation Template](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/5.%20feed-%26-metadata-specific/source-curation-template.json)**: Canonical JSON template for publisher metadata profiles (v2.0 — Facts/Classifications/Assessments). Contains a filled demo for Nikkei Asia.
    - **[Publisher Metadata Field Guide](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/5.%20feed-%26-metadata-specific/publisher-metadata-field-guide.md)**: Study material explaining every metadata field — its definition, purpose, and where it surfaces in the system (UI/AI/Internal). Includes Publisher Profile Page concept and system data flow diagram.
+   - **[Publisher & Feed Catalog (60 Profiles)](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/source-profiles/README.md)**: 60 canonical publisher profiles, live feed validation registry (77 rows), evidence register (215 items), and strategic portfolio analysis.
 5. **[5. Authentication & Role-Based Access Control (RBAC)](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/auth-rbac.md)**  
    Session handling via NextAuth.js and Prisma, defining scopes for Public, Authenticated, and Admin users.
-6. **[6. Admin Dashboard](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/4.%20admin-dashboard/0.admin-dashboard.md)**  
+6. **[6. Admin Dashboard](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/4.%20admin-dashboard/0.%20admin-dashboard.md)**  
    Core administration panel for system health telemetry, ingestion crawler configuration, feed management, user permissions audit, and interactive gazetteer tuning sandbox.
 7. **[7. Chat Interface](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/6.%20chat/0.%20chat-interface.md)**  
    Interactive multi-model AI global news analyst chat interface with context RAG grounding, voice-mode integration, and session history management. Uses [embeddings.ts](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/frontend/lib/ai/embeddings.ts) to embed user search queries and runs tools (in [tools/](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/frontend/lib/ai/tools/index.ts)) to perform vector similarity lookups on Supabase and live web searches.
-8. **[8. Notification System](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/1.%20Domain%20specific/7.%20notification-system/0.%20notification-system.md)**  
-   Intent and design document for the global in-app notification system (broadcast, channels, schedule). Implementation deferred.
+8. **[8. Notification System](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/2.%20my_notes_&_drafts/7.%20notification-system/0.%20notification-system.md)**  
+   Design and baseline implementation documentation for the in-app and webhook notification system (Discord, Telegram, pg-boss queue).
 
 ---
 
 ## 4. Project State & Ops
 
-- **[Project Status and ToDo's](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/PROJECT%20STATUS%20AND%20ToDo's.md)** _(User Authored)_  
-  Tracking board for the project's current conditions, focus points, and remaining issues.
+- **[Project Status, Roadmap and ToDo's](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/2.%20my_notes_&_drafts/PROJECT%20STATUS%20AND%20ToDo's.md)** _(User Authored)_  
+   Tracking board for the project's current conditions, focus points, and remaining issues.
+- **[GitHub Actions Guide](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/archive_dump/GITHUB_ACTIONS_GUIDE.md)**  
+   Historical CI/CD deployment configurations and runner schedules (now consolidated into pg-boss workers).g issues.
 - **[Project Roadmap](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/PROJECT_ROADMAP.md)**  
   A backlog of tasks divided by priority and scope.
 - **[GitHub Actions Guide](file:///home/mainu/programming/projects/automation/global-news-monitor/global-news-aggregator/docs/GITHUB_ACTIONS_GUIDE.md)**  

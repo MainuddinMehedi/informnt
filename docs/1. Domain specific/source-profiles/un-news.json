@@ -1,0 +1,158 @@
+{
+  "facts": {
+    "identity": {
+      "name": "UN News",
+      "slug": "un-news",
+      "website": "https://news.un.org",
+      "publisherCountry": "International",
+      "language": "English",
+      "foundedYear": 1946,
+      "description": "The official news service of the United Nations, publishing multilingual coverage of peace and security, humanitarian affairs, development, human rights and the UN system."
+    },
+    "ownership": {
+      "owner": "United Nations",
+      "parentOrganization": "UN Secretariat, Department of Global Communications",
+      "stateFunded": true,
+      "ownershipNotes": "An intergovernmental communication channel rather than an independent commercial publisher. Editorial output is institutionally tied to the UN Secretariat and its member-state mandate."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Public Service",
+    "publisherType": "Government Agency",
+    "editorialStyle": "Straight News",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Global",
+    "subRegion": "Global"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Global"
+    ],
+    "secondaryRegions": [
+      "Africa",
+      "Asia-Pacific",
+      "Europe",
+      "Middle East",
+      "North America",
+      "South America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Peace and security",
+        "Humanitarian affairs",
+        "UN diplomacy",
+        "Sustainable development"
+      ],
+      "moderate": [
+        "Human rights",
+        "Climate policy",
+        "Global health"
+      ],
+      "weak": [
+        "Markets",
+        "Consumer technology",
+        "Sport"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "State-Aligned",
+      "evidence": "UN News is the Secretariat's official communications channel and frames events within UN mandates, resolutions and member-state positions.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.9
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "Multilateral, consensus-oriented framing rather than partisan domestic politics; positions are negotiated among member states.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.7
+    },
+    "economicPerspective": {
+      "value": "Not applicable",
+      "evidence": "Economic coverage is framed through development, humanitarian and sustainable-development mandates rather than a market or partisan economic programme.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.8
+    },
+    "internationalAlignment": {
+      "value": [
+        "United Nations",
+        "Multilateralism",
+        "International humanitarian law"
+      ],
+      "evidence": "Coverage consistently centres UN mandates, General Assembly and Security Council processes, and humanitarian-law frameworks.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.85
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Official institutional publisher with named spokespeople, documents and correction channels; the main limitation is institutional framing, not fabrication.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.8
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified for UN News. Reliability assessed from the institutional publisher and official documentation."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Multilateral institutional voice. Frames conflicts and crises through UN mandates, humanitarian access, development targets and member-state diplomacy, often emphasising consensus and process over partisan confrontation.",
+    "knownStrengths": [
+      "UN system access",
+      "Humanitarian and refugee reporting",
+      "Peacekeeping and mediation",
+      "Global development policy"
+    ],
+    "knownWeaknesses": [
+      "Institutional self-censorship risk",
+      "Limited investigative independence",
+      "Slow consensus-oriented framing"
+    ]
+  },
+  "selectionRationale": "Provides an authoritative baseline for UN decisions, humanitarian appeals and multilateral diplomacy that commercial wires often cover only episodically.",
+  "feeds": [
+    {
+      "url": "https://news.un.org/feed/subscribe/en/news/region/global/feed/rss.xml",
+      "category": "Global news",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-23T06:00:00+00:00",
+      "entryCount": 30,
+      "feedTitle": "UN News - Global perspective Human stories",
+      "bozo": false,
+      "validationNote": "30 items in validation sample; returns valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Independent Wire",
+    "biasGroup": "Centrist",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Reuters",
+      "AP",
+      "Agence France-Presse"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "About page returned HTTP 406 to the research client; identity and mandate verified through the UN DGC reference entry and feed metadata. Existing production mapping retained. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-un-news-about",
+      "EV-un-news-wikipedia",
+      "EV-un-news-feed-1"
+    ]
+  }
+}

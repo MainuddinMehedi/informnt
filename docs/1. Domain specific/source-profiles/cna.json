@@ -1,0 +1,157 @@
+{
+  "facts": {
+    "identity": {
+      "name": "CNA",
+      "slug": "cna",
+      "website": "https://www.channelnewsasia.com",
+      "publisherCountry": "Singapore",
+      "language": "English",
+      "foundedYear": 1999,
+      "description": "Singapore's international news channel and digital outlet, owned by Mediacorp, covering Asia-Pacific politics, business, society and global affairs."
+    },
+    "ownership": {
+      "owner": "Mediacorp",
+      "parentOrganization": "Mediacorp Pte Ltd",
+      "stateFunded": true,
+      "ownershipNotes": "Owned by Mediacorp, Singapore's state-owned media conglomerate. CNA operates with professional editorial standards but within Singapore's close media-government environment."
+    }
+  },
+  "classifications": {
+    "ownershipType": "State",
+    "publisherType": "Broadcaster",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Regional",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "Southeast Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Singapore",
+      "Southeast Asia",
+      "Asia-Pacific"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "North America",
+      "Europe"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Singapore politics",
+        "Southeast Asia",
+        "Business",
+        "Asia-Pacific affairs"
+      ],
+      "moderate": [
+        "China",
+        "India",
+        "Climate"
+      ],
+      "weak": [
+        "Africa",
+        "Latin America",
+        "Investigative depth"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "State-owned through Mediacorp, but CNA publishes a range of regional voices and critical analysis; structural caution and self-censorship risks remain.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.4
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No MBFC rating parsed; self-assessed as centrist with a pro-establishment, technocratic Singaporean lens.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.4
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Business coverage is regionally focused and generally market-friendly, reflecting Singapore's trade and investment model.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "Singapore",
+        "ASEAN",
+        "Liberal democracies"
+      ],
+      "evidence": "Singapore and ASEAN-centred coverage with a technocratic, pro-trade outlook.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Professional broadcaster with named reporters and corrections; state ownership requires transparency but does not by itself invalidate reporting.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.65
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No clean MBFC rating parsed for CNA."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Singapore-based regional coverage with a technocratic, pro-ASEAN lens. Strong on Southeast Asian business, policy and explainer journalism.",
+    "knownStrengths": [
+      "Southeast Asia",
+      "Singapore policy",
+      "Business",
+      "Explainer journalism"
+    ],
+    "knownWeaknesses": [
+      "State-ownership constraints",
+      "Singapore-centric",
+      "Limited adversarial reporting"
+    ]
+  },
+  "selectionRationale": "Adds a Southeast Asian regional broadcaster with strong explainer and business coverage.",
+  "feeds": [
+    {
+      "url": "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml",
+      "category": "Latest",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:33:54+00:00",
+      "entryCount": 20,
+      "feedTitle": "Latest News",
+      "bozo": false,
+      "validationNote": "20 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "State Media",
+    "biasGroup": "Centrist",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Straits Times",
+      "Nikkei Asia",
+      "Reuters Asia"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page confirms Mediacorp ownership. State ownership and editorial independence are recorded separately; mapping to State Media is for compatibility. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-cna-about",
+      "EV-cna-wikipedia",
+      "EV-cna-feed-1"
+    ]
+  }
+}

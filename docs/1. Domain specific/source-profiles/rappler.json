@@ -1,0 +1,155 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Rappler",
+      "slug": "rappler",
+      "website": "https://www.rappler.com",
+      "publisherCountry": "Philippines",
+      "language": "English",
+      "foundedYear": 2012,
+      "description": "A Filipino digital news organisation known for investigative reporting, data journalism, fact-checking and coverage of politics, justice and society."
+    },
+    "ownership": {
+      "owner": "Rappler Holdings Corp.",
+      "parentOrganization": "Rappler Holdings Corp.",
+      "stateFunded": false,
+      "ownershipNotes": "Rappler Holdings owns 98.77% of the operating company. Major holders include Dolphin Fire (31.21%), Maria Ressa (23.77%), Hatchd (17.86%) and Benjamin So (17.86%). Omidyar Network and North Base Media provided funding through Philippine Depositary Receipts."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Investigative",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "Southeast Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Philippines",
+      "Southeast Asia"
+    ],
+    "secondaryRegions": [
+      "Asia-Pacific",
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Philippine politics",
+        "Investigations",
+        "Fact-checking",
+        "Data journalism"
+      ],
+      "moderate": [
+        "Business",
+        "Rights",
+        "Climate"
+      ],
+      "weak": [
+        "Markets data",
+        "Africa",
+        "Latin America"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Independent digital newsroom with a strong record of holding Philippine governments to account, including during the Duterte administration; legal and funding pressures have been documented.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.65
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "No parsed MBFC rating; self-assessed centre-left based on its rights, accountability and civil-liberties coverage.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.45
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is secondary and accountability-oriented rather than consistently pro-market.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.4
+    },
+    "internationalAlignment": {
+      "value": [
+        "Philippines",
+        "Civil society",
+        "Liberal democracy"
+      ],
+      "evidence": "Philippine national lens with a pro-democracy, human-rights and accountability orientation.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Award-winning investigative newsroom with named reporters, fact-checking and corrections; no external rating parsed.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.65
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No clean MBFC rating parsed for Rappler."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Filipino accountability journalism with a strong investigative and fact-checking orientation, often focused on power, disinformation and impunity.",
+    "knownStrengths": [
+      "Investigations",
+      "Fact-checking",
+      "Philippine politics",
+      "Data journalism"
+    ],
+    "knownWeaknesses": [
+      "Philippines-centric",
+      "Legal pressure",
+      "Limited markets coverage"
+    ]
+  },
+  "selectionRationale": "Adds independent Philippine investigative capacity and a Southeast Asian civil-society perspective.",
+  "feeds": [
+    {
+      "url": "https://www.rappler.com/feed/",
+      "category": "Main",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:20:59+00:00",
+      "entryCount": 10,
+      "feedTitle": "RAPPLER",
+      "bozo": false,
+      "validationNote": "10 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Left-leaning",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Philippine Daily Inquirer",
+      "ABS-CBN News",
+      "Vera Files"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page accessible. Ownership percentages and PDR financing from Wikipedia and Rappler disclosures; PDR status is time-sensitive and requires legal review. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-rappler-about",
+      "EV-rappler-wikipedia",
+      "EV-rappler-feed-1"
+    ]
+  }
+}

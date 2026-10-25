@@ -7,6 +7,7 @@ import hashSnippet from "./utils/hashSnippet.js";
 import formatDuration from "./utils/formatDuration.js";
 import revalidateCache from "./utils/revalidateCache.js";
 import { generateSlug } from "./utils/generateSlug.js";
+import extractArticleDate from "./utils/extractArticleDate.js";
 import { createArticleProcessor } from "./newsPipeline/enrichmentPipeline.js";
 import { startTaskLogging, updateTaskHeartbeat, completeTaskLogging } from "./utils/taskLogger.js";
 import { loadConfigOverrides } from "./ai/aiConfig.js";
@@ -78,6 +79,18 @@ export async function runIngestionPipeline() {
 
         item.url = normUrl;
         item.contentHash = hash;
+
+        // Resolve missing publishedAt (e.g. undated RSS feeds like Nikkei Asia)
+        if (!item.publishedAt) {
+          const extractedDate = await extractArticleDate(item.url);
+          if (extractedDate) {
+            item.publishedAt = extractedDate;
+            console.log(`  🕒 Resolved date for "${item.title}": ${extractedDate.toISOString()}`);
+          } else {
+            console.warn(`  ⚠️ Could not resolve date for "${item.title}". Falling back to current timestamp.`);
+            item.publishedAt = new Date();
+          }
+        }
 
         try {
           const rawArticle = await prisma.rawArticle.create({

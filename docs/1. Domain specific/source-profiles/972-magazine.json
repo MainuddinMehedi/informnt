@@ -1,0 +1,157 @@
+{
+  "facts": {
+    "identity": {
+      "name": "+972 Magazine",
+      "slug": "972-magazine",
+      "website": "https://www.972mag.com",
+      "publisherCountry": "Israel",
+      "language": "English",
+      "foundedYear": 2010,
+      "description": "An independent Israeli online magazine publishing news, analysis and opinion on Israel-Palestine, human rights and regional politics from a left-wing perspective."
+    },
+    "ownership": {
+      "owner": "972 — Advancement of Citizen Journalism",
+      "parentOrganization": "972 — Advancement of Citizen Journalism",
+      "stateFunded": false,
+      "ownershipNotes": "Independent nonprofit funded by readers and grants. Disclosed funders include Heinrich Böll Stiftung Israel, Moriah Fund, Rockefeller Brothers Fund and the Social Justice Fund."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Non-profit",
+    "publisherType": "Magazine",
+    "editorialStyle": "Opinion-heavy",
+    "coverageScope": "Regional",
+    "originality": "Mixed",
+    "sourceRegion": "Middle East",
+    "subRegion": "Israel"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Israel",
+      "Palestine",
+      "Middle East"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "North America",
+      "Europe"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Israel-Palestine",
+        "Human rights",
+        "Occupation",
+        "Civil society"
+      ],
+      "moderate": [
+        "Israeli politics",
+        "International law",
+        "Regional conflict"
+      ],
+      "weak": [
+        "Markets",
+        "Technology",
+        "Africa"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Nonprofit, reader- and grant-funded magazine with an explicit left-wing, human-rights orientation; independent of state or party ownership.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.6
+    },
+    "politicalLeaning": {
+      "value": "Left",
+      "evidence": "No parsed MBFC rating; self-assessed as left based on consistent advocacy for Palestinian rights, ending occupation and civil liberties.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.55
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic questions are secondary and framed through rights, occupation and social justice.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.35
+    },
+    "internationalAlignment": {
+      "value": [
+        "Palestinian rights",
+        "Human rights",
+        "Civil society"
+      ],
+      "evidence": "Openly aligned with Palestinian rights and Israeli human-rights movements, with a critical stance toward Israeli state policy.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.65
+    },
+    "reliability": {
+      "value": "Medium",
+      "evidence": "Established independent magazine with named writers and sourcing, but opinion-heavy and advocacy-oriented; factual claims require cross-checking.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.5
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No clean MBFC rating parsed for +972 Magazine."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Left-wing Israeli analysis and commentary focused on occupation, Palestinian rights and the Israeli human-rights movement.",
+    "knownStrengths": [
+      "Israel-Palestine",
+      "Occupation and international law",
+      "Civil society",
+      "Underreported stories"
+    ],
+    "knownWeaknesses": [
+      "Advocacy framing",
+      "Opinion-heavy",
+      "Limited markets/technology"
+    ]
+  },
+  "selectionRationale": "Adds a critical Israeli civil-society perspective on Palestine that is largely absent from mainstream English-language outlets.",
+  "feeds": [
+    {
+      "url": "https://www.972mag.com/feed/",
+      "category": "Main",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-23T08:42:51+00:00",
+      "entryCount": 10,
+      "feedTitle": "+972 Magazine",
+      "bozo": false,
+      "validationNote": "10 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Left-leaning",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Haaretz",
+      "The Electronic Intifada",
+      "Mondoweiss"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page returned 403. Funding details from disclosed funders and Wikipedia. Opinion-heavy content should be weighted accordingly. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-972-magazine-about",
+      "EV-972-magazine-wikipedia",
+      "EV-972-magazine-feed-1"
+    ]
+  }
+}

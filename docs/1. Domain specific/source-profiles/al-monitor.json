@@ -1,0 +1,156 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Al-Monitor",
+      "slug": "al-monitor",
+      "website": "https://www.al-monitor.com",
+      "publisherCountry": "USA",
+      "language": "English",
+      "foundedYear": 2012,
+      "description": "A Washington-based digital publication providing news and analysis on the Middle East, with country-specific editions and a policy-oriented audience."
+    },
+    "ownership": {
+      "owner": "Al-Monitor LLC",
+      "parentOrganization": "Al-Monitor LLC",
+      "stateFunded": false,
+      "ownershipNotes": "Operated as Al-Monitor LLC. The exact ultimate ownership and investor structure was not independently verified in this review; the publication is editorially independent of any single regional government."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Analysis",
+    "coverageScope": "Regional",
+    "originality": "Mixed",
+    "sourceRegion": "North America",
+    "subRegion": "United States"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Middle East",
+      "United States"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "Europe",
+      "Asia-Pacific"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Middle East diplomacy",
+        "Iran",
+        "Turkey",
+        "Israel-Palestine"
+      ],
+      "moderate": [
+        "Gulf affairs",
+        "Energy",
+        "US foreign policy"
+      ],
+      "weak": [
+        "Africa",
+        "Latin America",
+        "Markets data"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Washington-based regional specialist with bylined analysis and a range of Middle East voices; ownership opacity is a transparency concern.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.4
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No parsed MBFC rating; self-assessed as centrist and policy-analytic, with a Washington foreign-policy vantage point.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.4
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is secondary and framed through sanctions, energy and regional investment.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.35
+    },
+    "internationalAlignment": {
+      "value": [
+        "United States",
+        "Middle East diplomacy",
+        "Regional stability"
+      ],
+      "evidence": "US foreign-policy audience and Washington-based framing, with strong attention to US Middle East policy.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "Medium",
+      "evidence": "Professional regional specialists and named authors, but ownership opacity and analysis-heavy content reduce confidence.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.5
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified for Al-Monitor."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Washington-based Middle East analysis, strongest on Iran, Turkey, Israel and US regional policy.",
+    "knownStrengths": [
+      "Iran",
+      "Turkey",
+      "Middle East diplomacy",
+      "US policy"
+    ],
+    "knownWeaknesses": [
+      "Ownership opacity",
+      "Analysis-heavy",
+      "Limited grassroots reporting"
+    ]
+  },
+  "selectionRationale": "Adds specialist Middle East policy analysis from a Washington vantage point, complementing regional national outlets.",
+  "feeds": [
+    {
+      "url": "https://www.al-monitor.com/rss",
+      "category": "Main",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:46:39+00:00",
+      "entryCount": 20,
+      "feedTitle": "AL-MONITOR: The Pulse of The Middle East",
+      "bozo": false,
+      "validationNote": "20 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Middle East Eye",
+      "Al Jazeera",
+      "Foreign Policy"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Exact parent/owner unresolved; recorded as Al-Monitor LLC. Official About page was not captured. Feed validated. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-al-monitor-about",
+      "EV-al-monitor-wikipedia",
+      "EV-al-monitor-feed-1"
+    ]
+  }
+}

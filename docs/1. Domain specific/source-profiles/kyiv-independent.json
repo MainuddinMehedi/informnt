@@ -1,0 +1,157 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Kyiv Independent",
+      "slug": "kyiv-independent",
+      "website": "https://kyivindependent.com",
+      "publisherCountry": "Ukraine",
+      "language": "English",
+      "foundedYear": 2021,
+      "description": "An English-language Ukrainian news outlet founded by former Kyiv Post journalists, covering Ukraine's war, politics, business and society for an international audience."
+    },
+    "ownership": {
+      "owner": "Kyiv Independent",
+      "parentOrganization": "Kyiv Independent",
+      "stateFunded": false,
+      "ownershipNotes": "No single owner; reader- and membership-funded with philanthropic support. Created in November 2021 by journalists fired from the Kyiv Post after ownership interference."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Non-profit",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Europe",
+    "subRegion": "Ukraine"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Ukraine",
+      "Europe"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "North America",
+      "Middle East"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Ukraine war",
+        "Ukrainian politics",
+        "Security",
+        "Society"
+      ],
+      "moderate": [
+        "Business",
+        "Energy",
+        "Culture"
+      ],
+      "weak": [
+        "Africa",
+        "Latin America",
+        "Markets data"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Founded specifically to preserve editorial independence after ownership interference at the Kyiv Post; funded by readers and grants rather than the state.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.65
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "MBFC rates The Kyiv Independent Left-Center with High factual reporting; coverage is strongly pro-Ukrainian but professionally sourced.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.55
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is secondary and framed through war, reconstruction and energy security.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.35
+    },
+    "internationalAlignment": {
+      "value": [
+        "Ukraine",
+        "European Union",
+        "NATO"
+      ],
+      "evidence": "Clear Ukrainian national and pro-Western alignment, with strong coverage of EU/NATO integration and the war with Russia.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.7
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; independent newsroom with named reporters and corrections.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Ukrainian wartime coverage in English, strongly pro-Ukrainian and pro-Western but with professional sourcing and an independent newsroom.",
+    "knownStrengths": [
+      "Ukraine war",
+      "Ukrainian politics",
+      "Security",
+      "Energy"
+    ],
+    "knownWeaknesses": [
+      "Ukraine-centric",
+      "Wartime framing",
+      "Limited non-Ukraine coverage"
+    ]
+  },
+  "selectionRationale": "Adds essential Ukrainian English-language reporting and a frontline perspective absent from Russian state media and Western wires.",
+  "feeds": [
+    {
+      "url": "https://kyivindependent.com/news-archive/rss/",
+      "category": "News archive",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T09:52:48+00:00",
+      "entryCount": 15,
+      "feedTitle": "The Kyiv Independent",
+      "bozo": false,
+      "validationNote": "15 items; valid RSS; kyivindependent.com/feed/ returned 404."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Left-leaning",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Ukrinform",
+      "Kyiv Post",
+      "Reuters Ukraine"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page confirms founding history and funding model. Feed validated via news-archive endpoint. Legal entity still needs confirmation. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-kyiv-independent-about",
+      "EV-kyiv-independent-wikipedia",
+      "EV-kyiv-independent-mbfc",
+      "EV-kyiv-independent-feed-1"
+    ]
+  }
+}

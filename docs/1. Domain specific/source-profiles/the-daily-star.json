@@ -1,0 +1,154 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Daily Star",
+      "slug": "the-daily-star",
+      "website": "https://www.thedailystar.net",
+      "publisherCountry": "Bangladesh",
+      "language": "English",
+      "foundedYear": 1991,
+      "description": "Bangladesh's largest English-language daily, known for politics, corruption and foreign-policy coverage and a liberal-progressive editorial tradition."
+    },
+    "ownership": {
+      "owner": "Mediaworld Limited",
+      "parentOrganization": "Transcom Group (major shareholder)",
+      "stateFunded": false,
+      "ownershipNotes": "Owned by Mediaworld Limited, in which Transcom Group holds a major share. Editor and publisher Mahfuz Anam has been central to its editorial identity."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "South Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Bangladesh",
+      "South Asia"
+    ],
+    "secondaryRegions": [
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Bangladesh politics",
+        "Corruption",
+        "Foreign policy",
+        "Civil society"
+      ],
+      "moderate": [
+        "Business",
+        "Climate",
+        "Human rights"
+      ],
+      "weak": [
+        "Global markets",
+        "Technology",
+        "Sport beyond cricket"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Long record of critical reporting on Bangladeshi governments and corruption, despite commercial and political pressure.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.75
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "Described as liberal-progressive with a newspaper-of-record role; no MBFC rating identified.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.55
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is developmental and policy-oriented, without a consistent ideological programme.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.45
+    },
+    "internationalAlignment": {
+      "value": [
+        "Bangladesh",
+        "Liberal democracy",
+        "South Asian regionalism"
+      ],
+      "evidence": "Frames national politics through democratic accountability and civil liberties, with a South Asian regional lens.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Widely treated as a Bangladeshi newspaper of record with a strong corrections and opinion culture; no external MBFC rating.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.7
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified. Reliability assessed from institutional reputation and feed sample."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Bangladeshi liberal newspaper-of-record voice. Explains national politics through democratic accountability, corruption and civil society, with a strong English-language bridge to international readers.",
+    "knownStrengths": [
+      "Bangladesh politics",
+      "Corruption reporting",
+      "Foreign policy",
+      "Civil-society voices"
+    ],
+    "knownWeaknesses": [
+      "Domestic political pressure",
+      "Limited resources for global coverage",
+      "Stale public RSS"
+    ]
+  },
+  "selectionRationale": "Essential English-language Bangladesh source with a strong accountability tradition, though its public RSS is currently unusable for live news.",
+  "feeds": [
+    {
+      "url": "https://www.thedailystar.net/frontpage/rss.xml",
+      "category": "Front page",
+      "feedType": "RSS 2.0",
+      "enabled": false,
+      "validationStatus": "STALE",
+      "httpStatus": 200,
+      "latestObserved": "2022-07-22T06:00:00+00:00",
+      "entryCount": 10,
+      "feedTitle": "The Daily Star - Journalism without fear or favour",
+      "bozo": false,
+      "validationNote": "Stale since 2022. The alternate site feed last updated June 2026 with only 8 items and is also unsafe for live ingestion."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Dhaka Tribune",
+      "Prothom Alo",
+      "The Business Standard"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Public feed is stale; activation should be reconsidered until a current official endpoint is found. Ownership verified through Transcom and Wikipedia. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-the-daily-star-about",
+      "EV-the-daily-star-wikipedia",
+      "EV-the-daily-star-feed-1"
+    ]
+  }
+}

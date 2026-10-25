@@ -72,15 +72,6 @@
     "enabled": true
   },
   {
-    "name": "The Wall Street Journal World",
-    "sourceCountry": "USA",
-    "sourceType": "Commercial Publisher",
-    "biasGroup": "Right-leaning",
-    "coverageScope": "Global",
-    "url": "https://feeds.a.dj.com/rss/RSSWorldNews.xml",
-    "enabled": true
-  },
-  {
     "name": "NPR World News",
     "sourceCountry": "USA",
     "sourceType": "Commercial Publisher",
@@ -141,15 +132,6 @@
     "biasGroup": "Centrist",
     "coverageScope": "Regional",
     "url": "https://www.scmp.com/rss/91/feed",
-    "enabled": true
-  },
-  {
-    "name": "The Daily Star",
-    "sourceCountry": "Bangladesh",
-    "sourceType": "Commercial Publisher",
-    "biasGroup": "Centrist",
-    "coverageScope": "National",
-    "url": "https://www.thedailystar.net/frontpage/rss.xml",
     "enabled": true
   },
   {

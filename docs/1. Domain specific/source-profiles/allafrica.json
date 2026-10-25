@@ -1,0 +1,158 @@
+{
+  "facts": {
+    "identity": {
+      "name": "AllAfrica",
+      "slug": "allafrica",
+      "website": "https://allafrica.com",
+      "publisherCountry": "Mauritius",
+      "language": "English",
+      "foundedYear": 1999,
+      "description": "A pan-African news aggregator and distributor that republishes and produces reporting from more than 100 African news organisations."
+    },
+    "ownership": {
+      "owner": "AllAfrica Global Media",
+      "parentOrganization": "AllAfrica Global Media",
+      "stateFunded": false,
+      "ownershipNotes": "AllAfrica Global Media is registered in Mauritius and Delaware and operates from multiple African cities and Washington, DC. It is a commercial aggregator with a pan-African public-interest mission."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Regional",
+    "originality": "Mostly Syndicated",
+    "sourceRegion": "Africa",
+    "subRegion": "Pan-African"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Africa"
+    ],
+    "secondaryRegions": [
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Pan-African aggregation",
+        "African politics",
+        "Development",
+        "Business"
+      ],
+      "moderate": [
+        "Human rights",
+        "Culture",
+        "Health"
+      ],
+      "weak": [
+        "Original investigations",
+        "Non-African news",
+        "Markets data"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Aggregator model with a pan-African editorial mission; framing varies by source publication rather than a single house line.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.55
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC rates Least Biased and High factual reporting; aggregation dilutes a single editorial perspective.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.6
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic content spans source publications with varied perspectives.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.4
+    },
+    "internationalAlignment": {
+      "value": [
+        "Pan-Africanism",
+        "African Union",
+        "Development"
+      ],
+      "evidence": "Curates African-source coverage with a pan-African and development orientation.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High, but reliability varies by underlying source and aggregation adds verification risk.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "externalRatings": {
+      "mbfc": "Least Biased",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Least Biased; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Pan-African aggregation voice. Surfaces African newspaper and agency reporting that global wires miss, with framing that varies by the underlying publisher.",
+    "knownStrengths": [
+      "Pan-African breadth",
+      "Local-source access",
+      "Development news",
+      "Low-cost coverage"
+    ],
+    "knownWeaknesses": [
+      "Aggregation/verification risk",
+      "Limited original reporting",
+      "Variable source quality"
+    ]
+  },
+  "selectionRationale": "Provides broad African-source coverage that no single African outlet can match, with attribution caveats.",
+  "feeds": [
+    {
+      "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+      "category": "Latest headlines",
+      "feedType": "RSS 1.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-23T06:45:53+00:00",
+      "entryCount": 33,
+      "feedTitle": "AllAfrica News: Latest",
+      "bozo": false,
+      "validationNote": "33 items; valid RSS/RDF."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Independent Wire",
+    "biasGroup": "Centrist",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [
+      "More than 100 African news organisations"
+    ],
+    "partnerOrganizations": [
+      "African news organisations"
+    ],
+    "competitors": [
+      "Africa Report",
+      "African Arguments",
+      "Reuters Africa"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. Aggregator status means article-level verification is required before treating a story as independently confirmed. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-allafrica-about",
+      "EV-allafrica-wikipedia",
+      "EV-allafrica-mbfc",
+      "EV-allafrica-feed-1"
+    ]
+  }
+}

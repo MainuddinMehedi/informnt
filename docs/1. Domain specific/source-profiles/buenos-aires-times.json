@@ -1,0 +1,156 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Buenos Aires Times",
+      "slug": "buenos-aires-times",
+      "website": "https://www.batimes.com.ar",
+      "publisherCountry": "Argentina",
+      "language": "English",
+      "foundedYear": 2017,
+      "description": "An English-language Argentine news website covering national politics, business and culture for expatriate and international readers."
+    },
+    "ownership": {
+      "owner": "Grupo Perfil",
+      "parentOrganization": "Editorial Perfil S.A.",
+      "stateFunded": false,
+      "ownershipNotes": "Launched by Editorial Perfil as an English-language successor to the Buenos Aires Herald. Controlled by the Fontevecchia family, a major Argentine media group."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Mixed",
+    "sourceRegion": "South America",
+    "subRegion": "Southern Cone"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Argentina",
+      "South America"
+    ],
+    "secondaryRegions": [
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Argentine politics",
+        "Argentine business",
+        "English-language Argentina",
+        "Culture"
+      ],
+      "moderate": [
+        "South America",
+        "Economy",
+        "Human rights"
+      ],
+      "weak": [
+        "Global breaking news",
+        "Technology",
+        "Asia-Pacific"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Commercial Argentine outlet with bylined reporting and oppositional coverage of governments across the political spectrum.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.55
+    },
+    "politicalLeaning": {
+      "value": "Centre-Right",
+      "evidence": "MBFC rates Right-Center and High factual reporting; Grupo Perfil has a market-liberal editorial orientation.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Coverage generally favours market reforms, fiscal discipline and investment, reflecting Perfil's editorial line.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "internationalAlignment": {
+      "value": [
+        "Argentina",
+        "Western democracies",
+        "Market reform"
+      ],
+      "evidence": "Frames Argentine politics through market reform, democratic institutions and Western alignment.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; established Argentine media group.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": "Right-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Right-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "English-language Argentine market-liberal voice. Explains national politics through economic reform, investment and democratic institutions, with limited regional breadth.",
+    "knownStrengths": [
+      "Argentine politics",
+      "English-language Argentina",
+      "Business",
+      "Culture"
+    ],
+    "knownWeaknesses": [
+      "Single-country focus",
+      "Market-liberal framing",
+      "Limited South America breadth"
+    ]
+  },
+  "selectionRationale": "The only existing English-language Argentine source and a key Latin America gap-filler, though it cannot represent the region alone.",
+  "feeds": [
+    {
+      "url": "https://www.batimes.com.ar/feed",
+      "category": "Top stories",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-24T06:14:55+00:00",
+      "entryCount": 100,
+      "feedTitle": "Buenos Aires Times",
+      "bozo": false,
+      "validationNote": "100 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "Perfil"
+    ],
+    "competitors": [
+      "Buenos Aires Herald",
+      "The Bubble",
+      "Infobae"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. Wikipedia's Buenos Aires Times lookup resolves to Perfil, so ownership was verified via Media Ownership Monitor and the launch essay. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-buenos-aires-times-about",
+      "EV-buenos-aires-times-mbfc",
+      "EV-buenos-aires-times-feed-1"
+    ]
+  }
+}

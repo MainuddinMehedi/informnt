@@ -1,0 +1,157 @@
+{
+  "facts": {
+    "identity": {
+      "name": "ABC News Australia",
+      "slug": "abc-news-australia",
+      "website": "https://www.abc.net.au/news",
+      "publisherCountry": "Australia",
+      "language": "English",
+      "foundedYear": 1932,
+      "description": "The news service of Australia's public broadcaster, covering national, regional and international affairs across radio, television and digital."
+    },
+    "ownership": {
+      "owner": "Australian Broadcasting Corporation",
+      "parentOrganization": "Australian Government",
+      "stateFunded": true,
+      "ownershipNotes": "A statutory public broadcaster funded by the Australian government. Its charter requires independence and balance; funding and board appointments are politically contested."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Public Service",
+    "publisherType": "Broadcaster",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Regional",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "Oceania"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Australia",
+      "Pacific",
+      "Asia-Pacific"
+    ],
+    "secondaryRegions": [
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Australian politics",
+        "Pacific affairs",
+        "Climate",
+        "Rural and regional news"
+      ],
+      "moderate": [
+        "Asia-Pacific",
+        "Business",
+        "Science"
+      ],
+      "weak": [
+        "Global markets",
+        "Niche security trade",
+        "European politics"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Statutory charter and editorial independence requirements; coverage includes criticism of Australian governments.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.7
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "Broad public-service framing, generally centrist with strong climate and social coverage; no clean MBFC rating parsed.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.55
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is explanatory and policy-oriented, without a consistent market or state-directed programme.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.45
+    },
+    "internationalAlignment": {
+      "value": [
+        "Australia",
+        "Pacific",
+        "US-Australia alliance"
+      ],
+      "evidence": "Frames regional affairs through Australian alliance and Pacific-island perspectives.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Established public broadcaster with editorial standards and corrections; no MBFC rating parsed in this review.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC page was not found at the sampled URL; no rating identified. Assessed from charter and feed metadata."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Australian public-broadcaster voice. Strong on Pacific islands, climate and rural Australia, with a regional rather than global-breaking-news focus.",
+    "knownStrengths": [
+      "Pacific affairs",
+      "Australian politics",
+      "Climate",
+      "Regional reporting"
+    ],
+    "knownWeaknesses": [
+      "Australia/Pacific focus",
+      "Institutional caution",
+      "Limited global breaking news"
+    ]
+  },
+  "selectionRationale": "Adds essential Pacific and Australian public-service coverage that UK/US outlets underreport.",
+  "feeds": [
+    {
+      "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+      "category": "World",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:25:04+00:00",
+      "entryCount": 25,
+      "feedTitle": "Just In",
+      "bozo": false,
+      "validationNote": "25 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "State Media",
+    "biasGroup": "Centrist",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "Pacific broadcasters"
+    ],
+    "competitors": [
+      "SBS News",
+      "Nine News",
+      "RNZ"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. Public-service ownership differs from state-controlled media; mapping is a compatibility compromise. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-abc-news-australia-about",
+      "EV-abc-news-australia-wikipedia",
+      "EV-abc-news-australia-feed-1"
+    ]
+  }
+}

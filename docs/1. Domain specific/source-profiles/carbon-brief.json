@@ -1,0 +1,159 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Carbon Brief",
+      "slug": "carbon-brief",
+      "website": "https://www.carbonbrief.org",
+      "publisherCountry": "UK",
+      "language": "English",
+      "foundedYear": 2010,
+      "description": "A UK-based specialist climate publication producing data-driven analysis, explainers, fact-checks and investigations on climate science and policy."
+    },
+    "ownership": {
+      "owner": "Carbon Brief Ltd.",
+      "parentOrganization": "Carbon Brief Ltd.",
+      "stateFunded": false,
+      "ownershipNotes": "Independent nonprofit climate publication funded by philanthropic foundations and grants; publishes funding disclosures. Leo Hickman is director and editor."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Non-profit",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Analysis",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Europe",
+    "subRegion": "United Kingdom"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Global",
+      "Europe",
+      "Asia-Pacific",
+      "North America"
+    ],
+    "secondaryRegions": [
+      "Africa",
+      "South America",
+      "Middle East"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Climate science",
+        "Climate policy",
+        "Energy transition",
+        "Data analysis"
+      ],
+      "moderate": [
+        "Extreme weather",
+        "Carbon markets",
+        "International negotiations"
+      ],
+      "weak": [
+        "General politics",
+        "Markets",
+        "Security"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Nonprofit funding disclosures and a specialist editorial mission; coverage is evidence-heavy and policy-critical across governments.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.6
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "MBFC rates Carbon Brief Left-Center with High factual reporting; its framing accepts mainstream climate science and decarbonisation as a policy goal.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.6
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic analysis is focused on energy transition and policy design rather than a general ideological programme.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.4
+    },
+    "internationalAlignment": {
+      "value": [
+        "Climate action",
+        "Scientific consensus",
+        "European Union"
+      ],
+      "evidence": "Strong alignment with mainstream climate science, the Paris Agreement and decarbonisation policy, with substantial EU and UK coverage.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; Carbon Brief is known for data transparency, methodology notes and corrections.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Specialist, data-led climate journalism. It explains policy and science through charts, scenarios and expert evidence, with an explicit decarbonisation lens.",
+    "knownStrengths": [
+      "Climate science",
+      "Carbon budgets",
+      "Energy policy",
+      "Data visualization"
+    ],
+    "knownWeaknesses": [
+      "Single-issue focus",
+      "Advocacy-adjacent framing",
+      "Limited general news"
+    ]
+  },
+  "selectionRationale": "Provides authoritative climate and energy analysis that complements generalist environmental coverage and supports evidence-based event framing.",
+  "feeds": [
+    {
+      "url": "https://www.carbonbrief.org/feed/",
+      "category": "All",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-23T09:55:26+00:00",
+      "entryCount": 12,
+      "feedTitle": "Carbon Brief",
+      "bozo": false,
+      "validationNote": "12 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Left-leaning",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Mongabay",
+      "Inside Climate News",
+      "Climate Home News"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page confirms specialist climate mission. Nonprofit ownership is recorded but current UI taxonomy lacks a nonprofit option. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-carbon-brief-about",
+      "EV-carbon-brief-wikipedia",
+      "EV-carbon-brief-mbfc",
+      "EV-carbon-brief-feed-1"
+    ]
+  }
+}

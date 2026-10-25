@@ -1,0 +1,159 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Al Jazeera",
+      "slug": "al-jazeera",
+      "website": "https://www.aljazeera.com",
+      "publisherCountry": "Qatar",
+      "language": "English",
+      "foundedYear": 1996,
+      "description": "A Qatari state-funded international news network providing global coverage in English, Arabic and other languages, with particular strength in the Middle East and Global South."
+    },
+    "ownership": {
+      "owner": "Al Jazeera Media Network",
+      "parentOrganization": "State of Qatar",
+      "stateFunded": true,
+      "ownershipNotes": "A statutory private foundation for public benefit, primarily funded by the Qatari government. It claims editorial independence, but its funding and host-state relationship are structural influences."
+    }
+  },
+  "classifications": {
+    "ownershipType": "State",
+    "publisherType": "Broadcaster",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Middle East",
+    "subRegion": "Gulf"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Middle East",
+      "Global South",
+      "Global"
+    ],
+    "secondaryRegions": [
+      "Africa",
+      "Asia-Pacific",
+      "Europe",
+      "North America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Middle East",
+        "Palestine/Israel",
+        "Global South",
+        "Humanitarian crises"
+      ],
+      "moderate": [
+        "Africa",
+        "Asia-Pacific",
+        "Climate"
+      ],
+      "weak": [
+        "Qatar-critical investigations",
+        "Gulf labour rights",
+        "Some regional adversaries"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "State-Aligned",
+      "evidence": "State funding and Qatar's foreign-policy interests shape coverage; Al Jazeera is more critical of Qatar's rivals than of Qatar itself, while still reporting some domestic criticism.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.7
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC rates Left-Center and Mixed factual reporting; editorial stance is not a conventional left-right position but reflects Qatari/Gulf and Global South alignments.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.6
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is globally plural and not consistently pro-market or state-directed.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.45
+    },
+    "internationalAlignment": {
+      "value": [
+        "Qatar",
+        "Global South",
+        "Palestinian rights"
+      ],
+      "evidence": "Strong emphasis on Palestinian rights and Global South perspectives, with clear sensitivity to Qatari foreign-policy interests.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.7
+    },
+    "reliability": {
+      "value": "Medium",
+      "evidence": "MBFC rates factual reporting Mixed and credibility Medium; strong original reporting coexists with state-funding and regional-alignment biases.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting Mixed; credibility Medium (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Qatari state-funded Global South voice. Strong on Palestine, the Middle East and humanitarian crises, with a structural tendency to avoid damaging coverage of Qatar and its allies.",
+    "knownStrengths": [
+      "Middle East reporting",
+      "Palestine/Israel coverage",
+      "Global South bureaus",
+      "Live conflict coverage"
+    ],
+    "knownWeaknesses": [
+      "Qatar-alignment blind spots",
+      "Mixed factual rating",
+      "Regional political sensitivities"
+    ]
+  },
+  "selectionRationale": "Provides essential Middle East and Global South coverage and a non-Western perspective, with explicit state-funding caveats.",
+  "feeds": [
+    {
+      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "category": "All news",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T03:57:40+00:00",
+      "entryCount": 25,
+      "feedTitle": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+      "bozo": false,
+      "validationNote": "25 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "State Media",
+    "biasGroup": "State-Aligned",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "BBC Arabic",
+      "France 24 Arabic",
+      "Middle East Eye"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. The profile distinguishes state funding from direct editorial control. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-al-jazeera-about",
+      "EV-al-jazeera-wikipedia",
+      "EV-al-jazeera-mbfc",
+      "EV-al-jazeera-feed-1"
+    ]
+  }
+}

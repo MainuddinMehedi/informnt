@@ -1,0 +1,155 @@
+{
+  "facts": {
+    "identity": {
+      "name": "VnExpress",
+      "slug": "vnexpress",
+      "website": "https://e.vnexpress.net",
+      "publisherCountry": "Vietnam",
+      "language": "English",
+      "foundedYear": 2001,
+      "description": "Vietnam's leading online newspaper, publishing Vietnamese and English coverage of national politics, business, society and international affairs."
+    },
+    "ownership": {
+      "owner": "FPT Online",
+      "parentOrganization": "FPT Group",
+      "stateFunded": false,
+      "ownershipNotes": "Operated by FPT Online, a subsidiary of technology conglomerate FPT Group. Although commercially owned, Vietnamese media operate under party-state oversight and licensing."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "Southeast Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "secondaryRegions": [
+      "Asia-Pacific",
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Vietnamese politics",
+        "Business",
+        "Technology",
+        "Society"
+      ],
+      "moderate": [
+        "International affairs",
+        "Travel",
+        "Culture"
+      ],
+      "weak": [
+        "Investigative independence",
+        "Africa",
+        "Latin America"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "State-Aligned",
+      "evidence": "Commercial ownership sits within Vietnam's one-party media system; coverage generally follows official policy boundaries and avoids systemic criticism.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.55
+    },
+    "politicalLeaning": {
+      "value": "State-Aligned",
+      "evidence": "No independent rating; the outlet operates under party-state media guidance, so its political framing is treated as state-aligned.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.5
+    },
+    "economicPerspective": {
+      "value": "State-directed",
+      "evidence": "Economic coverage emphasises national development and official policy priorities within a socialist-market framework.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "Vietnam",
+        "ASEAN",
+        "State socialism"
+      ],
+      "evidence": "Vietnamese national lens aligned with party-state foreign and development policy.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "Medium",
+      "evidence": "Professional online newsroom with broad reporting, but structural constraints limit adversarial verification of state claims.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.45
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified for VnExpress."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Vietnamese national coverage with a development and official-policy lens, useful for understanding the country's business and social agenda.",
+    "knownStrengths": [
+      "Vietnam business",
+      "Technology",
+      "Society",
+      "Travel"
+    ],
+    "knownWeaknesses": [
+      "State-aligned framing",
+      "Limited investigative freedom",
+      "Vietnam-centric"
+    ]
+  },
+  "selectionRationale": "Adds Vietnamese national coverage from the country's leading online outlet, balancing regional English-language sources.",
+  "feeds": [
+    {
+      "url": "https://e.vnexpress.net/rss/news.rss",
+      "category": "English news",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T02:58:25+00:00",
+      "entryCount": 60,
+      "feedTitle": "VnExpress English",
+      "bozo": false,
+      "validationNote": "60 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "State-Aligned",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Tuoi Tre News",
+      "Vietnam News",
+      "CNA"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page returned 406. Ownership from FPT and Wikipedia. State-aligned assessment reflects Vietnam's media system, not direct state ownership. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-vnexpress-about",
+      "EV-vnexpress-wikipedia",
+      "EV-vnexpress-feed-1"
+    ]
+  }
+}

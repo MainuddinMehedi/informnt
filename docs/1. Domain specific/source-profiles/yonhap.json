@@ -1,0 +1,158 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Yonhap News Agency",
+      "slug": "yonhap",
+      "website": "https://en.yna.co.kr",
+      "publisherCountry": "South Korea",
+      "language": "English",
+      "foundedYear": 1980,
+      "description": "South Korea's major national news agency, supplying domestic and international news to Korean and overseas media."
+    },
+    "ownership": {
+      "owner": "Yonhap News Agency",
+      "parentOrganization": "Member news organisations",
+      "stateFunded": false,
+      "ownershipNotes": "A cooperative news agency owned by South Korean newspapers and broadcasters, with a public-service role in national news distribution. It is not a government agency."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Cooperative",
+    "publisherType": "Wire Service",
+    "editorialStyle": "Straight News",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "East Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "South Korea",
+      "East Asia"
+    ],
+    "secondaryRegions": [
+      "Asia-Pacific",
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Korean politics",
+        "Korean business",
+        "Inter-Korean relations",
+        "Breaking news"
+      ],
+      "moderate": [
+        "Technology",
+        "Culture",
+        "International affairs"
+      ],
+      "weak": [
+        "Global South",
+        "Investigative depth",
+        "Markets analysis"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Cooperative structure and wire-service mandate; coverage is generally factual and institution-focused.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.65
+    },
+    "politicalLeaning": {
+      "value": "Centre-Right",
+      "evidence": "MBFC rates Right-Center and Mostly Factual; South Korean establishment sources and security framing.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.65
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Business coverage follows South Korea's export-corporate model and market framing.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.6
+    },
+    "internationalAlignment": {
+      "value": [
+        "South Korea",
+        "US-South Korea alliance",
+        "Liberal democracies"
+      ],
+      "evidence": "Frames North Korea and regional security through the South Korean alliance perspective.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.65
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting Mostly Factual and credibility High; national wire with broad sourcing.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": "Right-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Right-Center; factual reporting Mostly Factual; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "South Korean national-wire voice. Provides fast, factual coverage of Korean politics, business and North Korea, framed through Seoul's alliance and security perspective.",
+    "knownStrengths": [
+      "Korean breaking news",
+      "Inter-Korean relations",
+      "Korean corporations",
+      "National wire breadth"
+    ],
+    "knownWeaknesses": [
+      "Wire-style brevity",
+      "Establishment sourcing",
+      "Limited investigative depth"
+    ]
+  },
+  "selectionRationale": "Provides essential Korean-language-origin news in English and fast national wire coverage, already active.",
+  "feeds": [
+    {
+      "url": "https://en.yna.co.kr/RSS/news.xml",
+      "category": "Top news",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:30:45+00:00",
+      "entryCount": 101,
+      "feedTitle": "Yonhap News Agency | All News",
+      "bozo": false,
+      "validationNote": "101 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Independent Wire",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "Korean member newspapers and broadcasters"
+    ],
+    "competitors": [
+      "Korea Herald",
+      "KBS",
+      "MBC"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. Cooperative ownership distinguishes Yonhap from state media. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-yonhap-about",
+      "EV-yonhap-wikipedia",
+      "EV-yonhap-mbfc",
+      "EV-yonhap-feed-1"
+    ]
+  }
+}

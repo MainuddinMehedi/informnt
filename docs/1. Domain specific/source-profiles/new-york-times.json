@@ -1,0 +1,159 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The New York Times",
+      "slug": "new-york-times",
+      "website": "https://www.nytimes.com",
+      "publisherCountry": "USA",
+      "language": "English",
+      "foundedYear": 1851,
+      "description": "An American newspaper of record with global reporting, investigations, opinion and a large digital subscription business."
+    },
+    "ownership": {
+      "owner": "The New York Times Company",
+      "parentOrganization": "The New York Times Company",
+      "stateFunded": false,
+      "ownershipNotes": "Publicly traded company controlled through a dual-class share structure by the Ochs-Sulzberger family, which has chaired the company since 1896."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "North America",
+    "subRegion": "United States"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "United States",
+      "Global"
+    ],
+    "secondaryRegions": [
+      "Europe",
+      "Middle East",
+      "Asia-Pacific",
+      "Africa",
+      "South America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Investigations",
+        "US politics",
+        "International reporting",
+        "Data journalism"
+      ],
+      "moderate": [
+        "Business",
+        "Science",
+        "Culture"
+      ],
+      "weak": [
+        "Fast market data",
+        "Local news outside New York",
+        "Niche trade coverage"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Separate news and opinion operations with published standards; editorially independent of government, though owned by a controlling family.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.8
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "MBFC rates Left-Center and High factual reporting; news reporting is professionally sourced while opinion and selection lean progressive.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.8
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage ranges from market-friendly to social-democratic; no single owner-directed economic line.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.55
+    },
+    "internationalAlignment": {
+      "value": [
+        "United States",
+        "Liberal internationalism",
+        "Transatlantic alliance"
+      ],
+      "evidence": "Frames global events through a US/liberal-internationalist lens, with substantial critical reporting on US policy.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; long-established corrections, investigations and named sourcing.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.9
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "US newspaper-of-record voice. Sets agenda through investigative and explanatory reporting, generally within a liberal-internationalist framework, with strong domestic-politics and culture coverage.",
+    "knownStrengths": [
+      "Investigative reporting",
+      "US politics",
+      "International bureaus",
+      "Data and visual journalism"
+    ],
+    "knownWeaknesses": [
+      "US-centric framing",
+      "Progressive opinion page",
+      "Paywall limits full-text access"
+    ]
+  },
+  "selectionRationale": "A global agenda-setter with investigative depth; already active and valuable for US and international coverage.",
+  "feeds": [
+    {
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+      "category": "World",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T03:01:45+00:00",
+      "entryCount": 52,
+      "feedTitle": "NYT > World News",
+      "bozo": false,
+      "validationNote": "52 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Left-leaning",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "The Washington Post",
+      "The Wall Street Journal",
+      "Reuters"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. RSS provides headlines and summaries, not full paywalled articles. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-new-york-times-about",
+      "EV-new-york-times-wikipedia",
+      "EV-new-york-times-mbfc",
+      "EV-new-york-times-feed-1"
+    ]
+  }
+}

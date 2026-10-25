@@ -1,0 +1,155 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Bangkok Post",
+      "slug": "bangkok-post",
+      "website": "https://www.bangkokpost.com",
+      "publisherCountry": "Thailand",
+      "language": "English",
+      "foundedYear": 1946,
+      "description": "Thailand's oldest English-language daily, covering Thai politics, business, society and Southeast Asian affairs."
+    },
+    "ownership": {
+      "owner": "Post Publishing PCL",
+      "parentOrganization": "Post Publishing PCL",
+      "stateFunded": false,
+      "ownershipNotes": "Listed publisher Post Publishing PCL. Major shareholders include Suthikiati Chirathivat and Bangkok Bank, giving the paper close ties to Thai business elites."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Mixed",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "Southeast Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Thailand",
+      "Southeast Asia"
+    ],
+    "secondaryRegions": [
+      "Asia-Pacific",
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Thai politics",
+        "Thai business",
+        "Tourism",
+        "Southeast Asia"
+      ],
+      "moderate": [
+        "International affairs",
+        "Culture",
+        "Climate"
+      ],
+      "weak": [
+        "Investigative depth",
+        "Africa",
+        "Latin America"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Commercial newspaper with a professional English-language newsroom, but Thai media face legal and commercial pressure and the paper has elite ownership ties.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.45
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No parsed MBFC rating; self-assessed as broadly centrist with a pro-establishment and business-friendly orientation.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.4
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Business and tourism coverage generally favours market-friendly policy and foreign investment.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "Thailand",
+        "ASEAN",
+        "Market economies"
+      ],
+      "evidence": "Thai national and ASEAN lens with a strong business and tourism focus.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.5
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Established newspaper of record with named reporters and corrections; no external rating parsed.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.6
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified for Bangkok Post."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Thai newspaper-of-record coverage in English. It explains Thai politics and business for expatriate and regional audiences.",
+    "knownStrengths": [
+      "Thai politics",
+      "Thai business",
+      "Tourism",
+      "Southeast Asia"
+    ],
+    "knownWeaknesses": [
+      "Elite ownership ties",
+      "Limited investigative edge",
+      "Small feed"
+    ]
+  },
+  "selectionRationale": "Adds Thai national coverage and a Southeast Asian business perspective.",
+  "feeds": [
+    {
+      "url": "https://www.bangkokpost.com/rss/data/topstories.xml",
+      "category": "Top stories",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:06:00+00:00",
+      "entryCount": 10,
+      "feedTitle": "Bangkokpost.com : Top Stories",
+      "bozo": false,
+      "validationNote": "10 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "The Nation Thailand",
+      "CNA",
+      "Nikkei Asia"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page returned 404. Ownership from 2026 AGM reporting and Wikipedia; requires human verification because shareholder detail is time-sensitive. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-bangkok-post-about",
+      "EV-bangkok-post-wikipedia",
+      "EV-bangkok-post-feed-1"
+    ]
+  }
+}

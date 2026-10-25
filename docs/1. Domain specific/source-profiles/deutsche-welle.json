@@ -1,0 +1,163 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Deutsche Welle",
+      "slug": "deutsche-welle",
+      "website": "https://www.dw.com",
+      "publisherCountry": "Germany",
+      "language": "English",
+      "foundedYear": 1953,
+      "description": "Germany's international public broadcaster, offering news and analysis in English and more than 30 other languages with a focus on Europe and global affairs."
+    },
+    "ownership": {
+      "owner": "Federal Republic of Germany",
+      "parentOrganization": "Deutsche Welle",
+      "stateFunded": true,
+      "ownershipNotes": "Publicly funded international broadcaster. The Deutsche Welle Act requires independence from government influence, though funding and oversight come through the German state."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Public Service",
+    "publisherType": "Broadcaster",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Europe",
+    "subRegion": "Germany"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Europe",
+      "Germany",
+      "Global"
+    ],
+    "secondaryRegions": [
+      "Africa",
+      "Asia-Pacific",
+      "Middle East",
+      "North America",
+      "South America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "European affairs",
+        "German politics",
+        "International broadcasting",
+        "Migration"
+      ],
+      "moderate": [
+        "Business",
+        "Climate",
+        "Culture"
+      ],
+      "weak": [
+        "US local politics",
+        "Market data",
+        "Niche security trade"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Statutory independence requirements and editorial guidelines; coverage is not uniformly pro-government and includes criticism of German policy.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.7
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "Broad public-service framing, generally centrist on German politics with a liberal-democratic institutional orientation.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.6
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is explanatory and social-market oriented rather than consistently pro-market or state-directed.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.55
+    },
+    "internationalAlignment": {
+      "value": [
+        "Germany",
+        "European Union",
+        "Liberal democracies"
+      ],
+      "evidence": "Frames events through German and EU perspectives, with strong emphasis on European integration and democratic institutions.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.65
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Established public broadcaster with editorial standards and corrections; MBFC page did not expose a parsed rating in this review.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC page was retrieved but no clean bias/factual fields were available in the saved page. Assessed from official governance and feed metadata."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "German public-broadcaster internationalism. Explains global events through European integration, democratic institutions and German foreign policy, with a strong Africa and Eastern Europe presence.",
+    "knownStrengths": [
+      "European Union coverage",
+      "German politics",
+      "Africa reporting",
+      "Multilingual reach"
+    ],
+    "knownWeaknesses": [
+      "German/EU-centric framing",
+      "Institutional caution",
+      "Limited adversarial reporting on allies"
+    ]
+  },
+  "selectionRationale": "Provides a high-quality European public-service perspective and substantial Africa coverage that complements UK/US and state-aligned outlets.",
+  "feeds": [
+    {
+      "url": "https://rss.dw.com/rdf/rss-en-all",
+      "category": "All English",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:42:00+00:00",
+      "entryCount": 130,
+      "feedTitle": "Deutsche Welle",
+      "bozo": false,
+      "validationNote": "130 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "State Media",
+    "biasGroup": "Centrist",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "ARD",
+      "ZDF",
+      "European Broadcasting Union"
+    ],
+    "competitors": [
+      "BBC World Service",
+      "France 24",
+      "Al Jazeera English"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. Public-service ownership is structurally distinct from state-controlled media. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-deutsche-welle-about",
+      "EV-deutsche-welle-wikipedia",
+      "EV-deutsche-welle-feed-1"
+    ]
+  }
+}

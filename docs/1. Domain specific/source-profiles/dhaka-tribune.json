@@ -1,0 +1,155 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Dhaka Tribune",
+      "slug": "dhaka-tribune",
+      "website": "https://www.dhakatribune.com",
+      "publisherCountry": "Bangladesh",
+      "language": "English",
+      "foundedYear": 2013,
+      "description": "A Bangladeshi English-language daily and digital publisher covering politics, business, society and culture, with a sister Bengali site."
+    },
+    "ownership": {
+      "owner": "2A Media Limited",
+      "parentOrganization": "Gemcon Group",
+      "stateFunded": false,
+      "ownershipNotes": "Published by 2A Media Limited and associated with Gemcon Group; publisher Kazi Anis Ahmed. Commercial ownership with a liberal, urban readership."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "South Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Bangladesh",
+      "South Asia"
+    ],
+    "secondaryRegions": [
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Bangladesh politics",
+        "Business",
+        "Society",
+        "Culture"
+      ],
+      "moderate": [
+        "Foreign policy",
+        "Climate",
+        "Human rights"
+      ],
+      "weak": [
+        "Global markets",
+        "Technology",
+        "Investigative depth"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Commercial newsroom with plural opinion and bylined reporting; no evidence of direct state control.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.55
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "Generally liberal-centrist and urban in outlook; no external rating identified.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.45
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Business coverage is descriptive and development-oriented, without a strong ideological line.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.45
+    },
+    "internationalAlignment": {
+      "value": [
+        "Bangladesh",
+        "South Asian regionalism",
+        "Liberal democracy"
+      ],
+      "evidence": "Frames national politics through governance, business and civil-society perspectives.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.45
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Established English-language daily with bylined reporting and corrections; no external MBFC rating.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.6
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified. Reliability assessed from institutional record and feed sample."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Bangladeshi urban-liberal newspaper voice. Covers politics and business with a relatively plural op-ed mix and a less confrontational tone than the Daily Star.",
+    "knownStrengths": [
+      "Bangladesh business",
+      "Society and culture",
+      "English-language national coverage"
+    ],
+    "knownWeaknesses": [
+      "Limited investigative depth",
+      "Domestic political pressure",
+      "Thin global coverage"
+    ]
+  },
+  "selectionRationale": "Provides a second Bangladeshi English-language perspective, reducing dependence on a single national outlet.",
+  "feeds": [
+    {
+      "url": "https://www.dhakatribune.com/feed/",
+      "category": "Top stories",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:46:42+00:00",
+      "entryCount": 100,
+      "feedTitle": "Dhaka Tribune",
+      "bozo": false,
+      "validationNote": "100 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "Bangla Tribune"
+    ],
+    "competitors": [
+      "The Daily Star",
+      "Prothom Alo",
+      "The Business Standard"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page returned 404; ownership verified through secondary references and feed metadata. Existing production mapping retained. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-dhaka-tribune-about",
+      "EV-dhaka-tribune-wikipedia",
+      "EV-dhaka-tribune-feed-1"
+    ]
+  }
+}

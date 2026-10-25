@@ -1,0 +1,157 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Middle East Eye",
+      "slug": "middle-east-eye",
+      "website": "https://www.middleeasteye.net",
+      "publisherCountry": "UK",
+      "language": "English",
+      "foundedYear": 2014,
+      "description": "A UK-based digital news outlet covering the Middle East, North Africa and the broader Muslim world, with a strong focus on Palestine and regional politics."
+    },
+    "ownership": {
+      "owner": "Middle East Eye",
+      "parentOrganization": "Independent",
+      "stateFunded": false,
+      "ownershipNotes": "Independent UK-based digital publisher founded by former Guardian Middle East editor David Hearst. Funding sources have been questioned by critics; the outlet denies state funding."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Regional",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Middle East",
+    "subRegion": "MENA"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Middle East",
+      "North Africa",
+      "Palestine/Israel"
+    ],
+    "secondaryRegions": [
+      "Europe",
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Palestine/Israel",
+        "Middle East politics",
+        "North Africa",
+        "Human rights"
+      ],
+      "moderate": [
+        "Turkey",
+        "Gulf",
+        "Migration"
+      ],
+      "weak": [
+        "Asia-Pacific",
+        "Markets data",
+        "US domestic politics"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Independent digital outlet with critical coverage of Gulf governments and Israel; funding transparency is limited and critics allege Gulf-linked funding, which the outlet denies.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.5
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "MBFC rates Left-Center and Mostly Factual; strong pro-Palestinian and human-rights framing.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is secondary and policy-oriented, without a consistent market ideology.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.45
+    },
+    "internationalAlignment": {
+      "value": [
+        "Palestinian rights",
+        "Middle East pluralism",
+        "Human rights"
+      ],
+      "evidence": "Frames regional affairs through Palestinian rights and criticism of authoritarian Gulf and Israeli policies.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.7
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting Mostly Factual and credibility High; strong original sourcing, with funding-transparency caveats.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting Mostly Factual; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Independent, Palestine-centred Middle East voice. Challenges Gulf and Israeli official narratives, with strong human-rights framing and limited transparency about funders.",
+    "knownStrengths": [
+      "Palestine/Israel",
+      "Gulf politics",
+      "North Africa",
+      "Human-rights reporting"
+    ],
+    "knownWeaknesses": [
+      "Funding transparency",
+      "Strong advocacy framing",
+      "Limited Asia coverage"
+    ]
+  },
+  "selectionRationale": "Provides a critical, Palestine-centred perspective that balances Gulf state-aligned and Israeli sources, with funding caveats.",
+  "feeds": [
+    {
+      "url": "https://www.middleeasteye.net/rss",
+      "category": "Top stories",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:33:58+00:00",
+      "entryCount": 20,
+      "feedTitle": "Section Feed",
+      "bozo": false,
+      "validationNote": "20 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Left-leaning",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Al Jazeera English",
+      "+972 Magazine",
+      "The New Arab"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. Funding transparency remains an open question; see uncertainty register. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-middle-east-eye-about",
+      "EV-middle-east-eye-wikipedia",
+      "EV-middle-east-eye-mbfc",
+      "EV-middle-east-eye-feed-1"
+    ]
+  }
+}

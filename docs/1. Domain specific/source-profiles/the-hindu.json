@@ -1,0 +1,155 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Hindu",
+      "slug": "the-hindu",
+      "website": "https://www.thehindu.com",
+      "publisherCountry": "India",
+      "language": "English",
+      "foundedYear": 1878,
+      "description": "An Indian English-language newspaper of record published by The Hindu Group, with strong national politics, foreign affairs and South Indian coverage."
+    },
+    "ownership": {
+      "owner": "Kasturi & Sons Limited",
+      "parentOrganization": "The Hindu Group",
+      "stateFunded": false,
+      "ownershipNotes": "Owned by the Kasturi family through Kasturi & Sons Limited and associated family shareholders. A longstanding Indian newspaper institution with a professional newsroom."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "South Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "India",
+      "South Asia"
+    ],
+    "secondaryRegions": [
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Indian politics",
+        "Foreign policy",
+        "South India",
+        "Judiciary"
+      ],
+      "moderate": [
+        "Business",
+        "Science",
+        "Culture"
+      ],
+      "weak": [
+        "Fast markets",
+        "Global breaking news",
+        "Entertainment"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Family-owned newspaper with a strong editorial-independence tradition and critical coverage of Indian governments.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.7
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "Historically liberal-left editorial tradition; MBFC page exists but no clean bias fields were parsed.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.55
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is policy-analytic and heterogeneous, not consistently pro-market.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "India",
+        "Non-alignment",
+        "Liberal democracy"
+      ],
+      "evidence": "Frames foreign policy through Indian strategic autonomy and democratic institutions.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC credibility High; established newspaper of record with named sourcing and corrections.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC page exists; no parsed bias/factual fields, credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Indian newspaper-of-record voice. Explains national politics and foreign policy through legal-institutional and South Indian lenses, with a liberal editorial tradition.",
+    "knownStrengths": [
+      "Indian politics",
+      "Foreign policy",
+      "Judiciary",
+      "South India"
+    ],
+    "knownWeaknesses": [
+      "India-centric",
+      "Limited fast-breaking global coverage",
+      "Editorial-page left lean"
+    ]
+  },
+  "selectionRationale": "Adds a high-quality Indian national perspective and South Asian depth beyond wire coverage.",
+  "feeds": [
+    {
+      "url": "https://www.thehindu.com/news/international/feeder/default.rss",
+      "category": "International",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:45:44+00:00",
+      "entryCount": 60,
+      "feedTitle": "World News: Latest International News & Updates | The Hindu",
+      "bozo": false,
+      "validationNote": "60 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Left-leaning",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "The Indian Express",
+      "Hindustan Times",
+      "Times of India"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. Ownership verified through the August 2026 Kasturi & Sons announcement and Media Ownership Monitor. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-the-hindu-about",
+      "EV-the-hindu-wikipedia",
+      "EV-the-hindu-mbfc",
+      "EV-the-hindu-feed-1"
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Daily Maverick",
+      "slug": "daily-maverick",
+      "website": "https://www.dailymaverick.co.za",
+      "publisherCountry": "South Africa",
+      "language": "English",
+      "foundedYear": 2009,
+      "description": "An independent South African online news publication known for investigations, analysis, politics, business and social-justice reporting."
+    },
+    "ownership": {
+      "owner": "Daily Maverick",
+      "parentOrganization": "Daily Maverick",
+      "stateFunded": false,
+      "ownershipNotes": "Independently owned. Inkululeko South Africa Media, a nonprofit, holds more than 25% and no shareholder holds more than 50%; co-founders Branko Brkic and Styli Charalambous lead the organisation. Funded by membership, advertising, events and grants."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Investigative",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Africa",
+    "subRegion": "South Africa"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "South Africa",
+      "Africa"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "Europe",
+      "North America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "South African politics",
+        "Investigations",
+        "Business",
+        "Social justice"
+      ],
+      "moderate": [
+        "Climate",
+        "Culture",
+        "International affairs"
+      ],
+      "weak": [
+        "Markets data",
+        "Asia-Pacific",
+        "Latin America"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Independent ownership with a nonprofit shareholder and no controlling owner; a strong investigative record on South African corruption and state capture.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.65
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC records High credibility but no parsed ideological rating; self-assessed as centrist with a pro-democracy, social-justice orientation.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.45
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Business coverage is substantial but not uniformly pro-market; investigations often target corporate and state corruption.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.4
+    },
+    "internationalAlignment": {
+      "value": [
+        "South Africa",
+        "African democracy",
+        "Civil society"
+      ],
+      "evidence": "South African national lens with strong African democracy, accountability and social-justice coverage.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC records High credibility; Daily Maverick has won awards for investigations and publishes corrections.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: credibility High; no clean bias/factual fields parsed (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "South African investigative and analysis journalism, with a strong accountability and social-justice lens.",
+    "knownStrengths": [
+      "Investigations",
+      "South African politics",
+      "Business",
+      "Social justice"
+    ],
+    "knownWeaknesses": [
+      "South Africa-centric",
+      "Limited daily breadth",
+      "Membership-funded pressures"
+    ]
+  },
+  "selectionRationale": "Adds essential South African investigative capacity and an African democracy perspective.",
+  "feeds": [
+    {
+      "url": "https://www.dailymaverick.co.za/dmrss/",
+      "category": "Latest",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T12:03:22+00:00",
+      "entryCount": 52,
+      "feedTitle": "Daily Maverick - Latest News",
+      "bozo": false,
+      "validationNote": "52 items; valid RSS; /feed/ returned 403."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Mail & Guardian",
+      "News24",
+      "GroundUp"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page confirms independent ownership and funding model. Feed validated via dmrss. Minority nonprofit shareholder is a key governance nuance. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-daily-maverick-about",
+      "EV-daily-maverick-wikipedia",
+      "EV-daily-maverick-mbfc",
+      "EV-daily-maverick-feed-1"
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Politico",
+      "slug": "politico",
+      "website": "https://www.politico.com",
+      "publisherCountry": "USA",
+      "language": "English",
+      "foundedYear": 2007,
+      "description": "An American political and policy news organisation covering Congress, the White House, lobbying, elections and European politics."
+    },
+    "ownership": {
+      "owner": "Axel Springer SE",
+      "parentOrganization": "Axel Springer SE",
+      "stateFunded": false,
+      "ownershipNotes": "Acquired by Axel Springer in 2021. Politico operates as a commercial subscription and advertising business with a strong insider-politics focus."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "North America",
+    "subRegion": "United States"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "United States",
+      "Europe"
+    ],
+    "secondaryRegions": [
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "US Congress",
+        "White House",
+        "Elections",
+        "EU policy"
+      ],
+      "moderate": [
+        "Lobbying",
+        "Technology policy",
+        "Trade"
+      ],
+      "weak": [
+        "Humanitarian crises",
+        "Global South",
+        "Markets data"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Insider political reporting with bylined sourcing; no evidence of a single-party editorial line, though access journalism shapes framing.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.65
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC rates Left-Center and High factual reporting; coverage is process-focused and broadly centrist with a Washington-insider lens.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.65
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Business and lobbying coverage is descriptive and interest-group aware rather than ideologically pro-market.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "United States",
+        "European Union",
+        "Transatlantic policy community"
+      ],
+      "evidence": "Frames politics through US and EU governing institutions and elite policy networks.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; strong sourcing within political institutions.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.8
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Washington and Brussels insider voice. Explains politics through legislative process, campaigns, lobbying and institutional power rather than ideology or street-level impact.",
+    "knownStrengths": [
+      "Congressional process",
+      "Campaigns and elections",
+      "EU policy",
+      "Lobbying"
+    ],
+    "knownWeaknesses": [
+      "Insider framing",
+      "Limited grassroots perspective",
+      "Narrow geographic scope"
+    ]
+  },
+  "selectionRationale": "Provides granular US and EU political-process coverage that general international feeds miss.",
+  "feeds": [
+    {
+      "url": "https://rss.politico.com/politics-news.xml",
+      "category": "Politics",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-24T09:19:56+00:00",
+      "entryCount": 30,
+      "feedTitle": "Politics",
+      "bozo": false,
+      "validationNote": "30 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "Axel Springer"
+    ],
+    "competitors": [
+      "The Hill",
+      "Axios",
+      "Punchbowl News"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. Politico's own company page returned 403; ownership verified through Axel Springer. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-politico-about",
+      "EV-politico-wikipedia",
+      "EV-politico-mbfc",
+      "EV-politico-feed-1"
+    ]
+  }
+}

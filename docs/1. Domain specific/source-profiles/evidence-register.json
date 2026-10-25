@@ -1,0 +1,3287 @@
+{
+  "generatedAt": "2026-10-25",
+  "method": "Feed-level validation, official pages, Wikipedia and Media Bias/Fact Check. Not a full article-level content analysis.",
+  "entryCount": 215,
+  "entries": [
+    {
+      "id": "EV-un-news-about",
+      "publisherSlug": "un-news",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://news.un.org/en/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 406,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Client rejected by the server; identity was corroborated with secondary sources."
+    },
+    {
+      "id": "EV-un-news-wikipedia",
+      "publisherSlug": "un-news",
+      "kind": "encyclopedic-reference",
+      "title": "United Nations Department of Global Communications",
+      "url": "https://en.wikipedia.org/wiki/United_Nations_Department_of_Global_Communications",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-un-news-feed-1",
+      "publisherSlug": "un-news",
+      "kind": "feed-validation",
+      "title": "RSS validation: Global news",
+      "url": "https://news.un.org/feed/subscribe/en/news/region/global/feed/rss.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "30 items in validation sample; returns valid RSS."
+    },
+    {
+      "id": "EV-foreign-policy-about",
+      "publisherSlug": "foreign-policy",
+      "kind": "official-about",
+      "title": "About Us – Foreign Policy",
+      "url": "https://foreignpolicy.com/about-us/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-foreign-policy-wikipedia",
+      "publisherSlug": "foreign-policy",
+      "kind": "encyclopedic-reference",
+      "title": "Foreign Policy",
+      "url": "https://en.wikipedia.org/wiki/Foreign_Policy",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-foreign-policy-mbfc",
+      "publisherSlug": "foreign-policy",
+      "kind": "media-bias-rating",
+      "title": "Foreign Policy - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/foreign-policy/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-foreign-policy-feed-1",
+      "publisherSlug": "foreign-policy",
+      "kind": "feed-validation",
+      "title": "RSS validation: Top stories",
+      "url": "https://foreignpolicy.com/feed/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "25 items; valid RSS."
+    },
+    {
+      "id": "EV-the-diplomat-about",
+      "publisherSlug": "the-diplomat",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://thediplomat.com/the-diplomat/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-the-diplomat-wikipedia",
+      "publisherSlug": "the-diplomat",
+      "kind": "encyclopedic-reference",
+      "title": "The Diplomat (magazine)",
+      "url": "https://en.wikipedia.org/wiki/The_Diplomat_(magazine)",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-the-diplomat-mbfc",
+      "publisherSlug": "the-diplomat",
+      "kind": "media-bias-rating",
+      "title": "The Diplomat Magazine - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/the-diplomat/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-the-diplomat-feed-1",
+      "publisherSlug": "the-diplomat",
+      "kind": "feed-validation",
+      "title": "RSS validation: Top stories",
+      "url": "https://thediplomat.com/feed/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "96 items; valid RSS."
+    },
+    {
+      "id": "EV-bbc-news-about",
+      "publisherSlug": "bbc-news",
+      "kind": "official-about",
+      "title": "Learn more about what we do",
+      "url": "https://www.bbc.com/aboutthebbc",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-bbc-news-wikipedia",
+      "publisherSlug": "bbc-news",
+      "kind": "encyclopedic-reference",
+      "title": "BBC News",
+      "url": "https://en.wikipedia.org/wiki/BBC_News",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-bbc-news-mbfc",
+      "publisherSlug": "bbc-news",
+      "kind": "media-bias-rating",
+      "title": "BBC - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/bbc-news/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-bbc-news-feed-1",
+      "publisherSlug": "bbc-news",
+      "kind": "feed-validation",
+      "title": "RSS validation: World",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "31 items; valid RSS."
+    },
+    {
+      "id": "EV-the-guardian-about",
+      "publisherSlug": "the-guardian",
+      "kind": "official-about",
+      "title": "About us | The Guardian",
+      "url": "https://www.theguardian.com/about",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-the-guardian-wikipedia",
+      "publisherSlug": "the-guardian",
+      "kind": "encyclopedic-reference",
+      "title": "The Guardian",
+      "url": "https://en.wikipedia.org/wiki/The_Guardian",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-the-guardian-mbfc",
+      "publisherSlug": "the-guardian",
+      "kind": "media-bias-rating",
+      "title": "The Guardian - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/the-guardian/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-the-guardian-feed-1",
+      "publisherSlug": "the-guardian",
+      "kind": "feed-validation",
+      "title": "RSS validation: World",
+      "url": "https://www.theguardian.com/world/rss",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "45 items; valid RSS."
+    },
+    {
+      "id": "EV-deutsche-welle-about",
+      "publisherSlug": "deutsche-welle",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://corporate.dw.com/en/about-dw/s-30688",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-deutsche-welle-wikipedia",
+      "publisherSlug": "deutsche-welle",
+      "kind": "encyclopedic-reference",
+      "title": "Deutsche Welle",
+      "url": "https://en.wikipedia.org/wiki/Deutsche_Welle",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-deutsche-welle-feed-1",
+      "publisherSlug": "deutsche-welle",
+      "kind": "feed-validation",
+      "title": "RSS validation: All English",
+      "url": "https://rss.dw.com/rdf/rss-en-all",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "130 items; valid RSS."
+    },
+    {
+      "id": "EV-france-24-about",
+      "publisherSlug": "france-24",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.francemediasmonde.com/en/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-france-24-wikipedia",
+      "publisherSlug": "france-24",
+      "kind": "encyclopedic-reference",
+      "title": "France 24",
+      "url": "https://en.wikipedia.org/wiki/France_24",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-france-24-feed-1",
+      "publisherSlug": "france-24",
+      "kind": "feed-validation",
+      "title": "RSS validation: All English",
+      "url": "https://www.france24.com/en/rss",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "24 items; valid RSS."
+    },
+    {
+      "id": "EV-new-york-times-about",
+      "publisherSlug": "new-york-times",
+      "kind": "official-about",
+      "title": "About Us | The New York Times Company",
+      "url": "https://www.nytco.com/company/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-new-york-times-wikipedia",
+      "publisherSlug": "new-york-times",
+      "kind": "encyclopedic-reference",
+      "title": "The New York Times",
+      "url": "https://en.wikipedia.org/wiki/The_New_York_Times",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-new-york-times-mbfc",
+      "publisherSlug": "new-york-times",
+      "kind": "media-bias-rating",
+      "title": "New York Times - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/new-york-times/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-new-york-times-feed-1",
+      "publisherSlug": "new-york-times",
+      "kind": "feed-validation",
+      "title": "RSS validation: World",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "52 items; valid RSS."
+    },
+    {
+      "id": "EV-wall-street-journal-about",
+      "publisherSlug": "wall-street-journal",
+      "kind": "official-about",
+      "title": "Dow Jones – Trusted News & Data",
+      "url": "https://www.dowjones.com/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-wall-street-journal-wikipedia",
+      "publisherSlug": "wall-street-journal",
+      "kind": "encyclopedic-reference",
+      "title": "The Wall Street Journal",
+      "url": "https://en.wikipedia.org/wiki/The_Wall_Street_Journal",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-wall-street-journal-mbfc",
+      "publisherSlug": "wall-street-journal",
+      "kind": "media-bias-rating",
+      "title": "Wall Street Journal - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/wall-street-journal/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-wall-street-journal-feed-1",
+      "publisherSlug": "wall-street-journal",
+      "kind": "feed-validation",
+      "title": "RSS validation: World",
+      "url": "https://feeds.a.dj.com/rss/RSSWorldNews.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "Last item January 2025; feed is not suitable for current-news ingestion without replacement."
+    },
+    {
+      "id": "EV-npr-about",
+      "publisherSlug": "npr",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.npr.org/about/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-npr-wikipedia",
+      "publisherSlug": "npr",
+      "kind": "encyclopedic-reference",
+      "title": "NPR",
+      "url": "https://en.wikipedia.org/wiki/NPR",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-npr-mbfc",
+      "publisherSlug": "npr",
+      "kind": "media-bias-rating",
+      "title": "NPR (National Public Radio) - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/npr/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-npr-feed-1",
+      "publisherSlug": "npr",
+      "kind": "feed-validation",
+      "title": "RSS validation: World",
+      "url": "https://feeds.npr.org/1004/rss.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "10 items; valid RSS."
+    },
+    {
+      "id": "EV-politico-about",
+      "publisherSlug": "politico",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.axelspringer.com/en/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-politico-wikipedia",
+      "publisherSlug": "politico",
+      "kind": "encyclopedic-reference",
+      "title": "Politico",
+      "url": "https://en.wikipedia.org/wiki/Politico",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-politico-mbfc",
+      "publisherSlug": "politico",
+      "kind": "media-bias-rating",
+      "title": "Politico - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/politico/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-politico-feed-1",
+      "publisherSlug": "politico",
+      "kind": "feed-validation",
+      "title": "RSS validation: Politics",
+      "url": "https://rss.politico.com/politics-news.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "30 items; valid RSS."
+    },
+    {
+      "id": "EV-techcrunch-about",
+      "publisherSlug": "techcrunch",
+      "kind": "official-about",
+      "title": "About TechCrunch | TechCrunch",
+      "url": "https://techcrunch.com/about/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-techcrunch-wikipedia",
+      "publisherSlug": "techcrunch",
+      "kind": "encyclopedic-reference",
+      "title": "TechCrunch",
+      "url": "https://en.wikipedia.org/wiki/TechCrunch",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-techcrunch-mbfc",
+      "publisherSlug": "techcrunch",
+      "kind": "media-bias-rating",
+      "title": "TechCrunch - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/techcrunch/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-techcrunch-feed-1",
+      "publisherSlug": "techcrunch",
+      "kind": "feed-validation",
+      "title": "RSS validation: Top stories",
+      "url": "https://techcrunch.com/feed/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "20 items; valid RSS."
+    },
+    {
+      "id": "EV-cbc-news-about",
+      "publisherSlug": "cbc-news",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://cbc.radio-canada.ca/en/vision/governance",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-cbc-news-wikipedia",
+      "publisherSlug": "cbc-news",
+      "kind": "encyclopedic-reference",
+      "title": "CBC News",
+      "url": "https://en.wikipedia.org/wiki/CBC_News",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-cbc-news-mbfc",
+      "publisherSlug": "cbc-news",
+      "kind": "media-bias-rating",
+      "title": "CBC News (Canadian Broadcasting) - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/cbc-news/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-cbc-news-feed-1",
+      "publisherSlug": "cbc-news",
+      "kind": "feed-validation",
+      "title": "RSS validation: World",
+      "url": "https://www.cbc.ca/cmlink/rss-world",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "20 items; valid RSS."
+    },
+    {
+      "id": "EV-nikkei-asia-about",
+      "publisherSlug": "nikkei-asia",
+      "kind": "official-about",
+      "title": "About Us - Nikkei Asia",
+      "url": "https://asia.nikkei.com/about",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-nikkei-asia-wikipedia",
+      "publisherSlug": "nikkei-asia",
+      "kind": "encyclopedic-reference",
+      "title": "Nikkei Asia",
+      "url": "https://en.wikipedia.org/wiki/Nikkei_Asia",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-nikkei-asia-mbfc",
+      "publisherSlug": "nikkei-asia",
+      "kind": "media-bias-rating",
+      "title": "Nikkei Asian Review - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/nikkei-asia/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-nikkei-asia-feed-1",
+      "publisherSlug": "nikkei-asia",
+      "kind": "feed-validation",
+      "title": "RSS validation: Top news",
+      "url": "https://asia.nikkei.com/rss/feed/nar",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "50 items parse but publication dates are absent; pipeline date fallback would distort recency."
+    },
+    {
+      "id": "EV-the-japan-times-about",
+      "publisherSlug": "the-japan-times",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.news2u.co.jp/en/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-the-japan-times-wikipedia",
+      "publisherSlug": "the-japan-times",
+      "kind": "encyclopedic-reference",
+      "title": "The Japan Times",
+      "url": "https://en.wikipedia.org/wiki/The_Japan_Times",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-the-japan-times-feed-1",
+      "publisherSlug": "the-japan-times",
+      "kind": "feed-validation",
+      "title": "RSS validation: Top stories",
+      "url": "https://www.japantimes.co.jp/feed/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "30 items; valid RSS."
+    },
+    {
+      "id": "EV-south-china-morning-post-about",
+      "publisherSlug": "south-china-morning-post",
+      "kind": "official-about",
+      "title": "South China Morning Post Publishers Limited – SCMP | Corporate Overview",
+      "url": "https://www.scmp.com/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-south-china-morning-post-wikipedia",
+      "publisherSlug": "south-china-morning-post",
+      "kind": "encyclopedic-reference",
+      "title": "South China Morning Post",
+      "url": "https://en.wikipedia.org/wiki/South_China_Morning_Post",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-south-china-morning-post-mbfc",
+      "publisherSlug": "south-china-morning-post",
+      "kind": "media-bias-rating",
+      "title": "South China Morning Post - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/south-china-morning-post/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-south-china-morning-post-feed-1",
+      "publisherSlug": "south-china-morning-post",
+      "kind": "feed-validation",
+      "title": "RSS validation: Top stories",
+      "url": "https://www.scmp.com/rss/91/feed",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "50 items; valid RSS."
+    },
+    {
+      "id": "EV-the-daily-star-about",
+      "publisherSlug": "the-daily-star",
+      "kind": "official-about",
+      "title": "About Us | The Daily Star",
+      "url": "https://www.thedailystar.net/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-the-daily-star-wikipedia",
+      "publisherSlug": "the-daily-star",
+      "kind": "encyclopedic-reference",
+      "title": "The Daily Star (Bangladesh)",
+      "url": "https://en.wikipedia.org/wiki/The_Daily_Star_(Bangladesh)",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-the-daily-star-feed-1",
+      "publisherSlug": "the-daily-star",
+      "kind": "feed-validation",
+      "title": "RSS validation: Front page",
+      "url": "https://www.thedailystar.net/frontpage/rss.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "Stale since 2022. The alternate site feed last updated June 2026 with only 8 items and is also unsafe for live ingestion."
+    },
+    {
+      "id": "EV-dhaka-tribune-about",
+      "publisherSlug": "dhaka-tribune",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.dhakatribune.com/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 404,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official about URL returned 404; identity and ownership rely on secondary sources."
+    },
+    {
+      "id": "EV-dhaka-tribune-wikipedia",
+      "publisherSlug": "dhaka-tribune",
+      "kind": "encyclopedic-reference",
+      "title": "Dhaka Tribune",
+      "url": "https://en.wikipedia.org/wiki/Dhaka_Tribune",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-dhaka-tribune-feed-1",
+      "publisherSlug": "dhaka-tribune",
+      "kind": "feed-validation",
+      "title": "RSS validation: Top stories",
+      "url": "https://www.dhakatribune.com/feed/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "100 items; valid RSS."
+    },
+    {
+      "id": "EV-the-hindu-about",
+      "publisherSlug": "the-hindu",
+      "kind": "official-about",
+      "title": "About Us - The Hindu",
+      "url": "https://www.thehindu.com/aboutus/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-the-hindu-wikipedia",
+      "publisherSlug": "the-hindu",
+      "kind": "encyclopedic-reference",
+      "title": "The Hindu",
+      "url": "https://en.wikipedia.org/wiki/The_Hindu",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-the-hindu-mbfc",
+      "publisherSlug": "the-hindu",
+      "kind": "media-bias-rating",
+      "title": "The Hindu - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/the-hindu/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-the-hindu-feed-1",
+      "publisherSlug": "the-hindu",
+      "kind": "feed-validation",
+      "title": "RSS validation: International",
+      "url": "https://www.thehindu.com/news/international/feeder/default.rss",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "60 items; valid RSS."
+    },
+    {
+      "id": "EV-the-straits-times-about",
+      "publisherSlug": "the-straits-times",
+      "kind": "official-about",
+      "title": "The Straits Times - Breaking news, Singapore news, Asia and world news & multimedia",
+      "url": "https://www.straitstimes.com/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-the-straits-times-wikipedia",
+      "publisherSlug": "the-straits-times",
+      "kind": "encyclopedic-reference",
+      "title": "The Straits Times",
+      "url": "https://en.wikipedia.org/wiki/The_Straits_Times",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-the-straits-times-mbfc",
+      "publisherSlug": "the-straits-times",
+      "kind": "media-bias-rating",
+      "title": "The Straits Times - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/the-straits-times/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-the-straits-times-feed-1",
+      "publisherSlug": "the-straits-times",
+      "kind": "feed-validation",
+      "title": "RSS validation: World",
+      "url": "https://www.straitstimes.com/news/world/rss.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "50 items; valid RSS."
+    },
+    {
+      "id": "EV-yonhap-about",
+      "publisherSlug": "yonhap",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://en.yna.co.kr/aboutus/yonhapnews",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-yonhap-wikipedia",
+      "publisherSlug": "yonhap",
+      "kind": "encyclopedic-reference",
+      "title": "Yonhap News Agency",
+      "url": "https://en.wikipedia.org/wiki/Yonhap_News_Agency",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-yonhap-mbfc",
+      "publisherSlug": "yonhap",
+      "kind": "media-bias-rating",
+      "title": "Yonhap News Agency - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/yonhap/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-yonhap-feed-1",
+      "publisherSlug": "yonhap",
+      "kind": "feed-validation",
+      "title": "RSS validation: Top news",
+      "url": "https://en.yna.co.kr/RSS/news.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "101 items; valid RSS."
+    },
+    {
+      "id": "EV-abc-news-australia-about",
+      "publisherSlug": "abc-news-australia",
+      "kind": "official-about",
+      "title": "About the ABC",
+      "url": "https://www.abc.net.au/about",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-abc-news-australia-wikipedia",
+      "publisherSlug": "abc-news-australia",
+      "kind": "encyclopedic-reference",
+      "title": "ABC News (Australia)",
+      "url": "https://en.wikipedia.org/wiki/ABC_News_(Australia)",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-abc-news-australia-feed-1",
+      "publisherSlug": "abc-news-australia",
+      "kind": "feed-validation",
+      "title": "RSS validation: World",
+      "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "25 items; valid RSS."
+    },
+    {
+      "id": "EV-al-jazeera-about",
+      "publisherSlug": "al-jazeera",
+      "kind": "official-about",
+      "title": "About Us | Today's latest from Al Jazeera",
+      "url": "https://www.aljazeera.com/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-al-jazeera-wikipedia",
+      "publisherSlug": "al-jazeera",
+      "kind": "encyclopedic-reference",
+      "title": "Al Jazeera Media Network",
+      "url": "https://en.wikipedia.org/wiki/Al_Jazeera_Media_Network",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-al-jazeera-mbfc",
+      "publisherSlug": "al-jazeera",
+      "kind": "media-bias-rating",
+      "title": "Al Jazeera - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/al-jazeera/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-al-jazeera-feed-1",
+      "publisherSlug": "al-jazeera",
+      "kind": "feed-validation",
+      "title": "RSS validation: All news",
+      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "25 items; valid RSS."
+    },
+    {
+      "id": "EV-arab-news-about",
+      "publisherSlug": "arab-news",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.srmg.com/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-arab-news-wikipedia",
+      "publisherSlug": "arab-news",
+      "kind": "encyclopedic-reference",
+      "title": "Arab News",
+      "url": "https://en.wikipedia.org/wiki/Arab_News",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-arab-news-mbfc",
+      "publisherSlug": "arab-news",
+      "kind": "media-bias-rating",
+      "title": "Arab News - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/arab-news/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-arab-news-feed-1",
+      "publisherSlug": "arab-news",
+      "kind": "feed-validation",
+      "title": "RSS validation: Top news",
+      "url": "https://www.arabnews.com/rss.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 403,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "Cloudflare 403 returned to validation client; no current items retrievable."
+    },
+    {
+      "id": "EV-middle-east-eye-about",
+      "publisherSlug": "middle-east-eye",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.middleeasteye.net/about-middle-east-eye",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-middle-east-eye-wikipedia",
+      "publisherSlug": "middle-east-eye",
+      "kind": "encyclopedic-reference",
+      "title": "Middle East Eye",
+      "url": "https://en.wikipedia.org/wiki/Middle_East_Eye",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-middle-east-eye-mbfc",
+      "publisherSlug": "middle-east-eye",
+      "kind": "media-bias-rating",
+      "title": "Middle East Eye - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/middle-east-eye/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-middle-east-eye-feed-1",
+      "publisherSlug": "middle-east-eye",
+      "kind": "feed-validation",
+      "title": "RSS validation: Top stories",
+      "url": "https://www.middleeasteye.net/rss",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "20 items; valid RSS."
+    },
+    {
+      "id": "EV-allafrica-about",
+      "publisherSlug": "allafrica",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://allafrica.com/misc/info/about/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-allafrica-wikipedia",
+      "publisherSlug": "allafrica",
+      "kind": "encyclopedic-reference",
+      "title": "AllAfrica",
+      "url": "https://en.wikipedia.org/wiki/AllAfrica",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-allafrica-mbfc",
+      "publisherSlug": "allafrica",
+      "kind": "media-bias-rating",
+      "title": "AllAfrica - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/allafrica/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-allafrica-feed-1",
+      "publisherSlug": "allafrica",
+      "kind": "feed-validation",
+      "title": "RSS validation: Latest headlines",
+      "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "33 items; valid RSS/RDF."
+    },
+    {
+      "id": "EV-buenos-aires-times-about",
+      "publisherSlug": "buenos-aires-times",
+      "kind": "official-about",
+      "title": "News from Argentina and beyond – in English | Buenos Aires Times",
+      "url": "https://www.batimes.com.ar/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-buenos-aires-times-mbfc",
+      "publisherSlug": "buenos-aires-times",
+      "kind": "media-bias-rating",
+      "title": "Buenos Aires Times - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/buenos-aires-times/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-buenos-aires-times-feed-1",
+      "publisherSlug": "buenos-aires-times",
+      "kind": "feed-validation",
+      "title": "RSS validation: Top stories",
+      "url": "https://www.batimes.com.ar/feed",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "100 items; valid RSS."
+    },
+    {
+      "id": "EV-reuters-about",
+      "publisherSlug": "reuters",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.reuters.com/about-us/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 401,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Blocked by bot protection; identity was corroborated with secondary sources."
+    },
+    {
+      "id": "EV-reuters-wikipedia",
+      "publisherSlug": "reuters",
+      "kind": "encyclopedic-reference",
+      "title": "Reuters",
+      "url": "https://en.wikipedia.org/wiki/Reuters",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-reuters-mbfc",
+      "publisherSlug": "reuters",
+      "kind": "media-bias-rating",
+      "title": "Reuters - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/reuters/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-reuters-feed-discovery",
+      "publisherSlug": "reuters",
+      "kind": "feed-discovery",
+      "title": "Official RSS discovery attempt",
+      "url": "https://www.reuters.com",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": null,
+      "supports": [
+        "feed-availability"
+      ],
+      "limitations": "No verified official public feed was found; tested endpoints were blocked, missing, or malformed."
+    },
+    {
+      "id": "EV-ap-about",
+      "publisherSlug": "ap",
+      "kind": "official-about",
+      "title": "About Us | The Associated Press",
+      "url": "https://www.ap.org/about/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-ap-wikipedia",
+      "publisherSlug": "ap",
+      "kind": "encyclopedic-reference",
+      "title": "Associated Press",
+      "url": "https://en.wikipedia.org/wiki/Associated_Press",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-ap-mbfc",
+      "publisherSlug": "ap",
+      "kind": "media-bias-rating",
+      "title": "Associated Press (AP News) - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/associated-press/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-ap-feed-discovery",
+      "publisherSlug": "ap",
+      "kind": "feed-discovery",
+      "title": "Official RSS discovery attempt",
+      "url": "https://apnews.com",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": null,
+      "supports": [
+        "feed-availability"
+      ],
+      "limitations": "No verified official public feed was found; tested endpoints were blocked, missing, or malformed."
+    },
+    {
+      "id": "EV-the-economist-about",
+      "publisherSlug": "the-economist",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.economistgroup.com/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-the-economist-wikipedia",
+      "publisherSlug": "the-economist",
+      "kind": "encyclopedic-reference",
+      "title": "The Economist",
+      "url": "https://en.wikipedia.org/wiki/The_Economist",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-the-economist-mbfc",
+      "publisherSlug": "the-economist",
+      "kind": "media-bias-rating",
+      "title": "The Economist - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/the-economist/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-the-economist-feed-1",
+      "publisherSlug": "the-economist",
+      "kind": "feed-validation",
+      "title": "RSS validation: The world this week",
+      "url": "https://www.economist.com/the-world-this-week/rss.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "300 items; valid RSS; headline/summary feed rather than full articles."
+    },
+    {
+      "id": "EV-financial-times-about",
+      "publisherSlug": "financial-times",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://aboutus.ft.com/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-financial-times-wikipedia",
+      "publisherSlug": "financial-times",
+      "kind": "encyclopedic-reference",
+      "title": "Financial Times",
+      "url": "https://en.wikipedia.org/wiki/Financial_Times",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-financial-times-mbfc",
+      "publisherSlug": "financial-times",
+      "kind": "media-bias-rating",
+      "title": "Financial Times - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/financial-times/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-financial-times-feed-1",
+      "publisherSlug": "financial-times",
+      "kind": "feed-validation",
+      "title": "RSS validation: World",
+      "url": "https://www.ft.com/world?format=rss",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "25 items; valid RSS; paywalled article bodies."
+    },
+    {
+      "id": "EV-bloomberg-about",
+      "publisherSlug": "bloomberg",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.bloomberg.com/company/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 403,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Blocked by bot protection; identity was corroborated with secondary sources."
+    },
+    {
+      "id": "EV-bloomberg-wikipedia",
+      "publisherSlug": "bloomberg",
+      "kind": "encyclopedic-reference",
+      "title": "Bloomberg News",
+      "url": "https://en.wikipedia.org/wiki/Bloomberg_News",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-bloomberg-mbfc",
+      "publisherSlug": "bloomberg",
+      "kind": "media-bias-rating",
+      "title": "Bloomberg News - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/bloomberg/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-bloomberg-feed-1",
+      "publisherSlug": "bloomberg",
+      "kind": "feed-validation",
+      "title": "RSS validation: Markets",
+      "url": "https://feeds.bloomberg.com/markets/news.rss",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "20 items; valid RSS."
+    },
+    {
+      "id": "EV-bloomberg-feed-2",
+      "publisherSlug": "bloomberg",
+      "kind": "feed-validation",
+      "title": "RSS validation: Politics",
+      "url": "https://feeds.bloomberg.com/politics/news.rss",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "19 items; valid RSS."
+    },
+    {
+      "id": "EV-propublica-about",
+      "publisherSlug": "propublica",
+      "kind": "official-about",
+      "title": "About Us — ProPublica",
+      "url": "https://www.propublica.org/about",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-propublica-wikipedia",
+      "publisherSlug": "propublica",
+      "kind": "encyclopedic-reference",
+      "title": "ProPublica",
+      "url": "https://en.wikipedia.org/wiki/ProPublica",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-propublica-mbfc",
+      "publisherSlug": "propublica",
+      "kind": "media-bias-rating",
+      "title": "Propublica - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/propublica/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-propublica-feed-1",
+      "publisherSlug": "propublica",
+      "kind": "feed-validation",
+      "title": "RSS validation: Main",
+      "url": "https://www.propublica.org/feeds/propublica/main",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "20 items; valid RSS."
+    },
+    {
+      "id": "EV-mongabay-about",
+      "publisherSlug": "mongabay",
+      "kind": "official-about",
+      "title": "About Mongabay News",
+      "url": "https://news.mongabay.com/about/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-mongabay-wikipedia",
+      "publisherSlug": "mongabay",
+      "kind": "encyclopedic-reference",
+      "title": "Mongabay",
+      "url": "https://en.wikipedia.org/wiki/Mongabay",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-mongabay-mbfc",
+      "publisherSlug": "mongabay",
+      "kind": "media-bias-rating",
+      "title": "Mongabay - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/mongabay/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-mongabay-feed-1",
+      "publisherSlug": "mongabay",
+      "kind": "feed-validation",
+      "title": "RSS validation: Conservation news",
+      "url": "https://news.mongabay.com/feed/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "32 items; valid RSS."
+    },
+    {
+      "id": "EV-carbon-brief-about",
+      "publisherSlug": "carbon-brief",
+      "kind": "official-about",
+      "title": "About - Carbon Brief",
+      "url": "https://www.carbonbrief.org/about",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-carbon-brief-wikipedia",
+      "publisherSlug": "carbon-brief",
+      "kind": "encyclopedic-reference",
+      "title": "Carbon Brief",
+      "url": "https://en.wikipedia.org/wiki/Carbon_Brief",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-carbon-brief-mbfc",
+      "publisherSlug": "carbon-brief",
+      "kind": "media-bias-rating",
+      "title": "Carbon Brief - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/carbon-brief/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-carbon-brief-feed-1",
+      "publisherSlug": "carbon-brief",
+      "kind": "feed-validation",
+      "title": "RSS validation: All",
+      "url": "https://www.carbonbrief.org/feed/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "12 items; valid RSS."
+    },
+    {
+      "id": "EV-prothom-alo-about",
+      "publisherSlug": "prothom-alo",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://en.prothomalo.com/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 404,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official about URL returned 404; identity and ownership rely on secondary sources."
+    },
+    {
+      "id": "EV-prothom-alo-wikipedia",
+      "publisherSlug": "prothom-alo",
+      "kind": "encyclopedic-reference",
+      "title": "Prothom Alo",
+      "url": "https://en.wikipedia.org/wiki/Prothom_Alo",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-prothom-alo-feed-1",
+      "publisherSlug": "prothom-alo",
+      "kind": "feed-validation",
+      "title": "RSS validation: English edition",
+      "url": "https://en.prothomalo.com/feed/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "15 items; valid RSS."
+    },
+    {
+      "id": "EV-business-standard-bd-about",
+      "publisherSlug": "business-standard-bd",
+      "kind": "official-about",
+      "title": "About Business Standard | The Business Standard",
+      "url": "https://www.tbsnews.net/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-business-standard-bd-wikipedia",
+      "publisherSlug": "business-standard-bd",
+      "kind": "encyclopedic-reference",
+      "title": "The Business Standard",
+      "url": "https://en.wikipedia.org/wiki/The_Business_Standard",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-business-standard-bd-feed-1",
+      "publisherSlug": "business-standard-bd",
+      "kind": "feed-validation",
+      "title": "RSS validation: Main",
+      "url": "https://www.tbsnews.net/rss.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "10 items; valid XML but stale since November 2021; do not activate."
+    },
+    {
+      "id": "EV-indian-express-about",
+      "publisherSlug": "indian-express",
+      "kind": "official-about",
+      "title": "About, The Indian Express – Journalism of Courage | The Indian Express",
+      "url": "https://indianexpress.com/about-us/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-indian-express-wikipedia",
+      "publisherSlug": "indian-express",
+      "kind": "encyclopedic-reference",
+      "title": "The Indian Express",
+      "url": "https://en.wikipedia.org/wiki/The_Indian_Express",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-indian-express-feed-1",
+      "publisherSlug": "indian-express",
+      "kind": "feed-validation",
+      "title": "RSS validation: Main",
+      "url": "https://indianexpress.com/feed/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "200 items; valid RSS."
+    },
+    {
+      "id": "EV-scroll-in-about",
+      "publisherSlug": "scroll-in",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://scroll.in/about",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 404,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official about URL returned 404; identity and ownership rely on secondary sources."
+    },
+    {
+      "id": "EV-scroll-in-wikipedia",
+      "publisherSlug": "scroll-in",
+      "kind": "encyclopedic-reference",
+      "title": "Scroll.in",
+      "url": "https://en.wikipedia.org/wiki/Scroll.in",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-scroll-in-feed-1",
+      "publisherSlug": "scroll-in",
+      "kind": "feed-validation",
+      "title": "RSS validation: Articles",
+      "url": "https://feeds.feedburner.com/ScrollinArticles.rss",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "100 items; valid FeedBurner RSS; primary scroll.in/feed was invalid."
+    },
+    {
+      "id": "EV-dawn-about",
+      "publisherSlug": "dawn",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.dawn.com/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 404,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official about URL returned 404; identity and ownership rely on secondary sources."
+    },
+    {
+      "id": "EV-dawn-wikipedia",
+      "publisherSlug": "dawn",
+      "kind": "encyclopedic-reference",
+      "title": "Dawn (newspaper)",
+      "url": "https://en.wikipedia.org/wiki/Dawn_(newspaper)",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-dawn-feed-1",
+      "publisherSlug": "dawn",
+      "kind": "feed-validation",
+      "title": "RSS validation: Home",
+      "url": "https://www.dawn.com/feeds/home",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "29 items; valid RSS."
+    },
+    {
+      "id": "EV-irrawaddy-about",
+      "publisherSlug": "irrawaddy",
+      "kind": "official-about",
+      "title": "About Us",
+      "url": "https://www.irrawaddy.com/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-irrawaddy-wikipedia",
+      "publisherSlug": "irrawaddy",
+      "kind": "encyclopedic-reference",
+      "title": "The Irrawaddy",
+      "url": "https://en.wikipedia.org/wiki/The_Irrawaddy",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-irrawaddy-feed-1",
+      "publisherSlug": "irrawaddy",
+      "kind": "feed-validation",
+      "title": "RSS validation: Main",
+      "url": "https://www.irrawaddy.com/feed",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "10 items; feed parser reported bozo=True but returned dated entries. Monitor XML validity."
+    },
+    {
+      "id": "EV-kyodo-news-about",
+      "publisherSlug": "kyodo-news",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://english.kyodonews.net/list/info/about",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-kyodo-news-wikipedia",
+      "publisherSlug": "kyodo-news",
+      "kind": "encyclopedic-reference",
+      "title": "Kyodo News",
+      "url": "https://en.wikipedia.org/wiki/Kyodo_News",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-kyodo-news-mbfc",
+      "publisherSlug": "kyodo-news",
+      "kind": "media-bias-rating",
+      "title": "Kyodo News Plus – Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/kyodo-news/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-kyodo-news-feed-1",
+      "publisherSlug": "kyodo-news",
+      "kind": "feed-validation",
+      "title": "RSS validation: Japan Wire",
+      "url": "https://english.kyodonews.net/list/feed/rss4kyodonews-fzone",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "15 items; valid RSS."
+    },
+    {
+      "id": "EV-korea-herald-about",
+      "publisherSlug": "korea-herald",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://company.heraldcorp.com/content.php?lang=eng",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-korea-herald-wikipedia",
+      "publisherSlug": "korea-herald",
+      "kind": "encyclopedic-reference",
+      "title": "The Korea Herald",
+      "url": "https://en.wikipedia.org/wiki/The_Korea_Herald",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-korea-herald-feed-1",
+      "publisherSlug": "korea-herald",
+      "kind": "feed-validation",
+      "title": "RSS validation: All news",
+      "url": "https://www.koreaherald.com/rss/newsAll",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "50 items; valid RSS; primary RSS endpoint was malformed."
+    },
+    {
+      "id": "EV-cna-about",
+      "publisherSlug": "cna",
+      "kind": "official-about",
+      "title": "About CNA: Your Trusted Source for Credible Asian News | Learn Our Story",
+      "url": "https://www.channelnewsasia.com/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-cna-wikipedia",
+      "publisherSlug": "cna",
+      "kind": "encyclopedic-reference",
+      "title": "CNA (TV network)",
+      "url": "https://en.wikipedia.org/wiki/CNA_(TV_network)",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-cna-feed-1",
+      "publisherSlug": "cna",
+      "kind": "feed-validation",
+      "title": "RSS validation: Latest",
+      "url": "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "20 items; valid RSS."
+    },
+    {
+      "id": "EV-bangkok-post-about",
+      "publisherSlug": "bangkok-post",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.bangkokpost.com/about",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 404,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official about URL returned 404; identity and ownership rely on secondary sources."
+    },
+    {
+      "id": "EV-bangkok-post-wikipedia",
+      "publisherSlug": "bangkok-post",
+      "kind": "encyclopedic-reference",
+      "title": "Bangkok Post",
+      "url": "https://en.wikipedia.org/wiki/Bangkok_Post",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-bangkok-post-feed-1",
+      "publisherSlug": "bangkok-post",
+      "kind": "feed-validation",
+      "title": "RSS validation: Top stories",
+      "url": "https://www.bangkokpost.com/rss/data/topstories.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "10 items; valid RSS."
+    },
+    {
+      "id": "EV-vnexpress-about",
+      "publisherSlug": "vnexpress",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://e.vnexpress.net/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 406,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Client rejected by the server; identity was corroborated with secondary sources."
+    },
+    {
+      "id": "EV-vnexpress-wikipedia",
+      "publisherSlug": "vnexpress",
+      "kind": "encyclopedic-reference",
+      "title": "VnExpress",
+      "url": "https://en.wikipedia.org/wiki/VnExpress",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-vnexpress-feed-1",
+      "publisherSlug": "vnexpress",
+      "kind": "feed-validation",
+      "title": "RSS validation: English news",
+      "url": "https://e.vnexpress.net/rss/news.rss",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "60 items; valid RSS."
+    },
+    {
+      "id": "EV-rappler-about",
+      "publisherSlug": "rappler",
+      "kind": "official-about",
+      "title": "About Rappler",
+      "url": "https://www.rappler.com/about/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-rappler-wikipedia",
+      "publisherSlug": "rappler",
+      "kind": "encyclopedic-reference",
+      "title": "Rappler",
+      "url": "https://en.wikipedia.org/wiki/Rappler",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-rappler-feed-1",
+      "publisherSlug": "rappler",
+      "kind": "feed-validation",
+      "title": "RSS validation: Main",
+      "url": "https://www.rappler.com/feed/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "10 items; valid RSS."
+    },
+    {
+      "id": "EV-focus-taiwan-about",
+      "publisherSlug": "focus-taiwan",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://focustaiwan.tw/aboutus",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-focus-taiwan-wikipedia",
+      "publisherSlug": "focus-taiwan",
+      "kind": "encyclopedic-reference",
+      "title": "Central News Agency (Taiwan)",
+      "url": "https://en.wikipedia.org/wiki/Central_News_Agency_(Taiwan)",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-focus-taiwan-feed-1",
+      "publisherSlug": "focus-taiwan",
+      "kind": "feed-validation",
+      "title": "RSS validation: English news",
+      "url": "https://feeds.feedburner.com/rsscna/engnews/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "39 items; valid FeedBurner RSS; focustaiwan.tw/rss returned 404."
+    },
+    {
+      "id": "EV-times-of-israel-about",
+      "publisherSlug": "times-of-israel",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.timesofisrael.com/about/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 403,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Blocked by bot protection; identity was corroborated with secondary sources."
+    },
+    {
+      "id": "EV-times-of-israel-wikipedia",
+      "publisherSlug": "times-of-israel",
+      "kind": "encyclopedic-reference",
+      "title": "The Times of Israel",
+      "url": "https://en.wikipedia.org/wiki/The_Times_of_Israel",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-times-of-israel-mbfc",
+      "publisherSlug": "times-of-israel",
+      "kind": "media-bias-rating",
+      "title": "Times of Israel - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/times-of-israel/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-times-of-israel-feed-1",
+      "publisherSlug": "times-of-israel",
+      "kind": "feed-validation",
+      "title": "RSS validation: Main",
+      "url": "https://www.timesofisrael.com/feed/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "15 items; valid RSS."
+    },
+    {
+      "id": "EV-972-magazine-about",
+      "publisherSlug": "972-magazine",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.972mag.com/about/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 403,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Blocked by bot protection; identity was corroborated with secondary sources."
+    },
+    {
+      "id": "EV-972-magazine-wikipedia",
+      "publisherSlug": "972-magazine",
+      "kind": "encyclopedic-reference",
+      "title": "+972 Magazine",
+      "url": "https://en.wikipedia.org/wiki/%2B972_Magazine",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-972-magazine-feed-1",
+      "publisherSlug": "972-magazine",
+      "kind": "feed-validation",
+      "title": "RSS validation: Main",
+      "url": "https://www.972mag.com/feed/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "10 items; valid RSS."
+    },
+    {
+      "id": "EV-gulf-news-about",
+      "publisherSlug": "gulf-news",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://gulfnews.com/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-gulf-news-wikipedia",
+      "publisherSlug": "gulf-news",
+      "kind": "encyclopedic-reference",
+      "title": "Gulf News",
+      "url": "https://en.wikipedia.org/wiki/Gulf_News",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-gulf-news-feed-1",
+      "publisherSlug": "gulf-news",
+      "kind": "feed-validation",
+      "title": "RSS validation: Stories",
+      "url": "https://gulfnews.com/stories.rss",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "29 items; valid RSS; gulfnews.com/rss returned 404."
+    },
+    {
+      "id": "EV-iran-international-about",
+      "publisherSlug": "iran-international",
+      "kind": "official-about",
+      "title": "Iran International",
+      "url": "https://www.iranintl.com/en/about",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-iran-international-wikipedia",
+      "publisherSlug": "iran-international",
+      "kind": "encyclopedic-reference",
+      "title": "Iran International",
+      "url": "https://en.wikipedia.org/wiki/Iran_International",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-iran-international-feed-1",
+      "publisherSlug": "iran-international",
+      "kind": "feed-validation",
+      "title": "RSS validation: English",
+      "url": "https://www.iranintl.com/en/feed",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "50 items; valid RSS; iranintl.com/en/rss returned invalid/empty."
+    },
+    {
+      "id": "EV-hurriyet-daily-news-about",
+      "publisherSlug": "hurriyet-daily-news",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.hurriyetdailynews.com/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": null,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "About page was not captured; identity and ownership rely on secondary sources."
+    },
+    {
+      "id": "EV-hurriyet-daily-news-wikipedia",
+      "publisherSlug": "hurriyet-daily-news",
+      "kind": "encyclopedic-reference",
+      "title": "Hürriyet Daily News — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/H%C3%BCrriyet_Daily_News",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-hurriyet-daily-news-feed-1",
+      "publisherSlug": "hurriyet-daily-news",
+      "kind": "feed-validation",
+      "title": "RSS validation: News",
+      "url": "https://www.hurriyetdailynews.com/rss/news",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "64 items; valid RSS; legacy /rss endpoint returned malformed feed."
+    },
+    {
+      "id": "EV-al-monitor-about",
+      "publisherSlug": "al-monitor",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://www.al-monitor.com/about-us",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": null,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "About page was not captured; identity and ownership rely on secondary sources."
+    },
+    {
+      "id": "EV-al-monitor-wikipedia",
+      "publisherSlug": "al-monitor",
+      "kind": "encyclopedic-reference",
+      "title": "Al-Monitor — Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Al-Monitor",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-al-monitor-feed-1",
+      "publisherSlug": "al-monitor",
+      "kind": "feed-validation",
+      "title": "RSS validation: Main",
+      "url": "https://www.al-monitor.com/rss",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "20 items; valid RSS."
+    },
+    {
+      "id": "EV-kyiv-independent-about",
+      "publisherSlug": "kyiv-independent",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://kyivindependent.com/about/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-kyiv-independent-wikipedia",
+      "publisherSlug": "kyiv-independent",
+      "kind": "encyclopedic-reference",
+      "title": "The Kyiv Independent",
+      "url": "https://en.wikipedia.org/wiki/The_Kyiv_Independent",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-kyiv-independent-mbfc",
+      "publisherSlug": "kyiv-independent",
+      "kind": "media-bias-rating",
+      "title": "Kyiv Independent – Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/kyiv-independent/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-kyiv-independent-feed-1",
+      "publisherSlug": "kyiv-independent",
+      "kind": "feed-validation",
+      "title": "RSS validation: News archive",
+      "url": "https://kyivindependent.com/news-archive/rss/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "15 items; valid RSS; kyivindependent.com/feed/ returned 404."
+    },
+    {
+      "id": "EV-meduza-about",
+      "publisherSlug": "meduza",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://meduza.io/en/pages/about",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-meduza-wikipedia",
+      "publisherSlug": "meduza",
+      "kind": "encyclopedic-reference",
+      "title": "Meduza",
+      "url": "https://en.wikipedia.org/wiki/Meduza_(website)",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-meduza-mbfc",
+      "publisherSlug": "meduza",
+      "kind": "media-bias-rating",
+      "title": "Meduza - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/meduza/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-meduza-feed-1",
+      "publisherSlug": "meduza",
+      "kind": "feed-validation",
+      "title": "RSS validation: English all",
+      "url": "https://meduza.io/rss/en/all",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "30 items; valid RSS."
+    },
+    {
+      "id": "EV-tass-about",
+      "publisherSlug": "tass",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://tass.com/about",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 404,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official about URL returned 404; identity and ownership rely on secondary sources."
+    },
+    {
+      "id": "EV-tass-wikipedia",
+      "publisherSlug": "tass",
+      "kind": "encyclopedic-reference",
+      "title": "TASS",
+      "url": "https://en.wikipedia.org/wiki/TASS",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-tass-feed-1",
+      "publisherSlug": "tass",
+      "kind": "feed-validation",
+      "title": "RSS validation: English",
+      "url": "https://tass.com/rss/v2.xml",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "39 items; valid RSS; state media, use only for official Russian statements and comparison."
+    },
+    {
+      "id": "EV-daily-maverick-about",
+      "publisherSlug": "daily-maverick",
+      "kind": "official-about",
+      "title": "About us",
+      "url": "https://www.dailymaverick.co.za/about-us/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-daily-maverick-wikipedia",
+      "publisherSlug": "daily-maverick",
+      "kind": "encyclopedic-reference",
+      "title": "Daily Maverick",
+      "url": "https://en.wikipedia.org/wiki/Daily_Maverick",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-daily-maverick-mbfc",
+      "publisherSlug": "daily-maverick",
+      "kind": "media-bias-rating",
+      "title": "Daily Maverick - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/daily-maverick/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-daily-maverick-feed-1",
+      "publisherSlug": "daily-maverick",
+      "kind": "feed-validation",
+      "title": "RSS validation: Latest",
+      "url": "https://www.dailymaverick.co.za/dmrss/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "52 items; valid RSS; /feed/ returned 403."
+    },
+    {
+      "id": "EV-premium-times-about",
+      "publisherSlug": "premium-times",
+      "kind": "official-about",
+      "title": "Premium Times - Nigeria leading newspaper for news, investigations",
+      "url": "https://www.premiumtimesng.com/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official page; self-description may omit ownership or political context."
+    },
+    {
+      "id": "EV-premium-times-wikipedia",
+      "publisherSlug": "premium-times",
+      "kind": "encyclopedic-reference",
+      "title": "Premium Times",
+      "url": "https://en.wikipedia.org/wiki/Premium_Times",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-premium-times-mbfc",
+      "publisherSlug": "premium-times",
+      "kind": "media-bias-rating",
+      "title": "Premium Times - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/premium-times/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-premium-times-feed-1",
+      "publisherSlug": "premium-times",
+      "kind": "feed-validation",
+      "title": "RSS validation: Main",
+      "url": "https://www.premiumtimesng.com/feed",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "15 items; valid RSS."
+    },
+    {
+      "id": "EV-el-pais-english-about",
+      "publisherSlug": "el-pais-english",
+      "kind": "official-about",
+      "title": "Official publisher page",
+      "url": "https://english.elpais.com/about-us/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 404,
+      "supports": [
+        "identity",
+        "self-description",
+        "ownership-context"
+      ],
+      "limitations": "Official about URL returned 404; identity and ownership rely on secondary sources."
+    },
+    {
+      "id": "EV-el-pais-english-wikipedia",
+      "publisherSlug": "el-pais-english",
+      "kind": "encyclopedic-reference",
+      "title": "El País",
+      "url": "https://en.wikipedia.org/wiki/El_Pa%C3%ADs",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "founding",
+        "ownership",
+        "history",
+        "identity"
+      ],
+      "limitations": "Secondary, crowd-edited source; used for orientation and corroboration, not as sole evidence for contested claims."
+    },
+    {
+      "id": "EV-el-pais-english-mbfc",
+      "publisherSlug": "el-pais-english",
+      "kind": "media-bias-rating",
+      "title": "El Pais - Bias and Credibility - Media Bias/Fact Check",
+      "url": "https://mediabiasfactcheck.com/el-pais-english/",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "political-leaning",
+        "factual-reporting",
+        "credibility"
+      ],
+      "limitations": "Third-party rating methodology; includes US-centric and regional coverage limits. Rating page may be updated after retrieval."
+    },
+    {
+      "id": "EV-el-pais-english-feed-1",
+      "publisherSlug": "el-pais-english",
+      "kind": "feed-validation",
+      "title": "RSS validation: English homepage",
+      "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/english.elpais.com/portada",
+      "retrievedAt": "2026-10-25",
+      "httpStatus": 200,
+      "supports": [
+        "feed-availability",
+        "freshness",
+        "metadata-quality"
+      ],
+      "limitations": "59 items; valid RSS."
+    }
+  ]
+}

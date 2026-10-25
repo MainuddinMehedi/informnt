@@ -1,0 +1,157 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Times of Israel",
+      "slug": "times-of-israel",
+      "website": "https://www.timesofisrael.com",
+      "publisherCountry": "Israel",
+      "language": "English",
+      "foundedYear": 2012,
+      "description": "An Israeli English-language online newspaper covering Israel, the Middle East and the Jewish world, with news, analysis, blogs and opinion."
+    },
+    "ownership": {
+      "owner": "Zmanei Yisrael",
+      "parentOrganization": "Zmanei Yisrael",
+      "stateFunded": false,
+      "ownershipNotes": "Launched in 2012 by journalist David Horovitz and American investor Seth Klarman. Registered as Zmanei Yisrael; the outlet says it has no partisan affiliation."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Middle East",
+    "subRegion": "Israel"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Israel",
+      "Middle East"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "North America",
+      "Europe"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Israeli politics",
+        "Middle East conflict",
+        "Jewish world",
+        "Analysis"
+      ],
+      "moderate": [
+        "Business",
+        "Technology",
+        "Culture"
+      ],
+      "weak": [
+        "Africa",
+        "Latin America",
+        "Markets data"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Founded as an independent English-language outlet with a multi-author blog platform and a broad range of Israeli voices; ownership by a private investor creates potential pressures.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.5
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "MBFC rates The Times of Israel Left-Center with High factual reporting; its news coverage is professional while opinion and blogs span a wider range.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.55
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is secondary and generally market-oriented without a consistent ideological programme.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.4
+    },
+    "internationalAlignment": {
+      "value": [
+        "Israel",
+        "Jewish world",
+        "Liberal democracy"
+      ],
+      "evidence": "Israeli national lens with strong coverage of the Jewish diaspora and Israel's international standing.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; established English-language newsroom with corrections and named reporters.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Israeli English-language coverage aimed at international and diaspora readers, combining fast news, analysis and a wide blog platform.",
+    "knownStrengths": [
+      "Israeli politics",
+      "Middle East conflict",
+      "Jewish diaspora",
+      "Analysis"
+    ],
+    "knownWeaknesses": [
+      "Israel-centric",
+      "Blog quality varies",
+      "Limited investigative depth"
+    ]
+  },
+  "selectionRationale": "Adds a major Israeli English-language perspective and diaspora coverage that complements global wires.",
+  "feeds": [
+    {
+      "url": "https://www.timesofisrael.com/feed/",
+      "category": "Main",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T03:45:22+00:00",
+      "entryCount": 15,
+      "feedTitle": "The Times of Israel",
+      "bozo": false,
+      "validationNote": "15 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Left-leaning",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Haaretz",
+      "The Jerusalem Post",
+      "Israel Hayom"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page blocked the research client with 403. Founding and ownership from Wikipedia and secondary references. Feed validated. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-times-of-israel-about",
+      "EV-times-of-israel-wikipedia",
+      "EV-times-of-israel-mbfc",
+      "EV-times-of-israel-feed-1"
+    ]
+  }
+}

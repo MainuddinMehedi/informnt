@@ -1,0 +1,155 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Prothom Alo",
+      "slug": "prothom-alo",
+      "website": "https://en.prothomalo.com",
+      "publisherCountry": "Bangladesh",
+      "language": "English",
+      "foundedYear": 1998,
+      "description": "Bangladesh's largest Bengali-language daily, with an English digital edition covering national politics, business, society and South Asian affairs."
+    },
+    "ownership": {
+      "owner": "Mediastar Limited",
+      "parentOrganization": "Transcom Group",
+      "stateFunded": false,
+      "ownershipNotes": "Published by Mediastar Limited, the media arm of Transcom Group. The group is one of Bangladesh's largest conglomerates, creating potential commercial and political entanglements despite a strong independent editorial reputation."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "South Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Bangladesh",
+      "South Asia"
+    ],
+    "secondaryRegions": [
+      "Asia-Pacific",
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Bangladesh politics",
+        "South Asian affairs",
+        "Business",
+        "Society"
+      ],
+      "moderate": [
+        "Climate",
+        "Human rights",
+        "Technology"
+      ],
+      "weak": [
+        "Markets data",
+        "Africa",
+        "Latin America"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Established record of critical reporting on Bangladeshi governments and investigations, although ownership by a large conglomerate creates structural commercial pressures.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.55
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No MBFC rating; self-assessed as broadly centrist with a liberal, professional news agenda and space for opposition and civil-society voices.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.45
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Business coverage is substantial but not uniformly pro-market; reporting spans corporate, labour and development perspectives.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.4
+    },
+    "internationalAlignment": {
+      "value": [
+        "Bangladesh",
+        "South Asia",
+        "Press freedom"
+      ],
+      "evidence": "National lens with strong coverage of Bangladesh's politics and its South Asian neighbourhood.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Long-established newspaper of record with professional reporting and corrections; no MBFC rating identified.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.65
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified for Prothom Alo in this review."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "A Bangladeshi national newspaper of record. It frames events through domestic politics, development, business and South Asian regional dynamics, with an English edition aimed at international readers.",
+    "knownStrengths": [
+      "Bangladesh politics",
+      "Investigative reporting",
+      "Business",
+      "South Asia"
+    ],
+    "knownWeaknesses": [
+      "Bangladesh-centric",
+      "Conglomerate ownership pressures",
+      "Limited English-language depth"
+    ]
+  },
+  "selectionRationale": "Provides essential Bangladeshi national coverage and a South Asian perspective missing from the existing Daily Star/Dhaka Tribune pair.",
+  "feeds": [
+    {
+      "url": "https://en.prothomalo.com/feed/",
+      "category": "English edition",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:42:41+00:00",
+      "entryCount": 15,
+      "feedTitle": "Prothom Alo English",
+      "bozo": false,
+      "validationNote": "15 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "The Daily Star",
+      "Dhaka Tribune",
+      "New Age"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Ownership established through Transcom/Mediastar references and Wikipedia; official English About page returned 404. Profile is DRAFT pending human verification and article sampling. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-prothom-alo-about",
+      "EV-prothom-alo-wikipedia",
+      "EV-prothom-alo-feed-1"
+    ]
+  }
+}

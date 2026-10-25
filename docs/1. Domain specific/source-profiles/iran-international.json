@@ -1,0 +1,156 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Iran International",
+      "slug": "iran-international",
+      "website": "https://www.iranintl.com",
+      "publisherCountry": "UK",
+      "language": "English",
+      "foundedYear": 2017,
+      "description": "A London-based Persian-language satellite and digital news network covering Iran, its diaspora and regional affairs, with an English-language service."
+    },
+    "ownership": {
+      "owner": "Volant Media UK",
+      "parentOrganization": "Volant Media UK",
+      "stateFunded": false,
+      "ownershipNotes": "Backed by Saudi-linked private investors, according to multiple media reports; the outlet denies funding from or ties to the Saudi government. It actively promotes former Crown Prince Reza Pahlavi and is designated a terrorist organisation by Iran."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Broadcaster",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Regional",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Europe",
+    "subRegion": "United Kingdom"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Iran",
+      "Middle East"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "Europe",
+      "North America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Iran politics",
+        "Iranian protests",
+        "Human rights",
+        "Diaspora"
+      ],
+      "moderate": [
+        "Regional security",
+        "Energy",
+        "International diplomacy"
+      ],
+      "weak": [
+        "Business",
+        "Africa",
+        "Latin America"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Editorially independent of the Iranian government and strongly oppositional, but opaque financing and Saudi-linked investment reports create significant alignment risk.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.35
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No parsed MBFC rating; self-assessed as centrist with a pronounced anti-regime and pro-Pahlavi editorial stance, which can push coverage rightward on Iran.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.35
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is secondary and largely framed through sanctions, regime accountability and diaspora investment.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.35
+    },
+    "internationalAlignment": {
+      "value": [
+        "Iranian opposition",
+        "Reza Pahlavi",
+        "Saudi-aligned funders"
+      ],
+      "evidence": "Openly opposes the Islamic Republic and promotes regime change, with reported Saudi-linked financing; its international alignment is therefore contested.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "Medium",
+      "evidence": "Professional newsroom with original Iran reporting, but opaque ownership and advocacy positioning require corroboration of politically sensitive claims.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.45
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No clean MBFC rating parsed for Iran International."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Oppositional Iranian coverage with a strong anti-regime and pro-diaspora lens, useful for protest and human-rights stories but requiring corroboration.",
+    "knownStrengths": [
+      "Iran protests",
+      "Human rights",
+      "Diaspora",
+      "Regime accountability"
+    ],
+    "knownWeaknesses": [
+      "Opaque financing",
+      "Regime-change advocacy",
+      "Limited business coverage"
+    ]
+  },
+  "selectionRationale": "Adds rare Iran-focused reporting and diaspora voices, balanced by explicit funding and alignment caveats.",
+  "feeds": [
+    {
+      "url": "https://www.iranintl.com/en/feed",
+      "category": "English",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T09:46:25+00:00",
+      "entryCount": 50,
+      "feedTitle": "Iran International",
+      "bozo": false,
+      "validationNote": "50 items; valid RSS; iranintl.com/en/rss returned invalid/empty."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "BBC Persian",
+      "Radio Farda",
+      "IranWire"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page accessible but thin. Financing is disputed and based on secondary reporting; profile must remain DRAFT pending documentary verification. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-iran-international-about",
+      "EV-iran-international-wikipedia",
+      "EV-iran-international-feed-1"
+    ]
+  }
+}

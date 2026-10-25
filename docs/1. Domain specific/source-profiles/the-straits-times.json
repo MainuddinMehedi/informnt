@@ -1,0 +1,158 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Straits Times",
+      "slug": "the-straits-times",
+      "website": "https://www.straitstimes.com",
+      "publisherCountry": "Singapore",
+      "language": "English",
+      "foundedYear": 1845,
+      "description": "Singapore's English-language newspaper of record, covering national politics, business and Southeast Asian affairs."
+    },
+    "ownership": {
+      "owner": "SPH Media Trust",
+      "parentOrganization": "SPH Media Trust",
+      "stateFunded": true,
+      "ownershipNotes": "Published by SPH Media Trust, a company limited by guarantee that took over Singapore Press Holdings' media business in 2021. It receives government funding while retaining commercial operations."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Public Service",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Regional",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "Southeast Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Singapore",
+      "Southeast Asia",
+      "Asia-Pacific"
+    ],
+    "secondaryRegions": [
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Singapore politics",
+        "Southeast Asian business",
+        "Trade",
+        "Regional security"
+      ],
+      "moderate": [
+        "China",
+        "India",
+        "Technology"
+      ],
+      "weak": [
+        "Human-rights investigations",
+        "Opposition politics",
+        "Global South"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "State-Aligned",
+      "evidence": "Close institutional proximity to Singapore's government and a history of restrained coverage of domestic political opposition; regional reporting is more plural.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.6
+    },
+    "politicalLeaning": {
+      "value": "Centre-Right",
+      "evidence": "MBFC rates Right-Center; pro-establishment, technocratic framing on domestic policy.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.6
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Coverage is oriented toward Singapore's trade, finance and investment model.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "internationalAlignment": {
+      "value": [
+        "Singapore",
+        "ASEAN",
+        "Liberal trading order"
+      ],
+      "evidence": "Frames regional affairs through Singapore's trade interests, ASEAN centrality and stable technocratic governance.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.65
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC credibility High; established newspaper of record, though domestic political coverage is constrained.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": "Right-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Right-Center; credibility High; no parsed factual score (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Singapore establishment/technocratic voice. Explains Southeast Asia through trade, investment, ASEAN process and governance stability, with limited adversarial coverage of domestic power.",
+    "knownStrengths": [
+      "Singapore policy",
+      "Southeast Asian business",
+      "ASEAN",
+      "Trade"
+    ],
+    "knownWeaknesses": [
+      "Domestic self-censorship risk",
+      "Pro-establishment framing",
+      "Limited human-rights lens"
+    ]
+  },
+  "selectionRationale": "Provides a key Southeast Asian establishment perspective and regional business coverage, with explicit state-proximity caveats.",
+  "feeds": [
+    {
+      "url": "https://www.straitstimes.com/news/world/rss.xml",
+      "category": "World",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:10:33+00:00",
+      "entryCount": 50,
+      "feedTitle": "The Straits Times World News",
+      "bozo": false,
+      "validationNote": "50 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "SPH Media"
+    ],
+    "competitors": [
+      "CNA",
+      "The Business Times",
+      "Nikkei Asia"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained, but MBFC suggests Right-Center and ownership is a public-service trust with government funding. Review mapping with schema migration. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-the-straits-times-about",
+      "EV-the-straits-times-wikipedia",
+      "EV-the-straits-times-mbfc",
+      "EV-the-straits-times-feed-1"
+    ]
+  }
+}

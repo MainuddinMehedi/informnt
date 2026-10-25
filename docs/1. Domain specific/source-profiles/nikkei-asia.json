@@ -1,0 +1,159 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Nikkei Asia",
+      "slug": "nikkei-asia",
+      "website": "https://asia.nikkei.com",
+      "publisherCountry": "Japan",
+      "language": "English",
+      "foundedYear": 2013,
+      "description": "The English-language Asia-focused publication of Nikkei Inc., covering business, markets, technology, politics and supply chains across the region."
+    },
+    "ownership": {
+      "owner": "Nikkei Inc.",
+      "parentOrganization": "Nikkei Inc.",
+      "stateFunded": false,
+      "ownershipNotes": "Privately held Japanese media group. Nikkei acquired the Financial Times in 2015, giving it a transcontinental business-news footprint and close ties to Japanese corporate and financial circles."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Magazine",
+    "editorialStyle": "Analysis",
+    "coverageScope": "International",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "East Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Japan",
+      "East Asia",
+      "Southeast Asia"
+    ],
+    "secondaryRegions": [
+      "South Asia",
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Asian business",
+        "Supply chains",
+        "Semiconductors",
+        "Japanese corporate strategy"
+      ],
+      "moderate": [
+        "Geopolitics",
+        "Trade",
+        "Technology"
+      ],
+      "weak": [
+        "Humanitarian reporting",
+        "Local crime",
+        "Entertainment"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Editorial independence from the Japanese government is maintained, but the publication has structural proximity to Japanese corporate and financial interests.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.7
+    },
+    "politicalLeaning": {
+      "value": "Centre-Right",
+      "evidence": "MBFC rates Right-Center and High factual reporting; pro-business framing and a Japanese allied perspective on regional security.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Coverage consistently frames events through corporate strategy, investment and market impact.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.8
+    },
+    "internationalAlignment": {
+      "value": [
+        "Japan",
+        "US-Japan alliance",
+        "Indo-Pacific"
+      ],
+      "evidence": "Regional security is framed through Japanese and allied interests, with critical but measured coverage of China.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.7
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; deep institutional reporting and named sourcing.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.8
+    },
+    "externalRatings": {
+      "mbfc": "Right-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Right-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Japanese business-establishment voice. Explains Asian events through supply chains, corporate strategy, trade and Japan's alliance relationships, with detailed techno-industrial coverage.",
+    "knownStrengths": [
+      "Asian supply chains",
+      "Semiconductors",
+      "Japanese corporate governance",
+      "Trade policy"
+    ],
+    "knownWeaknesses": [
+      "Business-first framing",
+      "Limited humanitarian lens",
+      "Undated RSS feed"
+    ]
+  },
+  "selectionRationale": "Provides unmatched English-language Asian business and supply-chain depth, complementing political wires and China-focused outlets.",
+  "feeds": [
+    {
+      "url": "https://asia.nikkei.com/rss/feed/nar",
+      "category": "Top news",
+      "feedType": "RSS 1.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED_NO_DATES",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T08:30:19+00:00",
+      "entryCount": 50,
+      "feedTitle": "Nikkei Asia",
+      "bozo": false,
+      "validationNote": "50 items parse. RSS XML lacks pubDate tags, but articles include ISO publication dates on-page (lead article datePublished: 2026-10-25T08:30:19Z; HTTP Last-Modified: 2026-10-25T14:38:02Z). Ingestion pipeline requires date scraping fallback."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Right-leaning",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "Financial Times"
+    ],
+    "competitors": [
+      "Bloomberg Asia",
+      "Reuters Asia",
+      "South China Morning Post"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "RSS is RSS 1.0/RDF and lacks dates. Existing production mapping retained; activation needs a date-handling fix or a replacement feed. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-nikkei-asia-about",
+      "EV-nikkei-asia-wikipedia",
+      "EV-nikkei-asia-mbfc",
+      "EV-nikkei-asia-feed-1"
+    ]
+  }
+}

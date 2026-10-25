@@ -1,0 +1,158 @@
+{
+  "facts": {
+    "identity": {
+      "name": "South China Morning Post",
+      "slug": "south-china-morning-post",
+      "website": "https://www.scmp.com",
+      "publisherCountry": "Hong Kong",
+      "language": "English",
+      "foundedYear": 1903,
+      "description": "A Hong Kong English-language newspaper and digital publisher covering China, Asia and international affairs."
+    },
+    "ownership": {
+      "owner": "Alibaba Group",
+      "parentOrganization": "Alibaba Group",
+      "stateFunded": false,
+      "ownershipNotes": "Owned by Alibaba Group since 2016. Alibaba's commercial interests in China create structural pressure on editorial independence, though the newsroom retains professional reporting standards."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Regional",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "Greater China"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "China",
+      "Hong Kong",
+      "Asia-Pacific"
+    ],
+    "secondaryRegions": [
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "China politics",
+        "Hong Kong",
+        "Asian business",
+        "Technology"
+      ],
+      "moderate": [
+        "Geopolitics",
+        "Trade",
+        "Environment"
+      ],
+      "weak": [
+        "Human-rights investigations",
+        "Taiwan-sensitive coverage",
+        "Global South"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Professional newsroom with original reporting, but Alibaba ownership and China-market exposure create credible self-censorship risk on sensitive topics.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.45
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "MBFC rates Left-Center but factual reporting Mixed; China coverage is often more restrained than Western outlets.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.55
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Business coverage is market and corporate focused, reflecting Hong Kong's financial-press tradition.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.65
+    },
+    "internationalAlignment": {
+      "value": [
+        "China",
+        "Hong Kong",
+        "Asian business"
+      ],
+      "evidence": "Frames China and regional affairs with attention to Beijing's sensitivities and Hong Kong's commercial role.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "Medium",
+      "evidence": "MBFC rates factual reporting Mixed and credibility Medium; strong original reporting coexists with ownership-related constraints.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting Mixed; credibility Medium (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Hong Kong/China-facing business and political voice. Provides detailed China coverage from inside the region, but with structural caution on topics sensitive to Beijing and Alibaba.",
+    "knownStrengths": [
+      "China business",
+      "Hong Kong politics",
+      "Asian technology",
+      "Regional reporting"
+    ],
+    "knownWeaknesses": [
+      "Ownership-related self-censorship risk",
+      "Sensitive-topic caution",
+      "Mixed factual rating"
+    ]
+  },
+  "selectionRationale": "Adds an important Hong Kong/China perspective and regional access, with explicit ownership and reliability caveats.",
+  "feeds": [
+    {
+      "url": "https://www.scmp.com/rss/91/feed",
+      "category": "Top stories",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:44:17+00:00",
+      "entryCount": 50,
+      "feedTitle": "News - South China Morning Post",
+      "bozo": false,
+      "validationNote": "50 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "Alibaba Group"
+    ],
+    "competitors": [
+      "Nikkei Asia",
+      "Bloomberg Asia",
+      "The Diplomat"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained, but MBFC suggests Left-Center. Ownership risk should be reviewed before treating SCMP as a neutral China source. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-south-china-morning-post-about",
+      "EV-south-china-morning-post-wikipedia",
+      "EV-south-china-morning-post-mbfc",
+      "EV-south-china-morning-post-feed-1"
+    ]
+  }
+}

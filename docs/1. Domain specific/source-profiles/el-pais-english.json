@@ -1,0 +1,158 @@
+{
+  "facts": {
+    "identity": {
+      "name": "El País English",
+      "slug": "el-pais-english",
+      "website": "https://english.elpais.com",
+      "publisherCountry": "Spain",
+      "language": "English",
+      "foundedYear": 1976,
+      "description": "The English-language edition of Spain's leading progressive daily, covering Spanish and Latin American politics, Europe and international affairs."
+    },
+    "ownership": {
+      "owner": "PRISA",
+      "parentOrganization": "Promotora de Informaciones, S.A. (PRISA)",
+      "stateFunded": false,
+      "ownershipNotes": "El País is owned by the Spanish media conglomerate PRISA. The English edition translates and curates selected Spanish-language reporting for international readers."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "International",
+    "originality": "Mixed",
+    "sourceRegion": "Europe",
+    "subRegion": "Spain"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Spain",
+      "Latin America",
+      "Europe"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "North America",
+      "Middle East"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Spanish politics",
+        "Latin America",
+        "European affairs",
+        "Culture"
+      ],
+      "moderate": [
+        "Business",
+        "Climate",
+        "Technology"
+      ],
+      "weak": [
+        "Africa",
+        "Asia-Pacific",
+        "Markets data"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Established newspaper with a public editorial line and professional newsroom; PRISA ownership and Spanish political ties create commercial pressures but no direct state control.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.55
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "MBFC rates El País Left-Center with High factual reporting; its editorial line is social-democratic and pro-European.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.6
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage generally supports a mixed economy and European social model rather than a pure market programme.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "Spain",
+        "European Union",
+        "Latin America"
+      ],
+      "evidence": "Spanish and EU lens with substantial Latin American coverage and a pro-European integration outlook.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; established newspaper of record with named reporters and corrections.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Spanish progressive internationalism, with strong European and Latin American coverage and a social-democratic editorial outlook.",
+    "knownStrengths": [
+      "Spanish politics",
+      "Latin America",
+      "European affairs",
+      "Culture"
+    ],
+    "knownWeaknesses": [
+      "English edition is curated/translated",
+      "Spain-centric",
+      "Limited Asia-Pacific depth"
+    ]
+  },
+  "selectionRationale": "Adds a major Spanish-language publisher's English edition and strong Latin American coverage, filling a gap in the catalog.",
+  "feeds": [
+    {
+      "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/english.elpais.com/portada",
+      "category": "English homepage",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-24T22:00:00+00:00",
+      "entryCount": 59,
+      "feedTitle": "EL PAÍS in English",
+      "bozo": false,
+      "validationNote": "59 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Left-leaning",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Reuters",
+      "Financial Times",
+      "Folha de S.Paulo"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official English About page returned 404. Ownership from PRISA and Wikipedia. Feed validated. English edition is a curated translation product, not the full Spanish newsroom. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-el-pais-english-about",
+      "EV-el-pais-english-wikipedia",
+      "EV-el-pais-english-mbfc",
+      "EV-el-pais-english-feed-1"
+    ]
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Financial Times",
+      "slug": "financial-times",
+      "website": "https://www.ft.com",
+      "publisherCountry": "UK",
+      "language": "English",
+      "foundedYear": 1888,
+      "description": "A global business and economics newspaper known for financial reporting, markets coverage, economic analysis and an internationalist editorial outlook."
+    },
+    "ownership": {
+      "owner": "Nikkei Inc.",
+      "parentOrganization": "Nikkei Inc.",
+      "stateFunded": false,
+      "ownershipNotes": "Nikkei acquired the Financial Times from Pearson in 2015. The FT operates under editorial independence protections and a prominent trust framework despite Japanese corporate ownership."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Analysis",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Europe",
+    "subRegion": "United Kingdom"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Global",
+      "Europe",
+      "United States",
+      "Asia-Pacific"
+    ],
+    "secondaryRegions": [
+      "Middle East",
+      "Africa",
+      "South America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Finance and markets",
+        "Economics",
+        "Trade policy",
+        "Corporate strategy"
+      ],
+      "moderate": [
+        "Geopolitics",
+        "Climate",
+        "Technology"
+      ],
+      "weak": [
+        "Local news",
+        "Sport",
+        "Popular culture"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "The FT's editorial charter and trust ownership provisions protect independence; coverage is critical of governments and companies across jurisdictions.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.65
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC rates the FT Least Biased with High factual reporting; its editorial page is liberal-internationalist and pro-market but the news operation is professionally balanced.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.6
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Strong preference for open markets, fiscal responsibility and liberal trade, with support for international institutions and market-based climate policy.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.6
+    },
+    "internationalAlignment": {
+      "value": [
+        "Liberal internationalism",
+        "Market economies",
+        "Western alliances"
+      ],
+      "evidence": "Coverage is global but anchored in London, European and transatlantic financial perspectives.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; the FT has a long record of sourced financial reporting and corrections.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "externalRatings": {
+      "mbfc": "Least Biased",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Least Biased; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Sophisticated business and economic analysis with a liberal-internationalist outlook. It is especially useful for markets, trade, central banks and corporate power.",
+    "knownStrengths": [
+      "Financial markets",
+      "Central banks",
+      "Trade and investment",
+      "European economy"
+    ],
+    "knownWeaknesses": [
+      "Paywall limits",
+      "Business-elite sourcing",
+      "Limited grassroots coverage"
+    ]
+  },
+  "selectionRationale": "Adds depth on finance, trade and economic policy that general wires and national outlets cannot match.",
+  "feeds": [
+    {
+      "url": "https://www.ft.com/world?format=rss",
+      "category": "World",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-24T23:00:11+00:00",
+      "entryCount": 25,
+      "feedTitle": "World | Financial Times",
+      "bozo": false,
+      "validationNote": "25 items; valid RSS; paywalled article bodies."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Bloomberg News",
+      "The Economist",
+      "Wall Street Journal"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Ownership confirmed via official FT Group page and Wikipedia. Feed item count and recency verified. Paywall and limited snippet length constrain downstream extraction. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-financial-times-about",
+      "EV-financial-times-wikipedia",
+      "EV-financial-times-mbfc",
+      "EV-financial-times-feed-1"
+    ]
+  }
+}

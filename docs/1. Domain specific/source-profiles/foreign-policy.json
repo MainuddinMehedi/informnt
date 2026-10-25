@@ -1,0 +1,158 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Foreign Policy",
+      "slug": "foreign-policy",
+      "website": "https://foreignpolicy.com",
+      "publisherCountry": "USA",
+      "language": "English",
+      "foundedYear": 1970,
+      "description": "An American global-affairs publication combining reported analysis, argument and policy journalism on diplomacy, security, economics and international institutions."
+    },
+    "ownership": {
+      "owner": "FP Group",
+      "parentOrganization": "Graham Holdings Company",
+      "stateFunded": false,
+      "ownershipNotes": "Commercial policy publisher owned by FP Group, a division of Graham Holdings. It has a strong Washington policy-network orientation but no direct state ownership."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Magazine",
+    "editorialStyle": "Analysis",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "North America",
+    "subRegion": "United States"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "United States",
+      "Global"
+    ],
+    "secondaryRegions": [
+      "Europe",
+      "Middle East",
+      "Asia-Pacific",
+      "Africa"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "US foreign policy",
+        "Diplomacy",
+        "Security policy",
+        "Global governance"
+      ],
+      "moderate": [
+        "Economics",
+        "Climate policy",
+        "Human rights"
+      ],
+      "weak": [
+        "Local news",
+        "Markets data",
+        "Sport"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Publishes multiple perspectives and critical analysis of US policy; no evidence of a single owner-directed editorial line.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.75
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC rates the publication Least Biased; article mix spans realist, liberal-internationalist and critical viewpoints.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is policy-analytic and plural, without a consistent free-market or state-directed editorial programme.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.6
+    },
+    "internationalAlignment": {
+      "value": [
+        "United States",
+        "Liberal internationalism",
+        "Transatlantic alliance"
+      ],
+      "evidence": "Coverage is written largely for a US policy audience and often assumes US leadership and alliance management, while publishing critiques of those assumptions.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.65
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; established editorial operation with named authors and corrections.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.8
+    },
+    "externalRatings": {
+      "mbfc": "Least Biased",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Least Biased; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Washington policy-insider analysis. Explains world events through US strategy, institutions and elite policy debate, with more interpretive depth and more ideological range than a straight wire.",
+    "knownStrengths": [
+      "US foreign-policy process",
+      "Security strategy",
+      "Diplomatic analysis",
+      "Policy argument"
+    ],
+    "knownWeaknesses": [
+      "US-centric framing",
+      "Limited grassroots reporting",
+      "Opinion/analysis can blur with news"
+    ]
+  },
+  "selectionRationale": "Adds interpretive depth on US foreign policy and global institutions that complements wire coverage and non-US perspectives.",
+  "feeds": [
+    {
+      "url": "https://foreignpolicy.com/feed/",
+      "category": "Top stories",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-23T14:22:10+00:00",
+      "entryCount": 25,
+      "feedTitle": "Foreign Policy",
+      "bozo": false,
+      "validationNote": "25 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Foreign Affairs",
+      "The Economist",
+      "Politico"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Ownership confirmed via official About page and Graham Holdings references. Existing production mapping retained. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-foreign-policy-about",
+      "EV-foreign-policy-wikipedia",
+      "EV-foreign-policy-mbfc",
+      "EV-foreign-policy-feed-1"
+    ]
+  }
+}

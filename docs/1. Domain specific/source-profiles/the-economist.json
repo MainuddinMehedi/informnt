@@ -1,0 +1,159 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Economist",
+      "slug": "the-economist",
+      "website": "https://www.economist.com",
+      "publisherCountry": "UK",
+      "language": "English",
+      "foundedYear": 1843,
+      "description": "A weekly news and current-affairs magazine offering data-rich analysis of economics, geopolitics, business, technology and culture from a classical-liberal perspective."
+    },
+    "ownership": {
+      "owner": "The Economist Group",
+      "parentOrganization": "The Economist Newspaper Limited",
+      "stateFunded": false,
+      "ownershipNotes": "The Economist Group is independently owned through a dual-class structure with significant historic shareholders including the Cadbury, Rothschild, Schroder and Agnelli families. Editorial independence is constitutionally protected."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Magazine",
+    "editorialStyle": "Analysis",
+    "coverageScope": "Global",
+    "originality": "Mixed",
+    "sourceRegion": "Europe",
+    "subRegion": "United Kingdom"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Global",
+      "United States",
+      "Europe",
+      "Asia-Pacific"
+    ],
+    "secondaryRegions": [
+      "Middle East",
+      "Africa",
+      "South America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Geopolitics",
+        "Economics",
+        "Business strategy",
+        "Data journalism"
+      ],
+      "moderate": [
+        "Technology",
+        "Climate",
+        "Culture"
+      ],
+      "weak": [
+        "Local news",
+        "Fast breaking news",
+        "Grassroots reporting"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "The group's constitution and editorial charter protect independence; the magazine takes explicit classical-liberal positions while distinguishing analysis from reporting.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.7
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC rates The Economist Least Biased with High factual reporting; its editorial line is classical-liberal and pro-market rather than partisan-centrist.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.65
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Consistent advocacy for free markets, open trade, fiscal discipline and liberal immigration, tempered by support for some state capacity and climate policy.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "internationalAlignment": {
+      "value": [
+        "Liberal internationalism",
+        "Market economies",
+        "Western alliances"
+      ],
+      "evidence": "Frames world affairs through liberal internationalism, open markets and alliance politics, with a distinctly Anglo-American analytical audience.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.65
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; bylined analysis, corrections and transparent data sourcing support reliability, though analysis is interpretive.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": "Least Biased",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Least Biased; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Analytical, data-driven classical liberalism. Explains events through incentives, institutions, markets and long-run trends, often with a clear editorial judgment about policy.",
+    "knownStrengths": [
+      "Global economics",
+      "Geopolitical analysis",
+      "Business and finance",
+      "Data visualization"
+    ],
+    "knownWeaknesses": [
+      "Anglo-American vantage point",
+      "Weekly cadence",
+      "Editorial voice can blur analysis and opinion"
+    ]
+  },
+  "selectionRationale": "Adds high-quality explanatory and data journalism that helps the system interpret economics and geopolitics rather than merely record events.",
+  "feeds": [
+    {
+      "url": "https://www.economist.com/the-world-this-week/rss.xml",
+      "category": "The world this week",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-24T04:53:01+00:00",
+      "entryCount": 300,
+      "feedTitle": "The world this week",
+      "bozo": false,
+      "validationNote": "300 items; valid RSS; headline/summary feed rather than full articles."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Financial Times",
+      "Foreign Affairs",
+      "The Atlantic"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Ownership and editorial independence confirmed through The Economist Group and Wikipedia. Feed is valid but contains summary-level items; article sampling was not performed. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-the-economist-about",
+      "EV-the-economist-wikipedia",
+      "EV-the-economist-mbfc",
+      "EV-the-economist-feed-1"
+    ]
+  }
+}

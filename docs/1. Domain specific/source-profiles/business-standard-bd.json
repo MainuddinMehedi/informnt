@@ -1,0 +1,155 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Business Standard",
+      "slug": "business-standard-bd",
+      "website": "https://www.tbsnews.net",
+      "publisherCountry": "Bangladesh",
+      "language": "English",
+      "foundedYear": 2019,
+      "description": "A Bangladeshi English-language business-focused newspaper and digital outlet covering the economy, markets, companies, policy and current affairs."
+    },
+    "ownership": {
+      "owner": "Horizon Media and Publication Ltd.",
+      "parentOrganization": "Horizon Media and Publication Ltd.",
+      "stateFunded": false,
+      "ownershipNotes": "Founded by Horizon Media and Publication Ltd in Dhaka. It combines original business reporting with selective syndicated analysis from international partners."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Analysis",
+    "coverageScope": "National",
+    "originality": "Mixed",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "South Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Bangladesh",
+      "South Asia"
+    ],
+    "secondaryRegions": [
+      "Asia-Pacific",
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Bangladesh economy",
+        "Banking",
+        "Companies",
+        "Policy"
+      ],
+      "moderate": [
+        "Politics",
+        "Climate",
+        "Technology"
+      ],
+      "weak": [
+        "Global breaking news",
+        "Sport",
+        "Culture"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Commercial business publisher with no evidence of direct state or party ownership; syndicates international analysis alongside local reporting.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.45
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No MBFC rating; business-press framing is broadly centrist and policy-focused.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.4
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Editorial focus is markets, investment and business policy, with a generally market-friendly analytical orientation.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "Bangladesh",
+        "Market economies",
+        "South Asia"
+      ],
+      "evidence": "National business lens with emphasis on Bangladesh's investment climate and regional trade.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.45
+    },
+    "reliability": {
+      "value": "Medium",
+      "evidence": "Professional business newsroom with named reporting, but limited independent verification and no external rating; syndicated content varies in quality.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.45
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified for The Business Standard."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Business-first national coverage. Explains Bangladesh through markets, investment, banking and policy, with less emphasis on grassroots reporting.",
+    "knownStrengths": [
+      "Bangladesh business",
+      "Banking and finance",
+      "Policy analysis",
+      "Company coverage"
+    ],
+    "knownWeaknesses": [
+      "Stale public feed",
+      "Business-elite framing",
+      "Limited investigative track record"
+    ]
+  },
+  "selectionRationale": "Adds dedicated Bangladeshi business and economic coverage that complements general national outlets.",
+  "feeds": [
+    {
+      "url": "https://www.tbsnews.net/rss.xml",
+      "category": "Main",
+      "feedType": "RSS 2.0",
+      "enabled": false,
+      "validationStatus": "STALE",
+      "httpStatus": 200,
+      "latestObserved": "2021-11-12T17:30:00+00:00",
+      "entryCount": 10,
+      "feedTitle": "The Business Standard",
+      "bozo": false,
+      "validationNote": "10 items; valid XML but stale since November 2021; do not activate."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "The Daily Star Business",
+      "Prothom Alo Business",
+      "Dhaka Tribune Business"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Main feed is stale; `/feed` and `/rss` returned 404. Ownership and launch context from official About page and Wikipedia. No activation until a current feed is found. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-business-standard-bd-about",
+      "EV-business-standard-bd-wikipedia",
+      "EV-business-standard-bd-feed-1"
+    ]
+  }
+}

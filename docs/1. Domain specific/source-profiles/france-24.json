@@ -1,0 +1,163 @@
+{
+  "facts": {
+    "identity": {
+      "name": "France 24",
+      "slug": "france-24",
+      "website": "https://www.france24.com",
+      "publisherCountry": "France",
+      "language": "English",
+      "foundedYear": 2006,
+      "description": "A French publicly funded international news channel and digital outlet broadcasting in French, English, Arabic and Spanish."
+    },
+    "ownership": {
+      "owner": "France Médias Monde",
+      "parentOrganization": "French state",
+      "stateFunded": true,
+      "ownershipNotes": "France 24 is part of France Médias Monde, which is publicly owned and funded by the French state. It operates under a public-service mandate with statutory editorial safeguards."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Public Service",
+    "publisherType": "Broadcaster",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Europe",
+    "subRegion": "France"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Europe",
+      "France",
+      "Global"
+    ],
+    "secondaryRegions": [
+      "Africa",
+      "Middle East",
+      "Asia-Pacific",
+      "North America",
+      "South America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "French politics",
+        "Africa",
+        "European affairs",
+        "Live news"
+      ],
+      "moderate": [
+        "Middle East",
+        "Business",
+        "Culture"
+      ],
+      "weak": [
+        "US local news",
+        "Market data",
+        "Niche technology"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Public-service mandate and editorial charter; coverage includes criticism of French policy and a plurality of international voices.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.65
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "Generally centrist public-broadcaster framing, with French institutional perspectives and a strong Africa focus.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.55
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is explanatory and policy-oriented, without a consistent free-market or state-directed line.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "France",
+        "European Union",
+        "Francophone world",
+        "Liberal democracies"
+      ],
+      "evidence": "Frames events through French and EU perspectives and maintains substantial coverage of Francophone Africa.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.65
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Established public broadcaster with editorial standards; no MBFC rating parsed in this review, so reliability is assessed from institutional record.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.7
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No clean MBFC rating parsed for France 24; assessed as a public-service broadcaster with statutory safeguards."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "French public-broadcaster perspective. Emphasises European and Francophone-African affairs, diplomatic process and French views of multilateralism, with a more Global South orientation than UK/US outlets.",
+    "knownStrengths": [
+      "Francophone Africa",
+      "French politics",
+      "European diplomacy",
+      "Live coverage"
+    ],
+    "knownWeaknesses": [
+      "French institutional framing",
+      "Uneven depth in Asia",
+      "Limited investigative edge"
+    ]
+  },
+  "selectionRationale": "Adds a French/European public-service voice and comparatively strong Francophone Africa coverage.",
+  "feeds": [
+    {
+      "url": "https://www.france24.com/en/rss",
+      "category": "All English",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:36:42+00:00",
+      "entryCount": 24,
+      "feedTitle": "France 24 - International breaking news, top stories and headlines",
+      "bozo": false,
+      "validationNote": "24 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "State Media",
+    "biasGroup": "Centrist",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "Radio France Internationale",
+      "France Médias Monde"
+    ],
+    "competitors": [
+      "BBC World Service",
+      "DW",
+      "Al Jazeera English"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. France Médias Monde is the public parent group. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-france-24-about",
+      "EV-france-24-wikipedia",
+      "EV-france-24-feed-1"
+    ]
+  }
+}

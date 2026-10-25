@@ -1,0 +1,157 @@
+{
+  "facts": {
+    "identity": {
+      "name": "TechCrunch",
+      "slug": "techcrunch",
+      "website": "https://techcrunch.com",
+      "publisherCountry": "USA",
+      "language": "English",
+      "foundedYear": 2005,
+      "description": "An American technology-news website covering startups, venture capital, products and the business of technology."
+    },
+    "ownership": {
+      "owner": "Yahoo Inc.",
+      "parentOrganization": "Apollo Global Management",
+      "stateFunded": false,
+      "ownershipNotes": "Owned by Yahoo Inc., which is controlled by Apollo Global Management. Commercial technology publisher with a startup and venture-capital focus."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "North America",
+    "subRegion": "United States"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "United States",
+      "Global"
+    ],
+    "secondaryRegions": [
+      "Asia-Pacific",
+      "Europe"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Startups",
+        "Venture capital",
+        "Technology products",
+        "Digital platforms"
+      ],
+      "moderate": [
+        "Regulation",
+        "AI",
+        "Cybersecurity"
+      ],
+      "weak": [
+        "Hard geopolitics",
+        "Humanitarian news",
+        "Macroeconomic policy"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Technology trade coverage with bylined reporting; ownership by Yahoo/Apollo creates commercial pressures but no evident party line.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.55
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC rates Left-Center and High factual reporting; coverage is business/technology focused rather than politically mobilised.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.6
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Startup and venture coverage generally assumes market-led innovation and investor perspectives.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "internationalAlignment": {
+      "value": [
+        "Technology industry",
+        "US innovation ecosystem"
+      ],
+      "evidence": "Frames technology through US startup and venture-capital networks, with limited geopolitical analysis.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.5
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; established technology publication with corrections.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Technology-business insider. Covers innovation through startup funding, product cycles and platform economics, with a generally optimistic, investor-literate framing.",
+    "knownStrengths": [
+      "Startup ecosystem",
+      "Venture capital",
+      "Product launches",
+      "Platform economy"
+    ],
+    "knownWeaknesses": [
+      "Promotional/industry access",
+      "Thin geopolitical context",
+      "Limited labour perspective"
+    ]
+  },
+  "selectionRationale": "Adds structured technology and startup coverage that general international outlets treat episodically.",
+  "feeds": [
+    {
+      "url": "https://techcrunch.com/feed/",
+      "category": "Top stories",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-24T14:46:34+00:00",
+      "entryCount": 20,
+      "feedTitle": "TechCrunch",
+      "bozo": false,
+      "validationNote": "20 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "Yahoo"
+    ],
+    "competitors": [
+      "The Verge",
+      "Wired",
+      "Ars Technica"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. Ownership verified through official About page and Wikipedia. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-techcrunch-about",
+      "EV-techcrunch-wikipedia",
+      "EV-techcrunch-mbfc",
+      "EV-techcrunch-feed-1"
+    ]
+  }
+}

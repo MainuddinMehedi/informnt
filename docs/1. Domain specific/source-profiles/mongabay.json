@@ -1,0 +1,158 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Mongabay",
+      "slug": "mongabay",
+      "website": "https://mongabay.com",
+      "publisherCountry": "USA",
+      "language": "English",
+      "foundedYear": 1999,
+      "description": "An independent environmental news organisation covering conservation, tropical forests, biodiversity, energy and planetary challenges through a global network of local journalists."
+    },
+    "ownership": {
+      "owner": "Mongabay.org",
+      "parentOrganization": "Mongabay.org",
+      "stateFunded": false,
+      "ownershipNotes": "Independent nonprofit media organisation funded by grants, philanthropy and readers. Its global network includes local reporters and regional editions."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Non-profit",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Analysis",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "North America",
+    "subRegion": "United States"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Global",
+      "South America",
+      "Africa",
+      "Asia-Pacific"
+    ],
+    "secondaryRegions": [
+      "North America",
+      "Europe"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Conservation",
+        "Deforestation",
+        "Biodiversity",
+        "Environmental science"
+      ],
+      "moderate": [
+        "Climate policy",
+        "Energy",
+        "Indigenous rights"
+      ],
+      "weak": [
+        "Markets",
+        "Security",
+        "Party politics"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Nonprofit, mission-driven environmental publisher with transparent funding and a network of local reporters; no evidence of state or corporate editorial control.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.6
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No parsed MBFC ideological rating; coverage is evidence-led and environmentalist rather than aligned with a political party.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.45
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic questions are framed through conservation, land use and sustainable development rather than a consistent market or state ideology.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.4
+    },
+    "internationalAlignment": {
+      "value": [
+        "Global South",
+        "Conservation",
+        "Indigenous rights"
+      ],
+      "evidence": "Strong emphasis on tropical forests, biodiversity hotspots and communities in the Global South.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC records High credibility; Mongabay cites scientific literature, names reporters and issues corrections.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.65
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: credibility High; no clean bias/factual fields in the saved page (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Conservation and planetary-boundaries journalism. Explains environmental change through science, land use, local communities and policy implementation.",
+    "knownStrengths": [
+      "Tropical forests",
+      "Biodiversity",
+      "Environmental science",
+      "Global South reporting"
+    ],
+    "knownWeaknesses": [
+      "Narrow topical focus",
+      "Limited hard-news cadence",
+      "Environmental-advocacy framing"
+    ]
+  },
+  "selectionRationale": "Adds specialist environmental depth and Global South reporting that general global sources cover episodically.",
+  "feeds": [
+    {
+      "url": "https://news.mongabay.com/feed/",
+      "category": "Conservation news",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-24T09:14:17+00:00",
+      "entryCount": 32,
+      "feedTitle": "Conservation news",
+      "bozo": false,
+      "validationNote": "32 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Carbon Brief",
+      "Inside Climate News",
+      "The Guardian Environment"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page confirms independent environmental newsroom. Feed-level review only; no article sample. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-mongabay-about",
+      "EV-mongabay-wikipedia",
+      "EV-mongabay-mbfc",
+      "EV-mongabay-feed-1"
+    ]
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Scroll.in",
+      "slug": "scroll-in",
+      "website": "https://scroll.in",
+      "publisherCountry": "India",
+      "language": "English",
+      "foundedYear": 2014,
+      "description": "An Indian digital news and culture publication known for independent reporting, analysis, long-form journalism and coverage of rights, politics and society."
+    },
+    "ownership": {
+      "owner": "Scroll Media Inc.",
+      "parentOrganization": "Scroll Media Inc.",
+      "stateFunded": false,
+      "ownershipNotes": "Founded by Samir Patil and owned by Scroll Media Inc., with funding from Omidyar Network and the Media Development Investment Fund. Editorially independent of government."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "South Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "India",
+      "South Asia"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "Asia-Pacific"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Indian politics",
+        "Rights and society",
+        "Culture",
+        "Long-form analysis"
+      ],
+      "moderate": [
+        "Business",
+        "Climate",
+        "Technology"
+      ],
+      "weak": [
+        "Markets data",
+        "Sport",
+        "Africa"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Digital-native outlet with philanthropic and reader support, a public editor and a record of critical reporting on Indian authorities.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.55
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "No parsed MBFC rating; self-assessed centre-left based on its rights, inequality and civil-liberties coverage.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.45
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is policy- and society-oriented rather than consistently pro-market.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.4
+    },
+    "internationalAlignment": {
+      "value": [
+        "India",
+        "Civil liberties",
+        "South Asia"
+      ],
+      "evidence": "Indian national lens with strong attention to minorities, rights, culture and inequality.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.5
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Professional reporting with named authors and corrections; no external factual rating parsed in this review.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.6
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified for Scroll.in."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Independent Indian digital journalism with a rights-and-culture lens. It favours explanatory and long-form treatment over speed.",
+    "knownStrengths": [
+      "Rights reporting",
+      "Indian politics",
+      "Culture",
+      "Long-form analysis"
+    ],
+    "knownWeaknesses": [
+      "India-centric",
+      "Limited breaking-news capacity",
+      "Funding-dependent business model"
+    ]
+  },
+  "selectionRationale": "Adds independent Indian civil-society and culture coverage that complements legacy newspapers.",
+  "feeds": [
+    {
+      "url": "https://feeds.feedburner.com/ScrollinArticles.rss",
+      "category": "Articles",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T10:21:11+00:00",
+      "entryCount": 100,
+      "feedTitle": "Scroll.in",
+      "bozo": false,
+      "validationNote": "100 items; valid FeedBurner RSS; primary scroll.in/feed was invalid."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Left-leaning",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "The Wire",
+      "The Quint",
+      "Indian Express"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page returned 404; ownership from Wikipedia and disclosed funding references. FeedBurner endpoint validated after the site feed returned zero entries. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-scroll-in-about",
+      "EV-scroll-in-wikipedia",
+      "EV-scroll-in-feed-1"
+    ]
+  }
+}

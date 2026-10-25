@@ -1,0 +1,154 @@
+{
+  "facts": {
+    "identity": {
+      "name": "ProPublica",
+      "slug": "propublica",
+      "website": "https://www.propublica.org",
+      "publisherCountry": "USA",
+      "language": "English",
+      "foundedYear": 2008,
+      "description": "A nonprofit investigative newsroom producing long-form accountability journalism, often in partnership with local and national news organisations."
+    },
+    "ownership": {
+      "owner": "ProPublica, Inc.",
+      "parentOrganization": "ProPublica, Inc.",
+      "stateFunded": false,
+      "ownershipNotes": "Independent nonprofit funded by philanthropy, donations and partnerships. It does not take advertising and publishes donor information."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Non-profit",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Investigative",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "North America",
+    "subRegion": "United States"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "United States"
+    ],
+    "secondaryRegions": [
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Investigations",
+        "Government accountability",
+        "Health care",
+        "Criminal justice"
+      ],
+      "moderate": [
+        "Climate",
+        "Technology",
+        "Elections"
+      ],
+      "weak": [
+        "Daily breaking news",
+        "Markets data",
+        "Foreign bureaus"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Nonprofit governance, published donor policies and a public investigative mission; stories frequently target powerful public and private actors.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.7
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "MBFC rates ProPublica Left-Center with High factual reporting; its investigative agenda emphasises civil rights, inequality and corporate accountability.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.65
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is accountability-driven rather than a systematic pro-market or state-directed programme.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.45
+    },
+    "internationalAlignment": {
+      "value": [
+        "United States",
+        "Civil society",
+        "Government accountability"
+      ],
+      "evidence": "Primarily US-focused accountability journalism with a civil-society and public-interest orientation.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; ProPublica has won multiple Pulitzer Prizes and publishes methodology and corrections.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.8
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Investigative, accountability-first journalism. It prioritises documented wrongdoing, data analysis and impact over daily news volume.",
+    "knownStrengths": [
+      "Investigative methodology",
+      "Data journalism",
+      "Accountability reporting",
+      "Collaborations"
+    ],
+    "knownWeaknesses": [
+      "US-centric",
+      "Low daily cadence",
+      "Limited international coverage"
+    ]
+  },
+  "selectionRationale": "Adds original investigative depth and accountability reporting that wires and general-interest publishers rarely supply.",
+  "feeds": [
+    {
+      "url": "https://www.propublica.org/feeds/propublica/main",
+      "category": "Main",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-24T22:00:00+00:00",
+      "entryCount": 20,
+      "feedTitle": "ProPublica",
+      "bozo": false,
+      "validationNote": "20 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Left-leaning",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "The Intercept",
+      "Reuters Investigations",
+      "The New York Times"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page confirmed nonprofit status and mission. Existing production taxonomy has no nonprofit source type; mapped to Commercial Publisher for compatibility. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-propublica-about",
+      "EV-propublica-wikipedia",
+      "EV-propublica-mbfc",
+      "EV-propublica-feed-1"
+    ]
+  }
+}

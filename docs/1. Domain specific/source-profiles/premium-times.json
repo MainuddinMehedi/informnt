@@ -1,0 +1,158 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Premium Times",
+      "slug": "premium-times",
+      "website": "https://www.premiumtimesng.com",
+      "publisherCountry": "Nigeria",
+      "language": "English",
+      "foundedYear": 2011,
+      "description": "A Nigerian online newspaper known for investigative reporting, public accountability, politics, business and coverage of West African affairs."
+    },
+    "ownership": {
+      "owner": "Premium Times Services Limited",
+      "parentOrganization": "Premium Times Services Limited",
+      "stateFunded": false,
+      "ownershipNotes": "Published by Premium Times Services Limited. Nasiru Abubakar Abdullahi is identified as chairman; the newsroom is known for independent, donor-supported investigative work."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Investigative",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Africa",
+    "subRegion": "Nigeria"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Nigeria",
+      "West Africa",
+      "Africa"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "Europe",
+      "North America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Nigerian politics",
+        "Investigations",
+        "Corruption",
+        "Business"
+      ],
+      "moderate": [
+        "Elections",
+        "Human rights",
+        "Climate"
+      ],
+      "weak": [
+        "Markets data",
+        "Asia-Pacific",
+        "Latin America"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Independent Nigerian newsroom with a strong investigative and public-accountability record; commercial ownership but no evidence of state control.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.6
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "MBFC rates Premium Times Left-Center with Mostly Factual reporting; its accountability agenda emphasises corruption, inequality and rights.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.55
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Business coverage is secondary and framed through accountability, regulation and development.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.4
+    },
+    "internationalAlignment": {
+      "value": [
+        "Nigeria",
+        "West Africa",
+        "Civil society"
+      ],
+      "evidence": "Nigerian national and West African lens with a strong public-accountability orientation.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "Medium",
+      "evidence": "MBFC rates factual reporting Mostly Factual and credibility Medium; strong investigations but variable editorial capacity and funding pressures.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.55
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting Mostly Factual; credibility Medium (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Nigerian accountability journalism with a strong investigative and anti-corruption lens, useful for West African governance stories.",
+    "knownStrengths": [
+      "Investigations",
+      "Nigerian politics",
+      "Corruption",
+      "West Africa"
+    ],
+    "knownWeaknesses": [
+      "Nigeria-centric",
+      "Funding constraints",
+      "Variable fact-checking capacity"
+    ]
+  },
+  "selectionRationale": "Adds Nigerian investigative capacity and a West African perspective that complements South African and global sources.",
+  "feeds": [
+    {
+      "url": "https://www.premiumtimesng.com/feed",
+      "category": "Main",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:00:19+00:00",
+      "entryCount": 15,
+      "feedTitle": "Premium Times Nigeria",
+      "bozo": false,
+      "validationNote": "15 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Left-leaning",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Punch",
+      "TheCable",
+      "Daily Trust"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Homepage accessible rather than a dedicated About page. Ownership and chairman from Wikipedia and corporate references. Feed validated. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-premium-times-about",
+      "EV-premium-times-wikipedia",
+      "EV-premium-times-mbfc",
+      "EV-premium-times-feed-1"
+    ]
+  }
+}

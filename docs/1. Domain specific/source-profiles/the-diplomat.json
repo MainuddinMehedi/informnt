@@ -1,0 +1,158 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Diplomat",
+      "slug": "the-diplomat",
+      "website": "https://thediplomat.com",
+      "publisherCountry": "USA",
+      "language": "English",
+      "foundedYear": 2001,
+      "description": "An English-language magazine focused on politics, security, economics and society across the Indo-Pacific, with a strong Asia-Pacific analysis franchise."
+    },
+    "ownership": {
+      "owner": "MHT Corporation",
+      "parentOrganization": "Trans-Asia Inc. / Diplomat Media Inc.",
+      "stateFunded": false,
+      "ownershipNotes": "Acquired by Japan's MHT Corporation in 2007; operated through Trans-Asia Inc. in Japan and Diplomat Media Inc. in the United States. James Pach is identified with day-to-day leadership."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Magazine",
+    "editorialStyle": "Analysis",
+    "coverageScope": "International",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "Indo-Pacific"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Asia-Pacific",
+      "South Asia",
+      "Southeast Asia",
+      "East Asia"
+    ],
+    "secondaryRegions": [
+      "United States",
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Indo-Pacific security",
+        "Asian politics",
+        "Diplomacy",
+        "Regional economics"
+      ],
+      "moderate": [
+        "Environment",
+        "Technology",
+        "Human rights"
+      ],
+      "weak": [
+        "Africa",
+        "Latin America",
+        "Local crime"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Regional specialist publication with bylined analysis and a range of Asia-Pacific viewpoints; no evidence of single-state editorial direction.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.7
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC rates Least Biased; coverage is analytical and regionally plural rather than partisan.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic analysis spans market, state-capitalist and development perspectives without a consistent ideological programme.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.55
+    },
+    "internationalAlignment": {
+      "value": [
+        "Indo-Pacific",
+        "US-Asia alliances",
+        "Regional multilateralism"
+      ],
+      "evidence": "Frames regional security through alliance politics, territorial disputes and Indo-Pacific institution-building, with substantial attention to non-US actors.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; established Asia-Pacific specialist with named contributors.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": "Least Biased",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Least Biased; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Asia-Pacific specialist analysis. Explains regional developments through sovereignty, alliance politics, trade and domestic political economy, with more depth on smaller Asian states than global wires usually provide.",
+    "knownStrengths": [
+      "Southeast Asian politics",
+      "Indo-Pacific security",
+      "China-Asia relations",
+      "Regional trade"
+    ],
+    "knownWeaknesses": [
+      "Limited original reporting outside Asia",
+      "Analysis-heavy mix",
+      "Variable contributor quality"
+    ]
+  },
+  "selectionRationale": "Fills the Indo-Pacific analysis gap between global wires and single-country national outlets.",
+  "feeds": [
+    {
+      "url": "https://thediplomat.com/feed/",
+      "category": "Top stories",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-23T12:05:00+00:00",
+      "entryCount": 96,
+      "feedTitle": "The Diplomat",
+      "bozo": false,
+      "validationNote": "96 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Nikkei Asia",
+      "South China Morning Post",
+      "East Asia Forum"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Ownership verified through official page and corporate references. Existing production mapping retained. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-the-diplomat-about",
+      "EV-the-diplomat-wikipedia",
+      "EV-the-diplomat-mbfc",
+      "EV-the-diplomat-feed-1"
+    ]
+  }
+}

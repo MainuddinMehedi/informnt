@@ -1,0 +1,157 @@
+{
+  "facts": {
+    "identity": {
+      "name": "TASS",
+      "slug": "tass",
+      "website": "https://tass.com",
+      "publisherCountry": "Russia",
+      "language": "English",
+      "foundedYear": 1904,
+      "description": "Russia's largest state news agency, publishing official and domestic news in Russian and English for international audiences."
+    },
+    "ownership": {
+      "owner": "Russian Government",
+      "parentOrganization": "Federal State Unitary Enterprise ITAR-TASS",
+      "stateFunded": true,
+      "ownershipNotes": "Federal state unitary enterprise ITAR-TASS, founded by the Russian Government. It functions as a central state news agency and reflects official Russian positions."
+    }
+  },
+  "classifications": {
+    "ownershipType": "State",
+    "publisherType": "Government Agency",
+    "editorialStyle": "Straight News",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Europe",
+    "subRegion": "Russia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Russia",
+      "Europe",
+      "Global"
+    ],
+    "secondaryRegions": [
+      "Middle East",
+      "Asia-Pacific",
+      "Africa"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Russian official statements",
+        "Kremlin diplomacy",
+        "Energy",
+        "Defence"
+      ],
+      "moderate": [
+        "Business",
+        "Science",
+        "Culture"
+      ],
+      "weak": [
+        "Independent verification",
+        "Civil society",
+        "Critical reporting"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "State-Aligned",
+      "evidence": "State-owned and editorially directed; coverage consistently follows Kremlin positions on the war, sanctions, domestic politics and foreign policy.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.85
+    },
+    "politicalLeaning": {
+      "value": "State-Aligned",
+      "evidence": "No independent rating; state ownership and editorial direction make state-aligned the only defensible classification.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.8
+    },
+    "economicPerspective": {
+      "value": "State-directed",
+      "evidence": "Economic coverage follows official development, sanctions and energy-policy priorities.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.7
+    },
+    "internationalAlignment": {
+      "value": [
+        "Russia",
+        "Kremlin",
+        "Eurasian integration"
+      ],
+      "evidence": "Directly aligned with Russian government foreign and domestic policy.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.85
+    },
+    "reliability": {
+      "value": "Low",
+      "evidence": "Useful for official Russian statements but not for independent verification; state control and wartime censorship make its factual reporting Low for contested events.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.65
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC page was saved but no clean rating was parsed for TASS."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Kremlin-aligned official coverage, valuable mainly as a primary source for Russian government positions and a counterpoint for propaganda analysis.",
+    "knownStrengths": [
+      "Official Russian statements",
+      "Kremlin diplomacy",
+      "Energy",
+      "Defence"
+    ],
+    "knownWeaknesses": [
+      "State propaganda",
+      "Low independent reliability",
+      "Censorship"
+    ]
+  },
+  "selectionRationale": "Included as a state-media primary source for understanding Russian official narratives, not as a neutral news source.",
+  "feeds": [
+    {
+      "url": "https://tass.com/rss/v2.xml",
+      "category": "English",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T02:31:10+00:00",
+      "entryCount": 39,
+      "feedTitle": "TASS",
+      "bozo": false,
+      "validationNote": "39 items; valid RSS; state media, use only for official Russian statements and comparison."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "State Media",
+    "biasGroup": "State-Aligned",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "RIA Novosti",
+      "Interfax",
+      "Reuters"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page returned 404. State ownership from Russian government sources and Wikipedia. Must be paired with independent sources for verification. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-tass-about",
+      "EV-tass-wikipedia",
+      "EV-tass-feed-1"
+    ]
+  }
+}

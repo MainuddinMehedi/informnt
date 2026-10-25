@@ -1,6 +1,37 @@
 import Parser from "rss-parser";
 
-const parser = new Parser();
+const parser = new Parser({
+  customFields: {
+    item: [
+      ["dc:date", "dcDate"],
+      ["atom:updated", "atomUpdated"],
+      ["atom:published", "atomPublished"],
+      ["pubdate", "pubdate"],
+      ["date", "date"],
+    ],
+  },
+});
+
+function parseItemDate(item) {
+  const rawDate =
+    item.isoDate ||
+    item.pubDate ||
+    item.dcDate ||
+    item["dc:date"] ||
+    item.atomUpdated ||
+    item.atomPublished ||
+    item.date ||
+    item.pubdate;
+
+  if (rawDate) {
+    const d = new Date(rawDate);
+    if (!isNaN(d.getTime())) {
+      return d;
+    }
+  }
+
+  return null;
+}
 
 function extractText(value) {
   if (!value) return "";
@@ -75,6 +106,7 @@ export default async function* fetchRSSStream(
     );
 
     for (const item of feed.items) {
+      const itemDate = parseItemDate(item);
       yield {
         title: extractText(item.title),
         url: item.link,
@@ -85,7 +117,7 @@ export default async function* fetchRSSStream(
         biasGroup: bias,
         coverageScope: scope,
         category: item.categories ? item.categories.join(", ") : "",
-        publishedAt: item.isoDate ? new Date(item.isoDate) : new Date(),
+        publishedAt: itemDate,
       };
     }
   } catch (err) {

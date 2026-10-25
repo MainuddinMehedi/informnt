@@ -1,0 +1,145 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Associated Press",
+      "slug": "ap",
+      "website": "https://apnews.com",
+      "publisherCountry": "USA",
+      "language": "English",
+      "foundedYear": 1846,
+      "description": "A not-for-profit cooperative news agency producing global breaking news, politics, business and investigative reporting distributed to member outlets and clients."
+    },
+    "ownership": {
+      "owner": "Associated Press members",
+      "parentOrganization": "Associated Press",
+      "stateFunded": false,
+      "ownershipNotes": "AP is an unincorporated not-for-profit cooperative owned by its member news organisations. It is not government-owned, though it sells content and data services commercially."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Cooperative",
+    "publisherType": "Wire Service",
+    "editorialStyle": "Straight News",
+    "coverageScope": "Global",
+    "originality": "Primary Reporter",
+    "sourceRegion": "North America",
+    "subRegion": "United States"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Global",
+      "United States",
+      "Europe",
+      "Middle East"
+    ],
+    "secondaryRegions": [
+      "Asia-Pacific",
+      "Africa",
+      "South America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Breaking news",
+        "US politics",
+        "Elections",
+        "Global conflict reporting"
+      ],
+      "moderate": [
+        "Business",
+        "Science",
+        "Health"
+      ],
+      "weak": [
+        "Markets data",
+        "Long-form opinion",
+        "Niche trade coverage"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Cooperative governance and published AP standards emphasise nonpartisan, fact-based reporting; the wire is widely used as a neutral baseline by outlets across the political spectrum.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.65
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC rates AP Left-Center with High factual reporting, but its straight-news file is structurally nonpartisan and supplies both conservative and liberal member outlets.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.55
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic reporting is explanatory and source-driven rather than advocacy-led.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.4
+    },
+    "internationalAlignment": {
+      "value": [
+        "Global",
+        "United States",
+        "Liberal democracies"
+      ],
+      "evidence": "A US-headquartered global wire with strong American institutional access and a broad international file.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.45
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; AP is a primary source for election calls, official statements and breaking news.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.75
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Institutional, nonpartisan wire copy with particular authority in US politics, elections and official accountability. It favours confirmed facts and named sourcing over interpretation.",
+    "knownStrengths": [
+      "US politics and elections",
+      "Breaking international news",
+      "Official records",
+      "Photo and video verification"
+    ],
+    "knownWeaknesses": [
+      "Limited analysis depth",
+      "US institutional framing",
+      "No public direct RSS access verified"
+    ]
+  },
+  "selectionRationale": "AP is a benchmark wire for factual cross-checking and US election coverage. It complements Reuters geographically and institutionally, but cannot be activated without a feed.",
+  "feeds": [],
+  "systemMapping": {
+    "sourceType": "Independent Wire",
+    "biasGroup": "Centrist",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Reuters",
+      "Agence France-Presse",
+      "Bloomberg News"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "AP's official About page was accessible, but AP News RSS and Arc outbound feeds returned Cloudflare 403. No reliable public feed; no activation recommendation. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-ap-about",
+      "EV-ap-wikipedia",
+      "EV-ap-mbfc",
+      "EV-ap-feed-discovery"
+    ]
+  }
+}

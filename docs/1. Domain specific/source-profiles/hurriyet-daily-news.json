@@ -1,0 +1,156 @@
+{
+  "facts": {
+    "identity": {
+      "name": "H\u00fcrriyet Daily News",
+      "slug": "hurriyet-daily-news",
+      "website": "https://www.hurriyetdailynews.com",
+      "publisherCountry": "Turkey",
+      "language": "English",
+      "foundedYear": 1961,
+      "description": "Turkey's oldest English-language newspaper, covering Turkish politics, foreign policy, business, society and regional affairs."
+    },
+    "ownership": {
+      "owner": "H\u00fcrriyet Gazetecilik ve Matbaac\u0131l\u0131k A.\u015e.",
+      "parentOrganization": "Demir\u00f6ren Medya",
+      "stateFunded": false,
+      "ownershipNotes": "Published by H\u00fcrriyet Gazetecilik ve Matbaac\u0131l\u0131k A.\u015e.; Demir\u00f6ren Medya holds 81.21% and 18.79% is free float. The Demir\u00f6ren group has close ties to the Turkish government."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Mixed",
+    "sourceRegion": "Middle East",
+    "subRegion": "Turkey"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Turkey",
+      "Middle East",
+      "Europe"
+    ],
+    "secondaryRegions": [
+      "Asia-Pacific",
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Turkish politics",
+        "Turkish foreign policy",
+        "Business",
+        "Regional affairs"
+      ],
+      "moderate": [
+        "Culture",
+        "Sport",
+        "Climate"
+      ],
+      "weak": [
+        "Investigative independence",
+        "Africa",
+        "Latin America"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Corporate-Aligned",
+      "evidence": "Demir\u00f6ren Medya's controlling stake and the group's close relationship with the Turkish government create strong commercial and political alignment pressures.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.5
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No parsed MBFC rating; self-assessed as centrist with a pro-government and nationalist tilt on security and foreign policy.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.4
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Business coverage generally favours Turkish corporate interests and market-friendly policy.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "Turkey",
+        "Turkish government",
+        "NATO"
+      ],
+      "evidence": "Turkish national lens aligned with official foreign-policy priorities, including NATO membership and regional security.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "Medium",
+      "evidence": "Established English-language daily with professional reporting, but ownership ties and Turkey's media environment constrain adversarial coverage.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.45
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified for H\u00fcrriyet Daily News."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Turkish national coverage in English, strongest on politics, diplomacy and business, with a pro-establishment orientation.",
+    "knownStrengths": [
+      "Turkish politics",
+      "Turkish foreign policy",
+      "Business",
+      "Regional affairs"
+    ],
+    "knownWeaknesses": [
+      "Corporate-government ties",
+      "Limited investigative independence",
+      "Turkey-centric"
+    ]
+  },
+  "selectionRationale": "Adds a Turkish national English-language perspective and a bridge between Europe and the Middle East.",
+  "feeds": [
+    {
+      "url": "https://www.hurriyetdailynews.com/rss/news",
+      "category": "News",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T05:10:00+00:00",
+      "entryCount": 64,
+      "feedTitle": "H\u00fcrriyet Daily News",
+      "bozo": false,
+      "validationNote": "64 items; valid RSS; legacy /rss endpoint returned malformed feed."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Daily Sabah",
+      "Turkey Recap",
+      "Reuters Turkey"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Ownership from Demir\u00f6ren Medya disclosures and Wikipedia. Official About page was not captured. Feed validated via /rss/news. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-hurriyet-daily-news-about",
+      "EV-hurriyet-daily-news-wikipedia",
+      "EV-hurriyet-daily-news-feed-1"
+    ]
+  }
+}

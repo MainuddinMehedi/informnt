@@ -1,0 +1,156 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Irrawaddy",
+      "slug": "irrawaddy",
+      "website": "https://www.irrawaddy.com",
+      "publisherCountry": "Thailand",
+      "language": "English",
+      "foundedYear": 1990,
+      "description": "An independent Myanmar-focused news organisation founded by Burmese exiles, covering the military, democracy movement, ethnic conflicts and regional affairs."
+    },
+    "ownership": {
+      "owner": "Irrawaddy Publishing Group",
+      "parentOrganization": "Irrawaddy Publishing Group",
+      "stateFunded": false,
+      "ownershipNotes": "Founded in 1990 by Burmese exiles in Thailand. Independent of the Myanmar military government and associated with the pro-democracy movement, though not formally aligned with any political party."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Regional",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "Southeast Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Myanmar",
+      "Southeast Asia",
+      "South Asia"
+    ],
+    "secondaryRegions": [
+      "Asia-Pacific",
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Myanmar politics",
+        "Military and conflict",
+        "Ethnic issues",
+        "Human rights"
+      ],
+      "moderate": [
+        "Business",
+        "Climate",
+        "China-Asia relations"
+      ],
+      "weak": [
+        "Markets data",
+        "Africa",
+        "Latin America"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Exile-founded newsroom with a documented pro-democracy orientation and no affiliation to the military government; it is openly opposed to the junta.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.65
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No parsed MBFC rating; self-assessed as centre-left on rights and democracy issues, with a strongly anti-junta editorial stance.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.45
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is secondary and framed through conflict, sanctions and development impacts.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.35
+    },
+    "internationalAlignment": {
+      "value": [
+        "Myanmar democracy movement",
+        "Human rights",
+        "Southeast Asia"
+      ],
+      "evidence": "Clear pro-democracy, anti-junta alignment alongside coverage of ethnic armed groups and regional diplomacy.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.65
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Established independent Myanmar newsroom with named reporters and a long track record; no external rating parsed.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.6
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified for The Irrawaddy."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Myanmar-focused independent journalism with a pro-democracy lens. It explains events through military power, ethnic conflict, resistance politics and regional spillover.",
+    "knownStrengths": [
+      "Myanmar conflict",
+      "Junta accountability",
+      "Ethnic issues",
+      "Regional diplomacy"
+    ],
+    "knownWeaknesses": [
+      "Narrow geographic focus",
+      "Advocacy-adjacent framing",
+      "Feed freshness variability"
+    ]
+  },
+  "selectionRationale": "Adds specialist Myanmar coverage and a Southeast Asian civil-society perspective that global wires cannot provide.",
+  "feeds": [
+    {
+      "url": "https://www.irrawaddy.com/feed",
+      "category": "Main",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED_WITH_WARNING",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-23T06:13:01+00:00",
+      "entryCount": 10,
+      "feedTitle": "The Irrawaddy",
+      "bozo": true,
+      "validationNote": "10 items; feed parser reported bozo=True but returned dated entries. Monitor XML validity."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Frontier Myanmar",
+      "Myanmar Now",
+      "Radio Free Asia"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page accessible. Feed returned valid items but parser warning; needs monitoring before activation. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-irrawaddy-about",
+      "EV-irrawaddy-wikipedia",
+      "EV-irrawaddy-feed-1"
+    ]
+  }
+}

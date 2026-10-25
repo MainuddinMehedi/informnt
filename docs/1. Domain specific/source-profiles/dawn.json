@@ -1,0 +1,156 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Dawn",
+      "slug": "dawn",
+      "website": "https://www.dawn.com",
+      "publisherCountry": "Pakistan",
+      "language": "English",
+      "foundedYear": 1941,
+      "description": "Pakistan's leading English-language newspaper and digital outlet, covering national politics, security, business, culture and international affairs."
+    },
+    "ownership": {
+      "owner": "Pakistan Herald Publications (Pvt) Ltd",
+      "parentOrganization": "Dawn Media Group",
+      "stateFunded": false,
+      "ownershipNotes": "Flagship of Dawn Media Group, owned through Pakistan Herald Publications by the Haroon-Saigol family. It has a long record of editorial independence within Pakistan's constrained media environment."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "South Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Pakistan",
+      "South Asia"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "Middle East",
+      "Asia-Pacific"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Pakistani politics",
+        "Security",
+        "Foreign policy",
+        "Business"
+      ],
+      "moderate": [
+        "Culture",
+        "Climate",
+        "Technology"
+      ],
+      "weak": [
+        "Markets data",
+        "Africa",
+        "Latin America"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Long-standing newspaper of record with a history of critical reporting on Pakistani governments and military influence, though commercial and political pressures persist.",
+      "source": "Ownership and self-description via secondary references (official about page blocked or unavailable); secondary references; feed-level sample",
+      "confidence": 0.55
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No parsed MBFC rating; self-assessed as broadly centrist, liberal and institutional in tone.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.45
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Business coverage is substantial but not uniformly pro-market; editorials often emphasise state capacity and social development.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.4
+    },
+    "internationalAlignment": {
+      "value": [
+        "Pakistan",
+        "South Asia",
+        "Liberal democracy"
+      ],
+      "evidence": "National lens with strong attention to Pakistan's security, India relations and regional diplomacy.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Established newspaper of record with bylined reporting and corrections; no external factual rating parsed.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.65
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified for Dawn."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Pakistani newspaper-of-record coverage. It frames events through national security, domestic politics and South Asian diplomacy, with a liberal editorial tradition.",
+    "knownStrengths": [
+      "Pakistan politics",
+      "Security and diplomacy",
+      "South Asia",
+      "Business"
+    ],
+    "knownWeaknesses": [
+      "Pakistan-centric",
+      "Media-pressure constraints",
+      "Limited digital innovation"
+    ]
+  },
+  "selectionRationale": "Adds essential Pakistani national coverage and a South Asian perspective absent from the current catalog.",
+  "feeds": [
+    {
+      "url": "https://www.dawn.com/feeds/home",
+      "category": "Home",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T04:48:27+00:00",
+      "entryCount": 29,
+      "feedTitle": "Dawn - Home",
+      "bozo": false,
+      "validationNote": "29 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "The Express Tribune",
+      "The News International",
+      "Arab News Pakistan"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page returned 404; ownership from Dawn Media Group references and Wikipedia. Feed validated. DRAFT pending peer review. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-dawn-about",
+      "EV-dawn-wikipedia",
+      "EV-dawn-feed-1"
+    ]
+  }
+}

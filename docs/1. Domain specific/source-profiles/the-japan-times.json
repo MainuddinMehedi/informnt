@@ -1,0 +1,155 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Japan Times",
+      "slug": "the-japan-times",
+      "website": "https://www.japantimes.co.jp",
+      "publisherCountry": "Japan",
+      "language": "English",
+      "foundedYear": 1897,
+      "description": "Japan's oldest English-language daily newspaper, covering Japanese politics, business, society and international affairs."
+    },
+    "ownership": {
+      "owner": "News2u Holdings",
+      "parentOrganization": "News2u Holdings",
+      "stateFunded": false,
+      "ownershipNotes": "Published by The Japan Times, Ltd., a subsidiary of News2u Holdings. Commercial ownership; historically associated with Japanese establishment and international-business readership."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "East Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Japan",
+      "East Asia"
+    ],
+    "secondaryRegions": [
+      "Asia-Pacific",
+      "Global"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Japanese politics",
+        "Japanese society",
+        "Business",
+        "International relations"
+      ],
+      "moderate": [
+        "Technology",
+        "Culture",
+        "Environment"
+      ],
+      "weak": [
+        "Global South",
+        "Markets data",
+        "Investigative depth outside Japan"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Commercial newspaper with bylined reporting and a range of domestic views; no evidence of direct state editorial control.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.6
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "Generally centrist, internationally minded Japanese coverage; MBFC page did not expose a clean parsed rating.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.5
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Business coverage is market-aware but not consistently ideological.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "Japan",
+        "US-Japan alliance",
+        "Liberal democracies"
+      ],
+      "evidence": "Frames regional security through Japanese alliance and democratic-institution perspectives.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Established newspaper of record with editorial standards; MBFC page available but no clean rating parsed.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.7
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC page exists but no clean bias/factual fields were parsed. Assessed from institutional record."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Japanese English-language newspaper voice. Explains Japan through domestic politics, business and alliance management for an internationally oriented readership.",
+    "knownStrengths": [
+      "Japanese politics",
+      "Japanese society",
+      "Business",
+      "English-language Japan analysis"
+    ],
+    "knownWeaknesses": [
+      "Japan-centric",
+      "Limited Global South depth",
+      "Uneven investigative reporting"
+    ]
+  },
+  "selectionRationale": "Provides a Japanese national perspective in English that complements Nikkei's business focus and Kyodo's wire coverage.",
+  "feeds": [
+    {
+      "url": "https://www.japantimes.co.jp/feed/",
+      "category": "Top stories",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T03:00:00+00:00",
+      "entryCount": 30,
+      "feedTitle": "Latest articles - The Japan Times",
+      "bozo": false,
+      "validationNote": "30 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Nikkei Asia",
+      "Kyodo News",
+      "The Asahi Shimbun"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. Ownership verified through parent-company page and Wikipedia. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-the-japan-times-about",
+      "EV-the-japan-times-wikipedia",
+      "EV-the-japan-times-feed-1"
+    ]
+  }
+}

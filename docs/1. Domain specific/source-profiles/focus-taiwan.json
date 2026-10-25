@@ -1,0 +1,156 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Focus Taiwan",
+      "slug": "focus-taiwan",
+      "website": "https://focustaiwan.tw",
+      "publisherCountry": "Taiwan",
+      "language": "English",
+      "foundedYear": 1924,
+      "description": "The English-language news service of Taiwan's Central News Agency, covering Taiwanese politics, cross-strait relations, business, society and culture."
+    },
+    "ownership": {
+      "owner": "Central News Agency",
+      "parentOrganization": "Central News Agency",
+      "stateFunded": true,
+      "ownershipNotes": "CNA is Taiwan's government-funded national news agency. It operates as a professional wire service but is institutionally tied to the state and its Taiwan/ROC framing."
+    }
+  },
+  "classifications": {
+    "ownershipType": "State",
+    "publisherType": "Wire Service",
+    "editorialStyle": "Straight News",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "East Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Taiwan",
+      "East Asia",
+      "Asia-Pacific"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "North America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Taiwan politics",
+        "Cross-strait relations",
+        "Business",
+        "Society"
+      ],
+      "moderate": [
+        "Technology",
+        "Culture",
+        "Climate"
+      ],
+      "weak": [
+        "Africa",
+        "Latin America",
+        "Investigative depth"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Government-funded national agency with professional wire standards; coverage is Taiwan-centred and follows ROC institutional framing without being a party organ.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.45
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No parsed MBFC rating; self-assessed as centrist with a pro-Taiwan, pro-democracy institutional lens.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.4
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Business coverage reports Taiwan's export and technology economy without a strong ideological programme.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.4
+    },
+    "internationalAlignment": {
+      "value": [
+        "Taiwan",
+        "Liberal democracy",
+        "Asia-Pacific"
+      ],
+      "evidence": "Taiwan national lens with clear attention to cross-strait security and democratic institutions.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.6
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Established national news agency with named reporters and professional standards; state funding requires transparency.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.6
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified for Focus Taiwan."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Taiwanese wire-service coverage in English, strong on cross-strait relations, domestic politics and the technology economy.",
+    "knownStrengths": [
+      "Taiwan politics",
+      "Cross-strait relations",
+      "Technology",
+      "Business"
+    ],
+    "knownWeaknesses": [
+      "State-funded framing",
+      "Taiwan-centric",
+      "Limited analysis"
+    ]
+  },
+  "selectionRationale": "Adds essential Taiwanese national coverage and a counterpoint to mainland Chinese and Hong Kong perspectives.",
+  "feeds": [
+    {
+      "url": "https://feeds.feedburner.com/rsscna/engnews/",
+      "category": "English news",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T17:07:30+00:00",
+      "entryCount": 39,
+      "feedTitle": "Latest | FOCUS TAIWAN - CNA ENGLISH NEWS",
+      "bozo": false,
+      "validationNote": "39 items; valid FeedBurner RSS; focustaiwan.tw/rss returned 404."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "State Media",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Taipei Times",
+      "CNA",
+      "Nikkei Asia"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page accessible. FeedBurner endpoint validated. State funding and ownership recorded separately from editorial assessment. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-focus-taiwan-about",
+      "EV-focus-taiwan-wikipedia",
+      "EV-focus-taiwan-feed-1"
+    ]
+  }
+}

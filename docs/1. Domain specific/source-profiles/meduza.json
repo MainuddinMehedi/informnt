@@ -1,0 +1,158 @@
+{
+  "facts": {
+    "identity": {
+      "name": "Meduza",
+      "slug": "meduza",
+      "website": "https://meduza.io",
+      "publisherCountry": "Latvia",
+      "language": "English",
+      "foundedYear": 2014,
+      "description": "An independent Russian- and English-language online newspaper operating from Latvia, covering Russian politics, war, society and the wider region."
+    },
+    "ownership": {
+      "owner": "SIA Meduza Project",
+      "parentOrganization": "SIA Meduza Project",
+      "stateFunded": false,
+      "ownershipNotes": "Operated by SIA Meduza Project in Latvia. Galina Timchenko is publisher/CEO and Ivan Kolpakov is editor-in-chief. Outlawed by the Russian state and funded by readers, advertising and grants."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Digital Native",
+    "editorialStyle": "Mixed",
+    "coverageScope": "Regional",
+    "originality": "Primary Reporter",
+    "sourceRegion": "Europe",
+    "subRegion": "Latvia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Russia",
+      "Ukraine",
+      "Europe"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "Asia-Pacific",
+      "Middle East"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Russian politics",
+        "War in Ukraine",
+        "Russian society",
+        "Investigations"
+      ],
+      "moderate": [
+        "Business",
+        "Energy",
+        "Culture"
+      ],
+      "weak": [
+        "Africa",
+        "Latin America",
+        "Markets data"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Exiled independent newsroom outlawed by the Russian state, with a documented record of investigative reporting and criticism of the Kremlin.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.75
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC records High credibility but no parsed ideological rating; self-assessed as centrist with a strongly anti-Kremlin and pro-democracy orientation.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.45
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is secondary and framed through sanctions, oligarchs and the war economy.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.35
+    },
+    "internationalAlignment": {
+      "value": [
+        "Russian opposition",
+        "Ukraine",
+        "Liberal democracy"
+      ],
+      "evidence": "Anti-Kremlin, pro-democracy and pro-Ukraine alignment, with a Russian émigré and regional audience.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.7
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC records High credibility; Meduza has a strong investigative record and named reporters, though it operates under exile and legal pressure.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: credibility High; no clean bias/factual fields parsed (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Independent Russian exile journalism, strongly anti-Kremlin and pro-democracy, with deep coverage of Russian politics, war and society.",
+    "knownStrengths": [
+      "Russian politics",
+      "Investigations",
+      "War in Ukraine",
+      "Russian society"
+    ],
+    "knownWeaknesses": [
+      "Exile perspective",
+      "Anti-Kremlin framing",
+      "Limited business coverage"
+    ]
+  },
+  "selectionRationale": "Adds independent Russian-language reporting and an exiled anti-Kremlin perspective that is otherwise absent from the catalog.",
+  "feeds": [
+    {
+      "url": "https://meduza.io/rss/en/all",
+      "category": "English all",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-24T22:42:58+00:00",
+      "entryCount": 30,
+      "feedTitle": "Meduza.io",
+      "bozo": false,
+      "validationNote": "30 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Regional"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "Moscow Times",
+      "Radio Free Europe/Radio Liberty",
+      "Novaya Gazeta Europe"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official About page confirms exile status and mission. Legal entity from Latvian registration references. Feed validated. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-meduza-about",
+      "EV-meduza-wikipedia",
+      "EV-meduza-mbfc",
+      "EV-meduza-feed-1"
+    ]
+  }
+}

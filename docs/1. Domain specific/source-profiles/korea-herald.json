@@ -1,0 +1,156 @@
+{
+  "facts": {
+    "identity": {
+      "name": "The Korea Herald",
+      "slug": "korea-herald",
+      "website": "https://www.koreaherald.com",
+      "publisherCountry": "South Korea",
+      "language": "English",
+      "foundedYear": 1953,
+      "description": "South Korea's leading English-language daily, covering Korean politics, business, culture, technology and international affairs."
+    },
+    "ownership": {
+      "owner": "Herald Media Group",
+      "parentOrganization": "Herald Media Group",
+      "stateFunded": false,
+      "ownershipNotes": "Part of Herald Media Group, chaired by Jung Won-ju. The group also operates The Herald Business and other media and cultural businesses."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Commercial",
+    "publisherType": "Newspaper",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Mixed",
+    "sourceRegion": "Asia-Pacific",
+    "subRegion": "East Asia"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "South Korea",
+      "East Asia"
+    ],
+    "secondaryRegions": [
+      "Asia-Pacific",
+      "Global",
+      "North America"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Korean politics",
+        "Korean business",
+        "Culture",
+        "Technology"
+      ],
+      "moderate": [
+        "International affairs",
+        "Sport",
+        "Climate"
+      ],
+      "weak": [
+        "Africa",
+        "Latin America",
+        "Markets data"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Commercial English-language newspaper with a professional newsroom; no evidence of direct state ownership.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.5
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "No MBFC rating; self-assessed as broadly centrist with a business-friendly and pro-alliance orientation.",
+      "source": "Analyst assessment from publisher self-description, secondary references and feed-level sample",
+      "confidence": 0.4
+    },
+    "economicPerspective": {
+      "value": "Pro-market",
+      "evidence": "Business coverage dominates and generally favours Korean corporate interests and market liberalisation.",
+      "source": "Analyst assessment from business and economic coverage",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "South Korea",
+        "US-ROK alliance",
+        "East Asia"
+      ],
+      "evidence": "Korean national lens with strong coverage of the US alliance, North Korea and Korean corporations.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "Established national English-language daily with named reporters and corrections; no external rating parsed.",
+      "source": "Analyst assessment from ownership, editorial record and feed-level sample",
+      "confidence": 0.6
+    },
+    "externalRatings": {
+      "mbfc": null,
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "No MBFC rating identified for The Korea Herald."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Korean national coverage in English, with a business and alliance lens. It explains Korean politics and culture for international audiences.",
+    "knownStrengths": [
+      "Korean politics",
+      "Korean corporations",
+      "Culture",
+      "North Korea"
+    ],
+    "knownWeaknesses": [
+      "Korea-centric",
+      "Business-friendly framing",
+      "Limited investigative depth"
+    ]
+  },
+  "selectionRationale": "Adds a Korean English-language national perspective that complements Yonhap's wire coverage.",
+  "feeds": [
+    {
+      "url": "https://www.koreaherald.com/rss/newsAll",
+      "category": "All news",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T19:45:45+00:00",
+      "entryCount": 50,
+      "feedTitle": "The Korea Herald",
+      "bozo": false,
+      "validationNote": "50 items; valid RSS; primary RSS endpoint was malformed."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [],
+    "competitors": [
+      "The Korea Times",
+      "Yonhap",
+      "Korea JoongAng Daily"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Official corporate About page confirms Herald Media Group. `rss/newsAll` validated after legacy endpoint returned malformed XML. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-korea-herald-about",
+      "EV-korea-herald-wikipedia",
+      "EV-korea-herald-feed-1"
+    ]
+  }
+}

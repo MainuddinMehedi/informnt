@@ -1,0 +1,161 @@
+{
+  "facts": {
+    "identity": {
+      "name": "NPR",
+      "slug": "npr",
+      "website": "https://www.npr.org",
+      "publisherCountry": "USA",
+      "language": "English",
+      "foundedYear": 1971,
+      "description": "An American nonprofit public broadcaster providing national and international news, audio journalism and cultural coverage."
+    },
+    "ownership": {
+      "owner": "National Public Radio, Inc.",
+      "parentOrganization": "NPR",
+      "stateFunded": false,
+      "ownershipNotes": "A nonprofit membership organisation funded by station fees, sponsorships, grants and listener support, not direct federal ownership. Public funding is a small and politically contested share."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Non-profit",
+    "publisherType": "Broadcaster",
+    "editorialStyle": "Mixed",
+    "coverageScope": "International",
+    "originality": "Primary Reporter",
+    "sourceRegion": "North America",
+    "subRegion": "United States"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "United States",
+      "Global"
+    ],
+    "secondaryRegions": [
+      "Europe",
+      "Middle East",
+      "Asia-Pacific",
+      "Africa"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "US politics",
+        "Audio journalism",
+        "Health",
+        "Science"
+      ],
+      "moderate": [
+        "International affairs",
+        "Business",
+        "Culture"
+      ],
+      "weak": [
+        "Fast markets",
+        "Defence trade",
+        "Local news outside member stations"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Nonprofit public-media structure and published ethics guidelines; coverage includes criticism of both US parties.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.75
+    },
+    "politicalLeaning": {
+      "value": "Centre-Left",
+      "evidence": "MBFC rates Left-Center and High factual reporting; newsroom is professional but audience and story selection lean progressive.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is explanatory and social-policy oriented, without a consistent partisan programme.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "United States",
+        "Liberal democracies",
+        "Public media"
+      ],
+      "evidence": "Frames international news through a US public-media lens with attention to humanitarian and civil-liberties issues.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; established corrections and editorial standards.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.85
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "US public-radio voice. Combines explanatory audio journalism with domestic politics, health and science, generally within a liberal public-media framework.",
+    "knownStrengths": [
+      "Audio and explainer journalism",
+      "US politics",
+      "Health and science",
+      "Cultural coverage"
+    ],
+    "knownWeaknesses": [
+      "US-centric",
+      "Progressive audience lean",
+      "Less hard international breaking news"
+    ]
+  },
+  "selectionRationale": "Adds a high-reliability US public-media perspective and audio-derived reporting, already active in the pipeline.",
+  "feeds": [
+    {
+      "url": "https://feeds.npr.org/1004/rss.xml",
+      "category": "World",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-25T01:15:00+00:00",
+      "entryCount": 10,
+      "feedTitle": "NPR Topics: World",
+      "bozo": false,
+      "validationNote": "10 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "Commercial Publisher",
+    "biasGroup": "Centrist",
+    "coverageScope": "Global"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "Member stations",
+      "CPB"
+    ],
+    "competitors": [
+      "PBS NewsHour",
+      "BBC World Service",
+      "CBC"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping treats NPR as Commercial Publisher; profile records Non-profit ownership. Mapping retained for compatibility and flagged for review. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-npr-about",
+      "EV-npr-wikipedia",
+      "EV-npr-mbfc",
+      "EV-npr-feed-1"
+    ]
+  }
+}

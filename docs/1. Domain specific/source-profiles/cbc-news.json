@@ -1,0 +1,160 @@
+{
+  "facts": {
+    "identity": {
+      "name": "CBC News",
+      "slug": "cbc-news",
+      "website": "https://www.cbc.ca/news",
+      "publisherCountry": "Canada",
+      "language": "English",
+      "foundedYear": 1941,
+      "description": "The English-language news division of Canada's public broadcaster, covering Canadian and international affairs across television, radio and digital."
+    },
+    "ownership": {
+      "owner": "Canadian Broadcasting Corporation",
+      "parentOrganization": "Government of Canada",
+      "stateFunded": true,
+      "ownershipNotes": "CBC is a Crown corporation funded through parliamentary appropriations and commercial revenue. It has a public-service mandate and statutory editorial independence."
+    }
+  },
+  "classifications": {
+    "ownershipType": "Public Service",
+    "publisherType": "Broadcaster",
+    "editorialStyle": "Mixed",
+    "coverageScope": "National",
+    "originality": "Primary Reporter",
+    "sourceRegion": "North America",
+    "subRegion": "Canada"
+  },
+  "coverage": {
+    "primaryRegions": [
+      "Canada",
+      "North America"
+    ],
+    "secondaryRegions": [
+      "Global",
+      "Europe",
+      "Asia-Pacific"
+    ],
+    "categoryStrengths": {
+      "strong": [
+        "Canadian politics",
+        "US-Canada relations",
+        "Indigenous affairs",
+        "Public health"
+      ],
+      "moderate": [
+        "International news",
+        "Business",
+        "Climate"
+      ],
+      "weak": [
+        "Global South depth",
+        "Market data",
+        "Niche security trade"
+      ]
+    }
+  },
+  "assessments": {
+    "editorialOrientation": {
+      "value": "Independent",
+      "evidence": "Crown-corporation structure with journalistic independence provisions; coverage includes criticism of Canadian governments.",
+      "source": "Ownership and self-description via Official about page; secondary references; feed-level sample",
+      "confidence": 0.7
+    },
+    "politicalLeaning": {
+      "value": "Centre",
+      "evidence": "MBFC rates Left-Center and High factual reporting; Canadian public-media framing is broadly centrist with a progressive social tilt.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.7
+    },
+    "economicPerspective": {
+      "value": "Mixed",
+      "evidence": "Economic coverage is policy-explanatory and social-service aware, without a consistent market or state-directed line.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.5
+    },
+    "internationalAlignment": {
+      "value": [
+        "Canada",
+        "Liberal democracies",
+        "NATO"
+      ],
+      "evidence": "Frames international events through Canadian and North American alliance perspectives.",
+      "source": "Ownership, editorial positioning and regional coverage sample",
+      "confidence": 0.55
+    },
+    "reliability": {
+      "value": "High",
+      "evidence": "MBFC rates factual reporting High and credibility High; established public broadcaster with corrections.",
+      "source": "Media Bias/Fact Check (retrieved 2026-10-25)",
+      "confidence": 0.8
+    },
+    "externalRatings": {
+      "mbfc": "Left-Center",
+      "newsGuard": null,
+      "adFontes": null,
+      "notes": "MBFC: Left-Center; factual reporting High; credibility High (retrieved 2026-10-25)."
+    }
+  },
+  "intelligence": {
+    "knownPerspective": "Canadian public-broadcaster voice. Explains events through Canadian federalism, Indigenous reconciliation, public health and North American alliance politics.",
+    "knownStrengths": [
+      "Canadian politics",
+      "Indigenous coverage",
+      "Public health",
+      "US-Canada relations"
+    ],
+    "knownWeaknesses": [
+      "Canada-centric",
+      "Limited Global South reporting",
+      "Public-funding political pressure"
+    ]
+  },
+  "selectionRationale": "Adds a Canadian public-service perspective and North American coverage beyond US outlets.",
+  "feeds": [
+    {
+      "url": "https://www.cbc.ca/cmlink/rss-world",
+      "category": "World",
+      "feedType": "RSS 2.0",
+      "enabled": true,
+      "validationStatus": "VALIDATED",
+      "httpStatus": 200,
+      "latestObserved": "2026-10-24T06:32:42+00:00",
+      "entryCount": 20,
+      "feedTitle": "CBC | World News",
+      "bozo": false,
+      "validationNote": "20 items; valid RSS."
+    }
+  ],
+  "systemMapping": {
+    "sourceType": "State Media",
+    "biasGroup": "Centrist",
+    "coverageScope": "National"
+  },
+  "relationships": {
+    "syndicatesFrom": [],
+    "partnerOrganizations": [
+      "Radio-Canada",
+      "The Canadian Press"
+    ],
+    "competitors": [
+      "CTV News",
+      "Global News",
+      "Toronto Star"
+    ]
+  },
+  "research": {
+    "researchedAt": "2026-10-25",
+    "researchedBy": "Informnt research (AI-assisted; human review pending)",
+    "status": "DRAFT",
+    "peerReviewDate": null,
+    "nextReviewDate": "2026-11-08",
+    "researchNotes": "Existing production mapping retained. The official governance page returned no extractable text in this pass. Research is feed-level only; full article sampling and peer review remain outstanding.",
+    "evidenceIds": [
+      "EV-cbc-news-about",
+      "EV-cbc-news-wikipedia",
+      "EV-cbc-news-mbfc",
+      "EV-cbc-news-feed-1"
+    ]
+  }
+}
