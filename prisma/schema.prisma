@@ -59,10 +59,14 @@ model RawArticle {
   contentHash      String?  @unique
   rawMetadata      Json?
 
+  publisherSlug    String?
+  publisher        Publisher? @relation(fields: [publisherSlug], references: [slug], onDelete: SetNull)
+
   processedArticle ProcessedArticle?
 
   @@index([publishedAt])
   @@index([sourceCountry])
+  @@index([publisherSlug])
 }
 
 model ProcessedArticle {
@@ -327,19 +331,56 @@ model FindingBookmark {
   @@index([userId])
 }
 
+model Publisher {
+  id                    String       @id @default(uuid())
+  slug                  String       @unique
+  name                  String       @unique
+  website               String?
+  publisherCountry      String
+  sourceRegion          String
+  ownershipType         String
+  publisherType         String
+  editorialStyle        String?
+  coverageScope         String
+  originality           String?
+  politicalLeaning      String?
+  economicPerspective   String?
+  reliability           String?
+  reliabilityConfidence Float?
+  stateFunded           Boolean      @default(false)
+  profile               Json?
+  createdAt             DateTime     @default(now())
+  updatedAt             DateTime     @updatedAt
+
+  feedSources FeedSource[]
+  rawArticles RawArticle[]
+
+  @@index([sourceRegion])
+  @@index([publisherCountry])
+  @@index([politicalLeaning])
+  @@index([ownershipType])
+}
+
 model FeedSource {
-  id            String    @id @default(uuid())
-  name          String    @unique
-  url           String    @unique
+  id            String     @id @default(uuid())
+  name          String     @unique
+  url           String     @unique
   sourceCountry String
   sourceType    String // e.g. "Commercial Publisher", "State Media"
   biasGroup     String // e.g. "Centrist", "State-Aligned"
   coverageScope String // e.g. "National", "Global"
-  enabled       Boolean   @default(true)
-  fetchFailures Int       @default(0)
+  category      String?
+  feedType      String?
+  enabled       Boolean    @default(true)
+  fetchFailures Int        @default(0)
   lastFetchedAt DateTime?
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  publisherSlug String?
+  publisher     Publisher? @relation(fields: [publisherSlug], references: [slug], onDelete: SetNull)
+
+  @@index([publisherSlug])
 }
 
 model SystemSetting {
