@@ -35,6 +35,8 @@ This index serves as the entry point and mindmap for the project's documentation
   Definitive model assignments across the stack, detailing Mistral AI (including Ministral 8B in chat), Groq, and Google AI Studio usage for optimal speed, intelligence, and cost.
 - **[pgvector-and-tsvector](pgvector-and-tsvector.md)**  
   Analysis of Supabase-native vector and full-text search capabilities, current gaps, and a proposal for hybrid search across articles, locked topics, and clustering.
+- **[Database Strategy: Neon vs. Supabase](database-strategy-neon-vs-supabase.md)**  
+  Grounded comparative matrix between Supabase and Neon free tiers, compute autoscaling nuances, `pg-boss` polling lifecycle, `pgvector` HNSW index restoration, and dual-provider setup workflow.
 - **[Loading Skeletons & Next.js Routing Conventions](file:///home/mainu/programming/projects/automation/geopolitical-news-monitor/global-news-aggregator/docs/loading-skeletons.md)**  
   Specifications for page loading skeletons, matching layout grids, modularization, and native Next.js route segment loading.
 
