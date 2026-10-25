@@ -12,15 +12,19 @@
 ![Prisma](https://img.shields.io/badge/Prisma-7.8-2D3748?logo=prisma)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-38B2AC?logo=tailwindcss)
 
-> **Multi-perspective geopolitical intelligence and real-time surveillance platform, synthesized by AI — your persistent investigative monitor for global events.**
+> **Understand the world as it unfolds.**  
+> An intelligence and monitoring platform designed to bridge information asymmetry, surface institutional biases, and continuously track critical global developments across news, public discourse, and empirical analytical frameworks.
 
 ---
 
 ## 🎯 Project Overview
 
-**informnt** is an autonomous geopolitical news aggregation and surveillance platform designed to bridge information asymmetry, surface institutional biases, and continuously track critical global developments.
+**informnt** is an intelligence and monitoring platform designed to cultivate a continuously updated understanding of global reality. Rather than drowning users in fragmented headlines or relying on single-source narratives, Informnt organizes reporting from verified global wire services and regional publishers across **7 macro-regions**, groups developments into structured story clusters with vector embeddings, and enables multi-perspective framing analysis.
 
-Rather than relying on single-source narratives, the platform ingests dozens of verified international wire services and regional publishers across **7 macro-regions**, structures timeline dossiers with vector clustering, and runs continuous background surveillance on user-defined **Locked Topics**.
+The architecture is built on a decoupled, three-layer foundation:
+1. **News Intelligence (Core Product):** High-signal publisher curation, deterministic classification across 10 locked categories, LLM entity and bias enrichment, and automated story clustering.
+2. **Social Intelligence (Future Module):** Independent public perception, narrative evolution, and trend analysis decoupled from primary news storage.
+3. **Analytical Modules (Future Capability):** Empirical interpretation microservices applying sociology, political science, and economics models.
 
 ---
 
