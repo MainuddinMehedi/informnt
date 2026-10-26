@@ -18,6 +18,9 @@ async function main() {
       coverageScope: true,
       url: true,
       enabled: true,
+      publisherSlug: true,
+      category: true,
+      feedType: true,
     },
     orderBy: {
       name: "asc",

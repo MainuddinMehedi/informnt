@@ -1,16 +1,20 @@
 import "dotenv/config";
-import { prisma } from "./db/prisma.js";
-import fetchRSSStream from "./newsPipeline/rss.js";
-import { getActiveFeeds } from "./data/feeds.js";
-import normalizeUrl from "./utils/normalizeUrl.js";
-import hashSnippet from "./utils/hashSnippet.js";
-import formatDuration from "./utils/formatDuration.js";
-import revalidateCache from "./utils/revalidateCache.js";
-import { generateSlug } from "./utils/generateSlug.js";
-import extractArticleDate from "./utils/extractArticleDate.js";
-import { createArticleProcessor } from "./newsPipeline/enrichmentPipeline.js";
-import { startTaskLogging, updateTaskHeartbeat, completeTaskLogging } from "./utils/taskLogger.js";
 import { loadConfigOverrides } from "./ai/aiConfig.js";
+import { getActiveFeeds } from "./data/feeds.js";
+import { prisma } from "./db/prisma.js";
+import { createArticleProcessor } from "./newsPipeline/enrichmentPipeline.js";
+import fetchRSSStream from "./newsPipeline/rss.js";
+import extractArticleDate from "./utils/extractArticleDate.js";
+import formatDuration from "./utils/formatDuration.js";
+import { generateSlug } from "./utils/generateSlug.js";
+import hashSnippet from "./utils/hashSnippet.js";
+import normalizeUrl from "./utils/normalizeUrl.js";
+import revalidateCache from "./utils/revalidateCache.js";
+import {
+  completeTaskLogging,
+  startTaskLogging,
+  updateTaskHeartbeat,
+} from "./utils/taskLogger.js";
 
 // ── CLI Flags ────────────────────────────────────────────────
 const args = process.argv.slice(2);
@@ -22,18 +26,23 @@ const startTime = Date.now();
 
 export async function runIngestionPipeline() {
   const taskId = await startTaskLogging("rss-ingestion");
+
   try {
     await loadConfigOverrides(prisma);
+
     const aiProcessor = skipAI ? null : createArticleProcessor();
+
     // ── Log run mode ──
     if (skipAI) {
-      console.log("🚀 Running in RAW-ONLY mode (--skip-ai): no AI processing\n");
+      console.log(
+        "🚀 Running in RAW-ONLY mode (--skip-ai): no AI processing\n",
+      );
     } else if (aiLimit < Infinity) {
       console.log(`🚀 Running with AI limit: ${aiLimit} articles max\n`);
     }
 
     const sources = await getActiveFeeds();
-    
+
     let totalFetched = 0;
     let totalInserted = 0;
     let totalDupes = 0;
@@ -50,6 +59,7 @@ export async function runIngestionPipeline() {
         src.url,
         src.biasGroup,
         src.coverageScope,
+        src.publisherSlug,
       )) {
         totalFetched++;
 
@@ -85,9 +95,13 @@ export async function runIngestionPipeline() {
           const extractedDate = await extractArticleDate(item.url);
           if (extractedDate) {
             item.publishedAt = extractedDate;
-            console.log(`  🕒 Resolved date for "${item.title}": ${extractedDate.toISOString()}`);
+            console.log(
+              `  🕒 Resolved date for "${item.title}": ${extractedDate.toISOString()}`,
+            );
           } else {
-            console.warn(`  ⚠️ Could not resolve date for "${item.title}". Falling back to current timestamp.`);
+            console.warn(
+              `  ⚠️ Could not resolve date for "${item.title}". Falling back to current timestamp.`,
+            );
             item.publishedAt = new Date();
           }
         }
@@ -103,6 +117,7 @@ export async function runIngestionPipeline() {
               sourceType: item.sourceType,
               biasGroup: item.biasGroup,
               coverageScope: item.coverageScope,
+              publisherSlug: item.publisherSlug || src.publisherSlug || null,
               publishedAt: item.publishedAt,
               contentHash: item.contentHash,
               slug: generateSlug(item.title),
@@ -162,7 +177,10 @@ export async function runIngestionPipeline() {
         tagsToRevalidate.push(`locked-topic-${topic.id}`);
       });
     } catch (err) {
-      console.error("⚠️ Failed to retrieve updated entities for revalidation:", err.message);
+      console.error(
+        "⚠️ Failed to retrieve updated entities for revalidation:",
+        err.message,
+      );
     }
 
     await revalidateCache(tagsToRevalidate);

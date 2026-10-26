@@ -25,6 +25,7 @@ function parseItemDate(item) {
 
   if (rawDate) {
     const d = new Date(rawDate);
+
     if (!isNaN(d.getTime())) {
       return d;
     }
@@ -51,6 +52,16 @@ function extractText(value) {
   return "";
 }
 
+function extractCategories(categories) {
+  if (!categories) return "";
+
+  if (Array.isArray(categories)) {
+    return categories.map(extractText).filter(Boolean).join(", ");
+  }
+
+  return extractText(categories);
+}
+
 /**
  * Fetches and streams articles from an RSS/Atom feed.
  *
@@ -69,6 +80,7 @@ export default async function* fetchRSSStream(
   feedUrl,
   biasGroup,
   coverageScope,
+  publisherSlug = null,
 ) {
   let url = feedUrl;
   let country = sourceCountry;
@@ -107,6 +119,7 @@ export default async function* fetchRSSStream(
 
     for (const item of feed.items) {
       const itemDate = parseItemDate(item);
+
       yield {
         title: extractText(item.title),
         url: item.link,
@@ -116,7 +129,8 @@ export default async function* fetchRSSStream(
         sourceType: type,
         biasGroup: bias,
         coverageScope: scope,
-        category: item.categories ? item.categories.join(", ") : "",
+        publisherSlug: publisherSlug,
+        category: extractCategories(item.categories),
         publishedAt: itemDate,
       };
     }
