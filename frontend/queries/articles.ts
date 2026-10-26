@@ -39,7 +39,11 @@ export async function getArticleById(id: string): Promise<Article | null> {
         OR: [{ id: id }, { rawArticle: { slug: id } }],
       },
       include: {
-        rawArticle: true,
+        rawArticle: {
+          include: {
+            publisher: true,
+          },
+        },
         categories: true,
       },
     });

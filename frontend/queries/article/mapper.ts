@@ -3,7 +3,14 @@ import { getPublisherRegion } from "@/utils/regions";
 import { Prisma } from "@news/db/client";
 
 export type RawArticleData = Prisma.ProcessedArticleGetPayload<{
-  include: { rawArticle: true; categories: true };
+  include: {
+    rawArticle: {
+      include: {
+        publisher: true;
+      };
+    };
+    categories: true;
+  };
 }>;
 
 export type ProcessedArticleWithRaw = RawArticleData;
@@ -17,6 +24,8 @@ export function mapArticle(raw: RawArticleData): Article {
   if (!rawArticle) {
     throw new Error("Raw article data is missing; cannot perform mapping");
   }
+
+  const publisher = (rawArticle as any).publisher || null;
 
   return {
     id: raw.id,
@@ -34,12 +43,32 @@ export function mapArticle(raw: RawArticleData): Article {
     url: rawArticle.url,
     categories: raw.categories || [],
     entities: raw.entities || [],
-    sourceCountry: rawArticle.sourceCountry ?? null,
-    sourceOrigin: getPublisherRegion(rawArticle.sourceCountry),
-    sourceType: rawArticle.sourceType ?? null,
-    biasGroup: rawArticle.biasGroup ?? null,
-    coverageScope: rawArticle.coverageScope ?? null,
+    sourceCountry: publisher?.publisherCountry ?? rawArticle.sourceCountry ?? null,
+    sourceOrigin: publisher?.sourceRegion ?? getPublisherRegion(rawArticle.sourceCountry),
+    sourceType: publisher?.ownershipType ?? rawArticle.sourceType ?? null,
+    biasGroup: publisher?.politicalLeaning ?? rawArticle.biasGroup ?? null,
+    coverageScope: publisher?.coverageScope ?? rawArticle.coverageScope ?? null,
     slug: rawArticle.slug ?? null,
+    publisherSlug: rawArticle.publisherSlug ?? publisher?.slug ?? null,
+    publisher: publisher
+      ? {
+          slug: publisher.slug,
+          name: publisher.name,
+          website: publisher.website,
+          publisherCountry: publisher.publisherCountry,
+          sourceRegion: publisher.sourceRegion,
+          ownershipType: publisher.ownershipType,
+          publisherType: publisher.publisherType,
+          editorialStyle: publisher.editorialStyle,
+          coverageScope: publisher.coverageScope,
+          originality: publisher.originality,
+          politicalLeaning: publisher.politicalLeaning,
+          economicPerspective: publisher.economicPerspective,
+          reliability: publisher.reliability,
+          reliabilityConfidence: publisher.reliabilityConfidence,
+          stateFunded: publisher.stateFunded,
+        }
+      : null,
   };
 }
 

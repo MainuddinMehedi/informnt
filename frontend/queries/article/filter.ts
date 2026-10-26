@@ -92,20 +92,40 @@ export function buildArticleWhereClause(
 
   if (type && type !== "all") {
     AND.push({
-      rawArticle: { is: { sourceType: { equals: type, mode: "insensitive" } } },
+      rawArticle: {
+        is: {
+          OR: [
+            { publisher: { is: { ownershipType: { equals: type, mode: "insensitive" } } } },
+            { publisher: { is: { publisherType: { equals: type, mode: "insensitive" } } } },
+            { sourceType: { equals: type, mode: "insensitive" } },
+          ],
+        },
+      },
     });
   }
 
   if (bias && bias !== "all") {
     AND.push({
-      rawArticle: { is: { biasGroup: { equals: bias, mode: "insensitive" } } },
+      rawArticle: {
+        is: {
+          OR: [
+            { publisher: { is: { politicalLeaning: { equals: bias, mode: "insensitive" } } } },
+            { biasGroup: { equals: bias, mode: "insensitive" } },
+          ],
+        },
+      },
     });
   }
 
   if (scope && scope !== "all") {
     AND.push({
       rawArticle: {
-        is: { coverageScope: { equals: scope, mode: "insensitive" } },
+        is: {
+          OR: [
+            { publisher: { is: { coverageScope: { equals: scope, mode: "insensitive" } } } },
+            { coverageScope: { equals: scope, mode: "insensitive" } },
+          ],
+        },
       },
     });
   }
@@ -115,18 +135,22 @@ export function buildArticleWhereClause(
   }
 
   // 5. Source Origin Country Mapping
-  // The UI passes a "region" (e.g., "Europe"), but the DB stores exact ISO countries
+  // Supports both publisher.sourceRegion direct match and ISO country matching
   if (srcOrigin && srcOrigin !== "all") {
     const matchingCountries =
       REGION_TO_COUNTRIES[srcOrigin.toLowerCase()] || [];
-    if (matchingCountries.length > 0) {
-      AND.push({
-        rawArticle: { is: { sourceCountry: { in: matchingCountries } } },
-      });
-    } else {
-      // If no countries match the mapped region, force a failure condition
-      AND.push({ id: "NOT_FOUND" });
-    }
+    AND.push({
+      rawArticle: {
+        is: {
+          OR: [
+            { publisher: { is: { sourceRegion: { equals: srcOrigin, mode: "insensitive" } } } },
+            ...(matchingCountries.length > 0
+              ? [{ sourceCountry: { in: matchingCountries } }]
+              : []),
+          ],
+        },
+      },
+    });
   }
 
   // 6. Time Range Bounding (Daily Mode)
@@ -177,7 +201,14 @@ export async function executeFilterQuery(
       ...(cursor ? { cursor: { id: cursor }, skip: 1 } : {}),
       where,
       orderBy,
-      include: { rawArticle: true, categories: true },
+      include: {
+        rawArticle: {
+          include: {
+            publisher: true,
+          },
+        },
+        categories: true,
+      },
     });
 
     const hasMore = raw.length > take;

@@ -152,7 +152,14 @@ export async function getStoryDetail(slug: string) {
       where: { slug },
       include: {
         articles: {
-          include: { rawArticle: true, categories: true },
+          include: {
+            rawArticle: {
+              include: {
+                publisher: true,
+              },
+            },
+            categories: true,
+          },
           orderBy: { processedAt: "desc" },
         },
       },

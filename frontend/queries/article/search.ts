@@ -101,7 +101,14 @@ export async function executeSearchQuery(
     // Fetch full article data with includes (applies remaining filters)
     const rawArticles = await prisma.processedArticle.findMany({
       where: { id: { in: ids } },
-      include: { rawArticle: true, categories: true },
+      include: {
+        rawArticle: {
+          include: {
+            publisher: true,
+          },
+        },
+        categories: true,
+      },
     });
 
     // Reorder to match the scored order

@@ -1,6 +1,7 @@
 import prisma from "@/lib/prisma";
 import { Article } from "@/types/article";
 import { TopicFinding } from "@/types/lockedTopic";
+import { mapArticle, RawArticleData } from "./article/mapper";
 
 export async function getUserBookmarkedArticles(
   userId: string,
@@ -10,7 +11,11 @@ export async function getUserBookmarkedArticles(
     include: {
       article: {
         include: {
-          rawArticle: true,
+          rawArticle: {
+            include: {
+              publisher: true,
+            },
+          },
           categories: true,
         },
       },
@@ -18,26 +23,9 @@ export async function getUserBookmarkedArticles(
     orderBy: { createdAt: "desc" },
   });
 
-  return articleBookmarks.map((b) => {
-    const article = b.article;
-
-    return {
-      id: article.id,
-      title: article.rawArticle.title,
-      source: article.rawArticle.source,
-      publishedAt: article.rawArticle.publishedAt.toISOString(),
-      contentSnippet: article.rawArticle.contentSnippet,
-      extractedContent: article.rawArticle.extractedContent,
-      biasNote: article.biasNote,
-      eventRegion: article.eventRegion,
-      sentimentScore: article.sentimentScore,
-      url: article.rawArticle.url,
-      categories: article.categories,
-      entities: article.entities,
-      sourceCountry: article.rawArticle.sourceCountry,
-      slug: article.rawArticle.slug,
-    };
-  }) as unknown as Article[];
+  return articleBookmarks.map((b) =>
+    mapArticle(b.article as unknown as RawArticleData),
+  );
 }
 
 export async function getUserBookmarkedFindings(
