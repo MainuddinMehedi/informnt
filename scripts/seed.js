@@ -155,9 +155,9 @@ async function main() {
         biasGroup: feed.biasGroup,
         coverageScope: feed.coverageScope,
         enabled: feed.enabled,
-        publisherSlug: meta.publisherSlug || null,
-        category: meta.category || null,
-        feedType: meta.feedType || null,
+        publisherSlug: meta.publisherSlug || feed.publisherSlug || null,
+        category: meta.category || feed.category || null,
+        feedType: meta.feedType || feed.feedType || null,
       },
       create: {
         name: feed.name,
@@ -167,9 +167,9 @@ async function main() {
         biasGroup: feed.biasGroup,
         coverageScope: feed.coverageScope,
         enabled: feed.enabled,
-        publisherSlug: meta.publisherSlug || null,
-        category: meta.category || null,
-        feedType: meta.feedType || null,
+        publisherSlug: meta.publisherSlug || feed.publisherSlug || null,
+        category: meta.category || feed.category || null,
+        feedType: meta.feedType || feed.feedType || null,
       },
     });
     feedCount++;

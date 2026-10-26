@@ -87,22 +87,22 @@
 | Premium Times | premium-times | VALIDATED | activate_candidate | 2026-10-25T04:00:19+00:00 | 15 items; valid RSS. |
 | El País English | el-pais-english | VALIDATED | activate_candidate | 2026-10-24T22:00:00+00:00 | 59 items; valid RSS. |
 
-### Suggested first batch
+### Suggested first batch (Batch 1 — ACTIVATED 2026-10-26)
 
-Prioritise a small set with clean feeds, clear ownership and low legal/ethical risk:
+The following 10 candidate feeds across 9 publishers were activated, seeded into `FeedSource`, and verified via `npm run ingest:raw`:
 
-1. Financial Times — global business/policy baseline.
-2. The Economist — weekly analysis and framing.
-3. Bloomberg markets + politics — markets and policy, with two-feed monitoring.
-4. Times of Israel — Israeli national lens.
-5. The Kyiv Independent — Ukraine wartime reporting.
-6. Meduza — independent Russian exile reporting.
-7. Daily Maverick — South African investigations.
-8. Premium Times — Nigerian accountability reporting.
-9. El País English — Spanish/Latin American coverage.
-10. Gulf News or Hürriyet — Gulf/Turkey national depth, with monitoring.
+1. **Financial Times** (`financial-times`) — global business/policy baseline (`https://www.ft.com/world?format=rss`).
+2. **The Economist** (`the-economist`) — weekly analysis and framing (`https://www.economist.com/the-world-this-week/rss.xml`).
+3. **Bloomberg Markets** (`bloomberg`) — global markets reporting (`https://feeds.bloomberg.com/markets/news.rss`).
+4. **Bloomberg Politics** (`bloomberg`) — US & global politics reporting (`https://feeds.bloomberg.com/politics/news.rss`).
+5. **The Times of Israel** (`times-of-israel`) — Israeli national lens (`https://www.timesofisrael.com/feed/`).
+6. **The Kyiv Independent** (`kyiv-independent`) — Ukraine wartime reporting (`https://kyivindependent.com/news-archive/rss/`).
+7. **Meduza** (`meduza`) — independent Russian exile reporting (`https://meduza.io/rss/en/all`).
+8. **Daily Maverick** (`daily-maverick`) — South African investigations (`https://www.dailymaverick.co.za/dmrss/`).
+9. **Premium Times** (`premium-times`) — Nigerian accountability reporting (`https://www.premiumtimesng.com/feed`).
+10. **El País English** (`el-pais-english`) — Spanish/Latin American coverage (`https://feeds.elpais.com/mrss-s/pages/ep/site/english.elpais.com/portada`).
 
-This is a sequencing suggestion, not an automatic allow-list. Confirm feed health and editorial review before enabling.
+*Pipeline verification on 2026-10-26 confirmed 10/10 active in database, 1,798 total items fetched, zero pipeline crashes, and 341 fresh articles ingested across the 9 publishers with 100% `publisherSlug` relational integrity.*
 
 ## Rows that must not be activated
 

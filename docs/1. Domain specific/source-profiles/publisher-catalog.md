@@ -32,31 +32,31 @@ Each publisher links to its canonical-template JSON. “Action” is the feed-le
 | [VnExpress](./vnexpress.json) | Vietnam | Asia-Pacific | Commercial | Digital Native | State-Aligned | Medium | Commercial Publisher | Valid | Add with monitoring |
 | [France 24](./france-24.json) | France | Europe | Public Service | Broadcaster | Centre | High | State Media | Valid | Keep active |
 | [Deutsche Welle](./deutsche-welle.json) | Germany | Europe | Public Service | Broadcaster | Centre | High | State Media | Valid | Keep active |
-| [Meduza](./meduza.json) | Latvia | Europe | Commercial | Digital Native | Centre | High | Commercial Publisher | Valid | Activate candidate |
+| [Meduza](./meduza.json) | Latvia | Europe | Commercial | Digital Native | Centre | High | Commercial Publisher | Valid | Active (Batch 1) |
 | [TASS](./tass.json) | Russia | Europe | State | Government Agency | State-Aligned | Low | State Media | Valid | State-media comparison only |
-| [El País English](./el-pais-english.json) | Spain | Europe | Commercial | Newspaper | Centre-Left | High | Commercial Publisher | Valid | Activate candidate |
+| [El País English](./el-pais-english.json) | Spain | Europe | Commercial | Newspaper | Centre-Left | High | Commercial Publisher | Valid | Active (Batch 1) |
 | [BBC News](./bbc-news.json) | UK | Europe | Public Service | Broadcaster | Centre | High | Commercial Publisher | Valid | Keep active |
 | [Carbon Brief](./carbon-brief.json) | UK | Europe | Non-profit | Digital Native | Centre-Left | High | Commercial Publisher | Valid | Activate candidate |
-| [Financial Times](./financial-times.json) | UK | Europe | Commercial | Newspaper | Centre | High | Commercial Publisher | Valid | Activate candidate |
+| [Financial Times](./financial-times.json) | UK | Europe | Commercial | Newspaper | Centre | High | Commercial Publisher | Valid | Active (Batch 1) |
 | [Iran International](./iran-international.json) | UK | Europe | Commercial | Broadcaster | Centre | Medium | Commercial Publisher | Valid | Add with monitoring |
 | [Reuters](./reuters.json) | UK | Europe | Commercial | Wire Service | Centre | High | Independent Wire | None found | No public feed |
-| [The Economist](./the-economist.json) | UK | Europe | Commercial | Magazine | Centre | High | Commercial Publisher | Valid | Activate candidate |
+| [The Economist](./the-economist.json) | UK | Europe | Commercial | Magazine | Centre | High | Commercial Publisher | Valid | Active (Batch 1) |
 | [The Guardian](./the-guardian.json) | UK | Europe | Non-profit | Newspaper | Centre-Left | High | Commercial Publisher | Valid | Keep active |
-| [The Kyiv Independent](./kyiv-independent.json) | Ukraine | Europe | Non-profit | Digital Native | Centre-Left | High | Commercial Publisher | Valid | Activate candidate |
+| [The Kyiv Independent](./kyiv-independent.json) | Ukraine | Europe | Non-profit | Digital Native | Centre-Left | High | Commercial Publisher | Valid | Active (Batch 1) |
 | [+972 Magazine](./972-magazine.json) | Israel | Middle East | Non-profit | Magazine | Left | Medium | Commercial Publisher | Valid | Activate candidate |
-| [The Times of Israel](./times-of-israel.json) | Israel | Middle East | Commercial | Digital Native | Centre-Left | High | Commercial Publisher | Valid | Activate candidate |
+| [The Times of Israel](./times-of-israel.json) | Israel | Middle East | Commercial | Digital Native | Centre-Left | High | Commercial Publisher | Valid | Active (Batch 1) |
 | [Al Jazeera](./al-jazeera.json) | Qatar | Middle East | State | Broadcaster | Centre | Medium | State Media | Valid | Keep active |
 | [Arab News](./arab-news.json) | Saudi Arabia | Middle East | Commercial | Newspaper | Centre-Right | Medium | Commercial Publisher | Valid | Keep active |
 | [Hürriyet Daily News](./hurriyet-daily-news.json) | Turkey | Middle East | Commercial | Newspaper | Centre | Medium | Commercial Publisher | Valid | Activate candidate |
 | [Gulf News](./gulf-news.json) | UAE | Middle East | Commercial | Newspaper | Centre | Medium | Commercial Publisher | Valid | Activate candidate |
 | [Middle East Eye](./middle-east-eye.json) | UK | Middle East | Commercial | Digital Native | Centre-Left | High | Commercial Publisher | Valid | Keep active |
 | [AllAfrica](./allafrica.json) | Mauritius | Africa | Commercial | Digital Native | Centre | High | Independent Wire | Valid | Keep active |
-| [Premium Times](./premium-times.json) | Nigeria | Africa | Commercial | Digital Native | Centre-Left | Medium | Commercial Publisher | Valid | Activate candidate |
-| [Daily Maverick](./daily-maverick.json) | South Africa | Africa | Commercial | Digital Native | Centre | High | Commercial Publisher | Valid | Activate candidate |
+| [Premium Times](./premium-times.json) | Nigeria | Africa | Commercial | Digital Native | Centre-Left | Medium | Commercial Publisher | Valid | Active (Batch 1) |
+| [Daily Maverick](./daily-maverick.json) | South Africa | Africa | Commercial | Digital Native | Centre | High | Commercial Publisher | Valid | Active (Batch 1) |
 | [CBC News](./cbc-news.json) | Canada | North America | Public Service | Broadcaster | Centre | High | State Media | Valid | Keep active |
 | [Al-Monitor](./al-monitor.json) | USA | North America | Commercial | Digital Native | Centre | Medium | Commercial Publisher | Valid | Activate candidate |
 | [Associated Press](./ap.json) | USA | North America | Cooperative | Wire Service | Centre | High | Independent Wire | None found | No public feed |
-| [Bloomberg News](./bloomberg.json) | USA | North America | Commercial | Wire Service | Centre-Left | High | Independent Wire | Valid / Valid | Activate candidate |
+| [Bloomberg News](./bloomberg.json) | USA | North America | Commercial | Wire Service | Centre-Left | High | Independent Wire | Valid / Valid | Active (Batch 1) |
 | [Foreign Policy](./foreign-policy.json) | USA | North America | Commercial | Magazine | Centre | High | Commercial Publisher | Valid | Keep active |
 | [Mongabay](./mongabay.json) | USA | North America | Non-profit | Digital Native | Centre | High | Commercial Publisher | Valid | Activate candidate |
 | [NPR](./npr.json) | USA | North America | Non-profit | Broadcaster | Centre-Left | High | Commercial Publisher | Valid | Keep active |

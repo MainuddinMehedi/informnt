@@ -1,10 +1,8 @@
 # Informnt Publisher & Feed Catalog — 60 Publisher Profiles
 
-> **Status: DRAFT — 2026-10-25.** All 60 profiles are provisional. Research is feed-level and web-level, not a 20–30 article content analysis, and no peer review has been completed. Do not treat any classification as final or as a production activation decision.
+> **Status: DRAFT / PARTIALLY ACTIVATED — 2026-10-26.** All 60 profiles remain research dossiers. Candidate Batch 1 (10 feeds across 9 publishers: Financial Times, The Economist, Bloomberg Markets & Politics, The Times of Israel, The Kyiv Independent, Meduza, Daily Maverick, Premium Times, and El País English) was activated into production `FeedSource` and verified via live ingestion on 2026-10-26. All other candidate profiles remain in review.
 
 This directory is the research output for the Informnt publisher/feed catalog. It contains exactly 60 canonical-template publisher profiles, a feed-validation registry, an evidence register, and the A–G analysis deliverables.
-
-No application code, Prisma schema, ingestion behavior, or `ingestion-service/data/feeds.json` was modified. Nothing here is active in production.
 
 ## Portfolio at a glance
 
