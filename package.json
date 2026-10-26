@@ -23,6 +23,7 @@
     "scan-topics": "node ingestion-service/scanTopics.js",
     "cluster": "node ingestion-service/runClustering.js",
     "backfill:topic-embeddings": "node ingestion-service/topics/backfillLockedTopicEmbeddings.js",
+    "compile:publishers": "node scripts/compile-publishers.js",
     "seed": "node scripts/seed.js",
     "db:drop-indexes": "node scripts/drop-indexes.js",
     "db:restore-indexes": "node scripts/restore-indexes.js"
